@@ -161,7 +161,7 @@
 </style>
 <br>
 <div class="romana_section_title text-center romana_recent_cause">
-    <h2>Business Plan</h2>
+{{--    <h2>Business Plan</h2>--}}
 </div>
 <div class="container">
     {{--        <h1>Pricing Table</h1>--}}

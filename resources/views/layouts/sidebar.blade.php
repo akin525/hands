@@ -166,11 +166,11 @@
                         <span class="micon dw dw-money"></span><span class="mtext">Fund Raising</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{url('donate')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-money"></span><span class="mtext">Donation</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{url('donate')}}" class="dropdown-toggle no-arrow">--}}
+{{--                        <span class="micon dw dw-money"></span><span class="mtext">Donation</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{url('advert')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bookmark"></span><span class="mtext">Advertisement</span>

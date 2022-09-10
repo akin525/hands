@@ -10,7 +10,8 @@
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" href="{{asset('images/logo.jpeg')}}">
+    <link rel="shortcut icon" type="image/png" href="https://www.ashsupport.com.ng/images/logo.jpeg">
+    <meta content="Learn How To Grow Your Business Quick" name="description" />
 
     <!-- ================================================================
         ***CSS File***
