@@ -121,13 +121,13 @@
                         <ul class="cartSearch">
                             {{--                        <li class="search"><a href="#"><i class="icofont icofont-search"></i></a></li>--}}
                             <li class="donation"><a href="{{route('dashboard')}}" class="hvr-box-shadow-outset">Dashboard</a></li>
-                            <li class="donation"><a href="{{route('myaccount')}}" class="hvr-box-shadow-outset">{{Auth::user()->name}}</a></li>
+{{--                            <li class="donation"><a href="{{route('myaccount')}}" class="hvr-box-shadow-outset">{{Auth::user()->name}}</a></li>--}}
                         </ul>
                     @else
                     <ul class="cartSearch">
 {{--                        <li class="search"><a href="#"><i class="icofont icofont-search"></i></a></li>--}}
-                        <li class="donation"><a href="{{route('login')}}" class="hvr-box-shadow-outset">Donate Now</a></li>
-                        <li class="donation"><a href="{{route('login')}}" class="hvr-box-shadow-outset">Post Ads</a></li>
+{{--                        <li class="donation"><a href="{{route('login')}}" class="hvr-box-shadow-outset">Donate Now</a></li>--}}
+                        <li class="donation"><a href="{{route('login')}}" class="hvr-box-shadow-outset">Login</a></li>
                     </ul>
                 @endif
                     <!-- cartSearch End -->
