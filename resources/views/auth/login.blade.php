@@ -32,18 +32,18 @@
     </script>
 </head>
 <body class="login-page">
-<div class="pre-loader">
-    <div class="pre-loader-box">
-        <div class="loader-logo"><img width="200" src="{{asset('images/logo.jpeg')}}" alt=""></div>
-        <div class='loader-progress' id="progress_div">
-            <div class='bar' id='bar1'></div>
-        </div>
-        <div class='percent' id='percent1'>0%</div>
-        <div class="loading-text">
-            ADE'S SUPPORTING HANDS...
-        </div>
-    </div>
-</div>
+{{--<div class="pre-loader">--}}
+{{--    <div class="pre-loader-box">--}}
+{{--        <div class="loader-logo"><img width="200" src="{{asset('images/logo.jpeg')}}" alt=""></div>--}}
+{{--        <div class='loader-progress' id="progress_div">--}}
+{{--            <div class='bar' id='bar1'></div>--}}
+{{--        </div>--}}
+{{--        <div class='percent' id='percent1'>0%</div>--}}
+{{--        <div class="loading-text">--}}
+{{--            ADE'S SUPPORTING HANDS...--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 @include('sweetalert::alert')
 @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
