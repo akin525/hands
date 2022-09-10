@@ -36,7 +36,9 @@
 <body>
 <div class="pre-loader">
     <div class="pre-loader-box">
+        <center>
         <div class="loader-logo"><img width="200" src="{{asset('images/logo.jpeg')}}" alt=""></div>
+        </center>
         <div class='loader-progress' id="progress_div">
             <div class='bar' id='bar1'></div>
         </div>
