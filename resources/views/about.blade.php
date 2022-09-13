@@ -1,104 +1,107 @@
-@extends("layouts.header")
+@extends("ads.lay.header")
 
 @section('content')
-    <!-- ==========================================================
-    2.*Hero_area start
-    ============================================================ -->
-    <div class="romana_allPage_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="romana_allPage_text text-center">
-                        <h1>About page</h1>
-                        <ol class="breadcrumb">
-                            <li><a href="{{url('home')}}">Home</a><span></span></li>
-                            <li><a href="#">About</a></li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-        </div>
-        <!-- container End -->
-    </div>
-    <!-- ==========================================================
-    3.*romana_our_mission_area start
-============================================================ -->
-    <div class="romana_our_mission_area romana_section_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="romana_mission_img">
-                        <img src="images/bot.jpeg" alt="">
-                    </div>
-                </div>
-                <!-- column End -->
-                <div class="col-sm-6 col-xs-12">
-                    <div class="romana_about_text">
-                        <h3>Our Mission</h3>
-                        <p><span>There claritatem insitam; est usus legentis in iis qui facit eorum clariate.
-estigationes demonstraverunt lectores legere me lius quod.</span></p>
-                        <p>Tabent claritatem insitam; est usus legentis in iis qui facit claritatem.The estigationes demonstraverunt lectores legere me lius quod ii legunt saep ius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudm. Mirum est notare quam littera gothica, nunc putamus parum..</p>
-                        <p>Rbent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.The estigationes demonstraverunt lectores legere me lius quod ii legunt saep ius.Claritas est etiam processus dynamicus</p>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-            <div class="romana_history_vision">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="romana_about_text">
-                            <h3>Our history</h3>
-                            <p><span>There claritatem insitam; est usus legentis in iis qui facit eorum clariate.
-estigationes demonstraverunt lectores legere me lius quod.</span></p>
-                            <p>Tabent claritatem insitam; est usus legentis in iis qui facit claritatem.The estigationes demonstraverunt lectores legere me lius quod ii legunt saep ius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudm. Mirum est notare quam littera gothica, nunc putamus parum..</p>
-                            <p>Rbent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.The estigationes demonstraverunt lectores legere me lius quod ii legunt saep ius.Claritas est etiam processus dynamicus</p>
+
+    <div class="sliderArea heroAboutStyle plr ">
+        <div class="slider-active">
+            <div class="single-slider heroPadding d-flex align-items-center">
+                <div class="container-fluid ">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-xxl-6 col-xl-7 col-lg-5 col-md-12">
+                            <div class="heroCaption mb-50">
+                                <h1 class="tittle" data-animation="fadeInUp" data-delay="0.0s">We make buying-selling online easier</h1>
+                                <div class="btn-wrapper">
+                                    <a href="{{route('login')}}" class="cmn-btn04 mr-15 mb-10 wow fadeInLeft" data-wow-delay="0.3s">Sign up</a>
+                                    <a href="{{url('listads')}}" class="browseBtn mb-10 wow fadeInLeft" data-wow-delay="0.3s">Browse ads <i class="las la-angle-right icon"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="countDown">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <div class="single mb-24 wow fadeInLeft" data-wow-delay="0.2s">
+                                            <div class="single-counter">
+                                                <span class="counter odometer" data-count="4.05"></span>
+                                                <p class="icon">+</p>
+                                            </div>
+                                            <div class="pera-count">
+                                                <p class="pera">Years in the industry</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <div class="single mb-24 wow fadeInLeft" data-wow-delay="0.4s">
+                                            <div class="single-counter">
+                                                <span class="counter odometer" data-count="1300"></span>
+                                                <p class="icon">+</p>
+                                            </div>
+                                            <div class="pera-count ">
+                                                <p>Employees working</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <div class="single mb-24 wow fadeInLeft" data-wow-delay="0.6s">
+                                            <div class="single-counter">
+                                                <span class="counter odometer" data-count="20"></span>
+                                                <p class="icon">K</p>
+                                            </div>
+                                            <div class="pera-count">
+                                                <p>Active registered users</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xxl-6 col-xl-5 col-lg-7 ">
+                            <div class="hero-man d-none d-lg-block f-right">
+                                <img src="assets/img/hero/aboutHero.png" alt="images" class="tilt-effect " data-animation="fadeInRight" data-delay="0.3s">
+                            </div>
                         </div>
                     </div>
-                    <!-- column End -->
-                    <div class="col-sm-6">
-                        <div class="romana_about_text">
-                            <h3>Our vission</h3>
-                            <p><span>There claritatem insitam; est usus legentis in iis qui facit eorum clariate.
-estigationes demonstraverunt lectores legere me lius quod.</span></p>
-                            <p>Tabent claritatem insitam; est usus legentis in iis qui facit claritatem.The estigationes demonstraverunt lectores legere me lius quod ii legunt saep ius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudm. Mirum est notare quam littera gothica, nunc putamus parum..</p>
-                            <p>Rbent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.The estigationes demonstraverunt lectores legere me lius quod ii legunt saep ius.Claritas est etiam processus dynamicus</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="storyArewa ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-5 col-xl-7 col-lg-8 col-md-9 col-sm-10">
+                    <div class="section-tittle section-tittle6 text-center mb-90">
+                        <h2 class="tittle">Our story <span class="lineBrack"></span> started in 2022</h2>
+                        <p>I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The 12 subjects applied 4 mL of hand sanitizer for 30 seconds per application, 20 applications over a 30 min period (total exposure time 10 min).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="aboutArea section-padding2 sectionBg3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-5 position-relative">
+
+                    <div class="aboutImg  tilt-effect mr-40">
+                        <img  src="{{asset('images/pri.jpeg')}}" alt="images" class="bouncingAnimations">
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-7">
+                    <div class="about-caption m-0">
+                        <div class="row justify-content-center">
+                            <div class="section-tittle section-tittle6 m-0">
+                                <h2 class="tittle p-0">We’re working to make the world a better place </h2>
+                            </div>
                         </div>
                     </div>
-                    <!-- column End -->
                 </div>
-                <!-- row End -->
             </div>
         </div>
-        <!-- container End -->
-    </div>
-    <!-- ==========================================================
-    4.*romana_about_video_area start
-============================================================ -->
-    <div class="romana_about_video_area romana_section_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="romana_section_title text-center">
-                        <h2>Video Presentation</h2></div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-            <div class="row ">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="romana_about_video romana_about_video2">
-                        <a data-lightbox-gallery="myGallery" href="#">
-                            <img src="images/bo.jpeg" class=" img-responsive" alt=""><span><img src="images/play_icon.png" alt=""></span></a>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-        </div>
-        <!-- container End -->
-    </div>
-    <!-- ==========================================================
+    </section>
+
 @endsection

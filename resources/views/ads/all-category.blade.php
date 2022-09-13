@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
 
-                @include('ads.lay.category')
+    @include('ads.lay.category')
                 <div class="col-xxl-9 col-xl-9  col-lg-8 col-md-7">
                     <div class="viewItems">
                         <div class="row">

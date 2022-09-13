@@ -5,7 +5,7 @@
 {{--    ============================================================ -->--}}
     <section class="romana_hero_area">
         <div class="hero_slider">
-            <div class="hero_slider_bg">
+            <div class="hero_slider_bg"  style="background-image: url(images/fg.png)">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">

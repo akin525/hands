@@ -52,7 +52,9 @@ Route::middleware(['auth'])->group(function () {
     Route::view('business', 'business');
 
 });
-Route::view('ads', 'ads.ads');
+Route::get('ads', [AdvertController::class, 'index'])->name('ads');
+Route::get('all-category/{id}', [AdvertController::class, 'adscat'])->name('all-category');
+
 Route::view('listads', 'ads.list-ads');
 
 Route::get('/cover/{filename}', function ($filename) {
