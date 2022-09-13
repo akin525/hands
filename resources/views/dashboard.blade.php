@@ -157,7 +157,7 @@
                                     <sup>₦</sup>300,000
                                 </div>
                                 <div class="cta">
-                                    <a href="{{route('request', 'ULTIMATE')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                                 </div>
 
                                 <div class="cta">
-                                    <a href="{{route('request', 'DIAMOND')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>

@@ -13,7 +13,7 @@
                                 <h1>Give a hand to make <br> the <span>better</span> world.</h1>
                                 <p>Bringing Help and Hope to Hurting People</p>
                                 <div class="romana_slider_btn">
-                                    <a href="{{route('dashboard')}}" class="hvr-box-shadow-outset">Donate Now </a>
+                                    <a href="{{url('ads')}}" class="hvr-box-shadow-outset">Ads</a>
                                 </div>
                                 <div class="slider_prg">
                                     <div class="slider_prg_in"></div>
@@ -34,7 +34,7 @@
                             <div class="romana_hero_text">
                                 <h1>Give a hand to make <br> the <span>better</span> world.</h1>
                                 <div class="romana_slider_btn">
-                                    <a href="#" class="hvr-box-shadow-outset">Donate Now</a>
+                                    <a href="{{url('ads')}}" class="hvr-box-shadow-outset">Advert</a>
                                 </div>
                                 <div class="slider_prg">
                                     <div class="slider_prg_in"></div>
@@ -243,124 +243,17 @@
         </div>
     </div>
 </div>
-<!-- ==========================================================
-4.*romana_recent_cause_area start
-============================================================ -->
-<div class="romana_recent_cause_area romana_section_padding">
+
+<div class="romana_better_place_area">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="romana_section_title text-center romana_recent_cause">
-                    <h2>Recent Causes</h2>
-{{--                    <p>liber tempor cum soluta nobis eleifend option--}}
-{{--                        <br>con gue nihil imperdiet doming id</p>--}}
-                </div>
-            </div>
-            <!-- column End -->
-        </div>
-        <!-- row End -->
         <div class="row ">
-            <div class="col-sm-4">
-                <div class="romana_single_cause_text_img">
-                    <div class="romana_cause_img">
-                        <img src="images/cause_img3.jpg" alt="">
-                    </div>
-                    <div class="romana_day_left">
-                        <h2>14 Days left</h2>
-                    </div>
-                    <div class="romana_single_cause_text">
-                        <h3><a href="cause-detail.html">Education for a child to live</a></h3>
-                        <p>Check to see if your employer will match your donation.</p>
-
-                        <div id="bar3" class="barfiller" data-color="#930e0e">
-                            <div class="tipWrap">
-                                <span class="tip"></span>
-                            </div>
-                            <span class="fill1 fill" data-percentage="65"></span>
-                        </div>
-
-                        <div class="romana_raise_goal clearfix">
-                            <div class="romana_raise_left">
-                                <p>Raised <span>₦12,458</span></p>
-                            </div>
-                            <div class="romana_raise_right">
-                                <p>goal <span>₦19,500</span></p>
-                            </div>
-                        </div>
-                        <div class="romana_cause_btn">
-                            <a href="{{url('donation')}}" class="hvr-box-shadow-outset">Donate Now</a>
-                        </div>
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="romana_better_place_text text-center">
+                    <h2>Advertise Your Business With Us, Kindly Click below to view all advert</h2>
+                    <div class="romana_better_place_btn">
+                        <a href="{{url('listads')}}" class="hvr-box-shadow-outset">All Advert</a>
                     </div>
                 </div>
-                <!-- romana_single_cause_text End -->
-            </div>
-            <div class="col-sm-4">
-                <div class="romana_single_cause_text_img">
-                    <div class="romana_cause_img">
-                        <img src="images/cause_img2.jpg" alt="">
-                    </div>
-                    <div class="romana_day_left">
-                        <h2>30 Days left</h2>
-                    </div>
-                    <div class="romana_single_cause_text">
-                        <h3><a href="cause-detail.html">Education for a child to live</a></h3>
-                        <p>Your distinguished Waqf investment opportunity. A productive olive tree at least ten years old, planted on an area of 33 square meters in Turkey, one of the best olive oil producing countries in the world.</p>
-
-                        <div id="bar2" class="barfiller" data-color="#930e0e">
-                            <div class="tipWrap">
-                                <span class="tip"></span>
-                            </div>
-                            <span class="fill" data-percentage="75"></span>
-                        </div>
-
-                        <div class="romana_raise_goal clearfix">
-                            <div class="romana_raise_left">
-                                <p>Raised <span>₦12,458</span></p>
-                            </div>
-                            <div class="romana_raise_right">
-                                <p>goal <span>₦19,500</span></p>
-                            </div>
-                        </div>
-                        <div class="romana_cause_btn">
-                            <a href="{{url('donation')}}" class="hvr-box-shadow-outset">Donate Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- romana_single_cause_text End -->
-            </div>
-            <div class="col-sm-4">
-                <div class="romana_single_cause_text_img">
-                    <div class="romana_cause_img">
-                        <img src="images/cause_img1.jpg" alt="">
-                    </div>
-                    <div class="romana_day_left">
-                        <h2>19 Days left</h2>
-                    </div>
-                    <div class="romana_single_cause_text">
-                        <h3><a href="cause-detail.html">Education for a child to live</a></h3>
-                        <p>facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feug.</p>
-
-                        <div id="bar1" class="barfiller" data-color="#930e0e">
-                            <div class="tipWrap">
-                                <span class="tip"></span>
-                            </div>
-                            <span class="fill" data-percentage="80"></span>
-                        </div>
-
-                        <div class="romana_raise_goal clearfix">
-                            <div class="romana_raise_left">
-                                <p>Raised <span>₦12,458</span></p>
-                            </div>
-                            <div class="romana_raise_right">
-                                <p>goal <span>₦19,500</span></p>
-                            </div>
-                        </div>
-                        <div class="romana_cause_btn">
-                            <a href="{{url('donation')}}" class="hvr-box-shadow-outset">Donate Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- romana_single_cause_text End -->
             </div>
             <!-- column End -->
         </div>
@@ -368,6 +261,8 @@
     </div>
     <!-- container End -->
 </div>
+
+
 <!-- ==========================================================
 
 5.*romana_about_area start
@@ -387,9 +282,8 @@
         <!-- row End -->
         <div class="row ">
             <div class="col-sm-6 col-xs-12">
-                <div class="romana_about_video">
-                    <a data-lightbox-gallery="myGallery" href="#">
-                        <img src="{{asset('images/ab.jpeg')}}" class=" img-responsive" alt=""><span><img src="images/play_icon.png" alt=""></span></a>
+                <div class="">
+                        <img src="{{asset('images/ab.jpeg')}}" class=" img-responsive" alt="">
                 </div>
             </div>
             <!-- column End -->

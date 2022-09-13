@@ -1132,7 +1132,7 @@ form.searchForm input + input {
 
 /* ==================================== romana_better_place_area Css ======================= */
 .romana_better_place_area {
-  background: url(../../images/bp_bg.jpg);
+  background: url(../../images/all.png);
   color: #fff;
   position: relative;
   padding: 100px 0px; }

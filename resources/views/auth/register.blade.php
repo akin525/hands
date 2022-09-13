@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-7">
-                <img src="vendors/images/register-page-img.png" alt="">
+                <img src="{{asset('images/auth.png')}}" alt="">
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="login-box bg-white box-shadow border-radius-10">

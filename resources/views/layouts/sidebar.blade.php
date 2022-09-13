@@ -162,6 +162,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{url('listads')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-bookmark"></span><span class="mtext">All Advert</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{url('fundraise')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-money"></span><span class="mtext">Fund Raising</span>
                     </a>
@@ -265,7 +270,7 @@
     }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://wa.me/2347025947239/?text=Goodday, My Username is....." class="float" target="_blank">
+<a href="https://wa.me/2348169532894/?text=Goodday, My Username is {{Auth::user()->username}}" class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
 </a>
 </body>

@@ -71,7 +71,7 @@
                 <div class="col-md-9 col-sm-8">
                     <div class="romana_header_top_left">
                         <ul>
-                            <li><a href="#">faq</a></li>
+                            <li><a href="https://instagram.com/ash_support?igshid=YmMyMTA2M2Y=">Instagram</a></li>
                             <li><a href="#">support</a></li>
                             <li><a href="{{url('contact')}}">contact</a></li>
                         </ul>
@@ -80,7 +80,7 @@
                 <!-- column End -->
                 <div class="col-md-3 col-sm-4">
                     <div class="romana_header_top_right text-right">
-                        <a href="tel:">Donation Hotline : +011-223-3445</a>
+                        <a href="tel:">Donation Hotline : 08169532894</a>
                     </div>
                 </div>
                 <!-- column End -->
@@ -109,6 +109,7 @@
                     <nav id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="navbar-link"><a href="{{url('home')}}">Home</a></li>
+                            <li class="navbar-link"><a href="{{url('ads')}}">Advert</a></li>
                             <li><a href="{{url('about')}}">about</a></li>
                             <li><a href="{{url('event')}}">Promote Business</a></li>
                             <li><a href="{{url('volunteer')}}">Fund Raising</a></li>
@@ -272,7 +273,7 @@
     }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://wa.me/2347025947239/?text=Goodday, My Username is....." class="float" target="_blank">
+<a href="https://wa.me/2348169532894/?text=Goodday, My Username is {{Auth::user()->username}}" class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
 </a>
 <!-- ======================================================

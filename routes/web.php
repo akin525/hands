@@ -52,6 +52,8 @@ Route::middleware(['auth'])->group(function () {
     Route::view('business', 'business');
 
 });
+Route::view('ads', 'ads.ads');
+Route::view('listads', 'ads.list-ads');
 
 Route::get('/cover/{filename}', function ($filename) {
     $path = storage_path('app/public/' . $filename);

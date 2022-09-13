@@ -77,7 +77,7 @@
             <div class="col-xl-4 mb-30">
                 <div class="card-box height-100-p pd-20">
                     <h2 class="h4 mb-20">Lead Target</h2>
-                    <img src="images/pr.jpeg" alt="">
+                    <img src="images/advert.png" alt="">
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
                                     <sup>₦</sup>300,000
                                 </div>
                                 <div class="cta">
-                                    <a href="{{route('request', 'ULTIMATE')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                                     <sup>₦</sup>400,000<sub></sub>
                                 </div>
                                 <div class="cta">
-                                    <a href="{{route('request', 'RUBY')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                                 </div>
 
                                 <div class="cta">
-                                    <a href="{{route('request', 'DIAMOND')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
