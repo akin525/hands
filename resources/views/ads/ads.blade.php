@@ -107,7 +107,7 @@
                             <p class="wow fadeInUp" data-wow-delay="0.2s">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humo or randomised words which don't look even slightlys</p>
                         </div>
                         <div class="btn-wrapper">
-                            <a href="#" class="cmn-btn2 mr-15 mb-10 wow fadeInLeft" data-wow-delay="0.3s">Post your ad</a>
+                            <a href="{{route('advert')}}" class="cmn-btn2 mr-15 mb-10 wow fadeInLeft" data-wow-delay="0.3s">Post your ad</a>
                             <a href="{{url('listads')}}" class="cmn-btn3 mb-10 wow fadeInRight" data-wow-delay="0.3s">Browse ads</a>
                         </div>
                     </div>
