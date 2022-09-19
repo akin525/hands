@@ -215,17 +215,17 @@
                     <div class="footer_contact">
                         <h2>contact us</h2>
                         <div class="romana_single_contact">
-                            <p>Call us <span>+011-223-445</span></p>
+                            <p>Call us <span>08169532894</span></p>
                         </div>
                         <div class="romana_single_contact">
-                            <p>Email us<span>crazycafe.net@gmail.com</span></p>
+                            <p>Email us<span>ashsuppt@gmail.com</span></p>
                         </div>
                         <div class="romana_single_contact">
                             <address>
                                 Address
                                 <span>
-                                    72/D Parkstreet view,<br>
-                                    Orland Home.
+                                    11A, Omoluabi Shopping Complex, Ogo-Oluwa Oshogbo <br>
+                                Osun State
                                 </span>
                             </address>
                         </div>

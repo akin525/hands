@@ -99,8 +99,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -115,8 +114,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Samsung M32</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -131,8 +129,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Persian cat</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -147,8 +144,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Beats headphone</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -163,8 +159,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -179,8 +174,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -195,8 +189,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -211,8 +204,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -227,8 +219,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>

@@ -11,12 +11,12 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="select-itms">
-                                    <select name="select" class="niceSelect">
-                                        <option value="">New York, USA</option>
-                                        <option value="">Location PK</option>
-                                        <option value="">Location US</option>
-                                        <option value="">Location UK</option>
-                                    </select>
+{{--                                    <select name="select" class="niceSelect">--}}
+{{--                                        <option value="">New York, USA</option>--}}
+{{--                                        <option value="">Location PK</option>--}}
+{{--                                        <option value="">Location US</option>--}}
+{{--                                        <option value="">Location UK</option>--}}
+{{--                                    </select>--}}
                                     <i class="las la-map-marker-alt  icon"></i>
                                 </div>
                             </div>
@@ -24,15 +24,15 @@
                                 <div class="SearchWrapper">
                                     <div class="searchBox-wrapper">
 
-                                        <form action="#" class="search-box">
-                                            <div class="input-form">
-                                                <input type="text" class=" keyup-input" placeholder="Search">
+{{--                                        <form action="#" class="search-box">--}}
+{{--                                            <div class="input-form">--}}
+{{--                                                <input type="text" class=" keyup-input" placeholder="Search">--}}
 
-                                                <div class="icon">
-                                                    <i class="las la-search"></i>
-                                                </div>
-                                            </div>
-                                        </form>
+{{--                                                <div class="icon">--}}
+{{--                                                    <i class="las la-search"></i>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </form>--}}
 
                                         <div class="category-searchbar search-showHide">
 
@@ -99,8 +99,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -115,8 +114,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Samsung M32</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -131,8 +129,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Persian cat</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -147,8 +144,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Beats headphone</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -163,8 +159,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">$139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -179,8 +174,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -195,8 +189,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -211,8 +204,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -227,8 +219,7 @@ Product Suggestions
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                        <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>
-                                        <span class="featurePricing">$139.40</span>
+                                         <span class="featurePricing">₦139.40</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -249,7 +240,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$146,300</span>
+                                        <span class="featurePricing">₦146,300</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
@@ -265,7 +256,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">Samsung M32</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$124.80</span>
+                                        <span class="featurePricing">₦124.80</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
@@ -281,7 +272,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">Persian cat</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$34.80</span>
+                                        <span class="featurePricing">₦34.80</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
@@ -297,7 +288,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">Beats headphone</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$150.19</span>
+                                        <span class="featurePricing">₦150.19</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn2">PROMOTED</span>
                                         </div>
@@ -312,7 +303,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$99.99</span>
+                                        <span class="featurePricing">₦99.99</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
@@ -328,7 +319,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$380</span>
+                                        <span class="featurePricing">₦380</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
@@ -344,7 +335,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$99.99</span>
+                                        <span class="featurePricing">₦99.99</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
@@ -360,7 +351,7 @@ Product Suggestions
                                     <div class="recentCaption">
                                         <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
                                         <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$380</span>
+                                        <span class="featurePricing">₦380</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
                                             <span class="pro-btn2">PROMOTED</span>
