@@ -157,6 +157,12 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{route('post-advert')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-bookmark2"></span><span class="mtext">Post Advert</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

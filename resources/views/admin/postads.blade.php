@@ -1,4 +1,4 @@
-@extends("layouts.sidebar")
+@extends("admin.layout.sidebar")
 
 @section('content')
     <div class="min-height-200px">
@@ -10,7 +10,7 @@
                     </div>
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('admin/dashboard')}}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Advertisement</li>
                         </ol>
                     </nav>
@@ -28,7 +28,7 @@
 
             <!-- Validation Errors -->
             <x-auth-validation-errors class="alert alert-danger" :errors="$errors" />
-            <form method="post" action="{{route('padvert')}}" enctype="multipart/form-data">
+            <form method="post" action="{{route('postas')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Advert Name </label>
@@ -79,56 +79,22 @@
                 <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Telephone</label>
                     <div class="col-sm-12 col-md-10">
-                        <input class="form-control" value="{{Auth::user()->number}}" type="tel" readonly>
+                        <input class="form-control"  type="number" name="number" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Cover Image</label>
                     <div class="dropzone" id="my-awesome-dropzone">
                         <div class="fallback">
-                        <input type="file"  name="cover"  required />
+                            <input type="file"  name="cover"  required />
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success">Request</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
 
         </div>
-            <div class="card-box mb-30">
-                <div class="pd-20">
-                    <h4 class="text-blue h4">All Advert</h4>
-                </div>
-                <div class="pb-20">
-                    <table class="table hover multiple-select-row data-table-export nowrap">
-                        <thead>
-                        <tr>
-                            <th class="table-plus datatable-nosort">Username</th>
-                            <th>Advert-Name</th>
-                            <th>Duration</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($advert as$fd)
-                            <tr>
-                                <td>{{$fd->username}}</td>
-                                <td>{{$fd->advert_name}}</td>
-                                <td>{{$fd->duration}}</td>
-                                <td>{{$fd->created_at}}</td>
-                                @if($fd->status==0)
-                                    <td><span class="badge badge-warning">Pending</span> </td>
-                                @elseif($fd->status==1)
-                                    <td><span class="badge badge-success">Approved</span> </td>
-                                @endif
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
+    </div>
     </div>
 @endsection
 @section('script')
@@ -147,4 +113,3 @@
     <script src="{{asset('src/plugins/dropzone/src/dropzone.js')}}"></script>
 
 @endsection
-

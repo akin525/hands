@@ -126,7 +126,7 @@
                                 </div>
 
                                 <div class="cta">
-                                    <a href="{{route('request','MASTER')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -135,8 +135,8 @@
             </div>
             <div class="col-xl-4 mb-30">
                 <div class="card-box height-100-p pd-20">
-                    <h2 class="h4 mb-20">Lead Target</h2>
-                    <img src="images/pr.jpeg" alt="">
+{{--                    <h2 class="h4 mb-20">Lead Target</h2>--}}
+                    <img src="images/aw.jpeg" alt="">
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@
                                     <sup>₦</sup>400,000<sub></sub>
                                 </div>
                                 <div class="cta">
-                                    <a href="{{route('request', 'RUBY')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>

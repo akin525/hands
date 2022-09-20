@@ -151,6 +151,13 @@
                         <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                     </a>
                 </li>
+                @if(Auth::user()->role=='admin')
+                <li>
+                    <a href="{{route('admin/dashboard')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-home"></span><span class="mtext">Admin</span>
+                    </a>
+                </li>
+                @endif
                 <li>
                     <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-board"></span><span class="mtext">Dashboard</span>
@@ -192,11 +199,11 @@
                         <span class="micon dw dw-user"></span><span class="mtext">My Account</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-settings"></span><span class="mtext">Setting</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">--}}
+{{--                        <span class="micon dw dw-settings"></span><span class="mtext">Setting</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{route('logout')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-light-bulb"></span><span class="mtext">Logout</span>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admin\Admindashboard;
+use App\Http\Controllers\admin\AlladvertController;
 use App\Http\Controllers\AdvertController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RequesfundController;
@@ -52,17 +54,27 @@ Route::middleware(['auth'])->group(function () {
     Route::view('business', 'business');
 
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
+    Route::get('post-advert', [AlladvertController::class, 'postadvertadmin'])->name('post-advert');
+    Route::post('postas', [AlladvertController::class, 'postalladvertadmin'])->name('postas');
+
+});
+
+
 Route::get('ads', [AdvertController::class, 'index'])->name('ads');
+Route::get('ads-detail/{id}', [AdvertController::class, 'adsdetails'])->name('ads-detail');
 Route::get('all-category/{id}', [AdvertController::class, 'adscat'])->name('all-category');
 
 Route::view('listads', 'ads.list-ads');
 
 Route::get('/cover/{filename}', function ($filename) {
-    $path = storage_path('app/public/' . $filename);
+    $path = storage_path('app/cover/' . $filename);
 
-    if (!File::exists($path)) {
-        abort(404);
-    }
+//    if (!File::exists($path)) {
+//        abort(404);
+//    }
     $file = File::get($path);
     $type = File::mimeType($path);
 

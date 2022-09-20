@@ -67,7 +67,7 @@
                                 </div>
 
                                 <div class="cta">
-                                    <a href="{{route('request','MASTER')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
             </div>
             <div class="col-xl-4 mb-30">
                 <div class="card-box height-100-p pd-20">
-                    <h2 class="h4 mb-20">Lead Target</h2>
+{{--                    <h2 class="h4 mb-20">Lead Target</h2>--}}
                     <img src="images/advert.png" alt="">
                 </div>
             </div>
