@@ -65,7 +65,7 @@ public function adscat($request)
 function adsdetails($request)
 {
     $ad=Advert::where('id', $request)->first();
-    $all=Advert::limit(3)->get();
+    $all=Advert::latest()->limit(3)->get();
     return view('ads/ads-detail', compact('ad', 'all'));
 }
 
