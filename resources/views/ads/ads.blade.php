@@ -258,6 +258,7 @@
             </div>
             <div class="row">
                 @foreach($ads as $ad)
+
                     <div class="col-lg-3">
 
                         <div class="singleFeature mb-24">
