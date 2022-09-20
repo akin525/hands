@@ -19,7 +19,7 @@ public function alladvertrequest()
 {
     $all=Advert::all();
 
-    return view('admin/alladvert', compact('all'));
+    return view('admin/checkadvert', compact('all'));
 }
 public function approveadvert($request)
 {

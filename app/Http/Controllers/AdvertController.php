@@ -15,7 +15,7 @@ class AdvertController extends Controller
 {
     public function index()
     {
-        $ads=Advert::all();
+        $ads=Advert::where('status', 1)->get();
 
         return view('ads/ads', compact('ads'));
     }

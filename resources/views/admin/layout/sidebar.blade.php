@@ -152,14 +152,20 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">
+                    <a href="{{route('admin/dashboard')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-board"></span><span class="mtext">Dashboard</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{route('post-advert')}}" class="dropdown-toggle no-arrow">
+                    <a href="{{route('admin/post-advert')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bookmark2"></span><span class="mtext">Post Advert</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('admin/checkads')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-phone-booth"></span><span class="mtext">Check Advert</span>
                     </a>
                 </li>
 

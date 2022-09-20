@@ -28,7 +28,7 @@
 
             <!-- Validation Errors -->
             <x-auth-validation-errors class="alert alert-danger" :errors="$errors" />
-            <form method="post" action="{{route('postas')}}" enctype="multipart/form-data">
+            <form method="post" action="{{route('admin/postas')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Advert Name </label>

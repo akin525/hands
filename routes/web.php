@@ -57,8 +57,11 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
-    Route::get('post-advert', [AlladvertController::class, 'postadvertadmin'])->name('post-advert');
-    Route::post('postas', [AlladvertController::class, 'postalladvertadmin'])->name('postas');
+    Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');
+    Route::get('admin/checkads', [AlladvertController::class, 'alladvertrequest'])->name('admin/checkads');
+    Route::get('admin/appads/{id}', [AlladvertController::class, 'approveadvert'])->name('admin/appads');
+    Route::get('admin/dispads/{id}', [AlladvertController::class, 'disapproveadvert'])->name('admin/dispads');
+    Route::post('admin/postas', [AlladvertController::class, 'postalladvertadmin'])->name('admin/postas');
 
 });
 
