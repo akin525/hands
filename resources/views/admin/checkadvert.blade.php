@@ -51,7 +51,7 @@
                             <td>
                                 @if($fd->status==0)
                                 <a href="{{route('admin/appads', $fd->id)}}"><i class="dw dw-check">Approved</i></a>
-                                <a href="{{route('admin/dispads', $fd->id)}}"><i class="dw dw-check">Disapproved</i></a>
+                                <a href="{{route('admin/dispads', $fd->id)}}"><i class="dw dw-cancel">Disapproved</i></a>
                             @elseif($fd->status==1)
                                <span class="badge badge-success">Running</span>
                                <span class="badge badge-warning">Click to stop</span>
