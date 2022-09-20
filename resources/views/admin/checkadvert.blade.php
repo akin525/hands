@@ -54,9 +54,12 @@
                                 <a href="{{route('admin/dispads', $fd->id)}}"><i class="dw dw-check">Disapproved</i></a>
                             @elseif($fd->status==1)
                                <span class="badge badge-success">Running</span>
+                               <span class="badge badge-warning">Click to stop</span>
                             @elseif($fd->status==2)
                                 <span class="badge badge-danger">Ads Rejected</span>
-                            @endif
+                                    <span class="badge badge-warning">Reprocess</span>
+
+                                @endif
                             </td>
                             <td><a href="#"><i class="dw dw-pencil">Edit</i></a></td>
                         </tr>
