@@ -78,9 +78,10 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="input-form">
-                                        <input type="text" value="{{$ad->number}}" readonly>
 
-                                        <div class="icon"><i class="las la-phone"></i></div>
+                                        <div class="icon"><i class="las la-phone"></i>
+                                            <a href="tel:{{$ad->number}}"> {{$ad->number}} </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
