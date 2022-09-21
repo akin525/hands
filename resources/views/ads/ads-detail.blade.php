@@ -91,9 +91,33 @@
                                 </div>
                             </div>
                         </form>
+
                         <div class="btn-wrapper">
-                            <a href="#" class="cmn-btn-outline2 w-100"><i class="las la-comments icon"></i>Message seller</a>
+                            <a href="#" onclick="document.getElementById('id01').style.display='block'" class="cmn-btn-outline2 w-100"><i class="las la-comments icon"></i>Message seller</a>
                         </div>
+                        <div id="id01" class="modal">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <form class="modal-content" action="#">
+                                <div class="container">
+                                    <h1>Drop Your Message Here</h1>
+{{--                                    <p>Are you sure you want to delete your account?</p>--}}
+                                    <textarea class="form-control" name="message" placeholder="Kindly Type Your Message........" required></textarea>
+                                    <br>
+                                        <button type="button" class="btn btn-success"><i class="dw dw-diagonal-arrow"></i> Send</button>
+                                </div>
+                            </form>
+                        </div>
+                        <script>
+                            // Get the modal
+                            var modal = document.getElementById('id01');
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+                        </script>
                     </div>
                     <section class="recentListing">
                         @foreach($all as $a)
