@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\admin\Admindashboard;
 use App\Http\Controllers\admin\AlladvertController;
+use App\Http\Controllers\admin\AllrequestController;
+use App\Http\Controllers\admin\FundController;
 use App\Http\Controllers\AdvertController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RequesfundController;
@@ -59,6 +61,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
     Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');
     Route::get('admin/checkads', [AlladvertController::class, 'alladvertrequest'])->name('admin/checkads');
+    Route::get('admin/checkrequest', [AllrequestController::class, 'indexrequest'])->name('admin/checkrequest');
+    Route::get('admin/bookfund', [FundController::class, 'bookfund'])->name('admin/bookfund');
+    Route::post('admin/booksubmit', [FundController::class, 'submitbook'])->name('admin/booksubmit');
+    Route::get('admin/approverequest/{id}', [AllrequestController::class, 'approvefundrequrst'])->name('admin/approverequest');
+    Route::get('admin/disapproverequest/{id}', [AllrequestController::class, 'disapprovedfundrequest'])->name('admin/disapproverequest');
     Route::get('admin/appads/{id}', [AlladvertController::class, 'approveadvert'])->name('admin/appads');
     Route::get('admin/dispads/{id}', [AlladvertController::class, 'disapproveadvert'])->name('admin/dispads');
     Route::post('admin/postas', [AlladvertController::class, 'postalladvertadmin'])->name('admin/postas');

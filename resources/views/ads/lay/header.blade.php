@@ -6,7 +6,7 @@
     <meta name="keywords" content="ads, advertise, advertising, classified, classified ads, database, directory, jobs, listing, local, portal" />
     <meta name="description" content="Choose from 72 Premium classified ads Templates from the #1 source for classified ads Templates. Created by our Global Community of independent Web Developers." />
     <title>Classified Ads</title>
-    <link rel="icon" type="image/x-icon" sizes="20x20" href="{{asset('assets/img/icon/favicon.png')}}">
+    <link rel="icon" type="image/x-icon" sizes="20x20" href="{{asset('assets/images/dark.jpeg')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/plugin.css')}}">
@@ -21,11 +21,11 @@
         <div class="responsive-mobile-menu">
             <div class="logo-wrapper">
                 <a href="{{url('ads')}}" class="logo">
-                    <img src="{{asset('images/lab.jpeg')}}" alt="images">
+                    <img width="50" src="{{asset('images/dark.jpeg')}}" alt="images">
                 </a>
             </div>
 
-            <a href="#0" class="click_show_icon"><i class="las la-ellipsis-v"></i> </a>
+            <a href="#" class="click_show_icon"><i class="las la-ellipsis-v"></i> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -281,7 +281,7 @@
                         <div class="footer-widget widget  mb-24">
                             <div class="footer-tittle footer-tittle2">
                                 <div class="footer-logo mb-40">
-                                    <a href="@"><img src="{{asset('images/lab.jpeg')}}" alt="images"></a>
+                                    <a href="#"><img width="100" src="{{asset('images/dark.jpeg')}}" alt="images"></a>
                                 </div>
                                 <ul class="listing">
                                     <li class="listItem wow fadeInUp" data-wow-delay="0.0s"><a href="#" class="singleLinks"><i class="las la-map-marker icon"></i>11A, Omoluabi Shopping Complex, Ogo-Oluwa Oshogbo Osun State</a></li>

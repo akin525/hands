@@ -99,7 +99,7 @@
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                             <form class="modal-content" action="#">
                                 <div class="container">
-                                    <h1>Drop Your Message Here</h1>
+                                    <h4>Contact The Vendor</h4>
 {{--                                    <p>Are you sure you want to delete your account?</p>--}}
                                     <textarea class="form-control" name="message" placeholder="Kindly Type Your Message........" required></textarea>
                                     <br>

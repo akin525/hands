@@ -168,6 +168,16 @@
                         <span class="micon dw dw-phone-booth"></span><span class="mtext">Check Advert</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('admin/checkrequest')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-fuel"></span><span class="mtext">Check RequestFund</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('admin/bookfund')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-bookmark2"></span><span class="mtext">Book Fund</span>
+                    </a>
+                </li>
 
             </ul>
         </div>
