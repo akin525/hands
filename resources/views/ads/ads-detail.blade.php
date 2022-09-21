@@ -74,7 +74,6 @@
                                 <p class="featureCap">Member since 2019</p>
                             </div>
                         </div>
-                        <form action="#" class="contactSeller">
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="input-form">
@@ -84,9 +83,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                <form action="#" class="contactSeller">
                                 <div class="col-lg-4">
                                     <div class="btn-wrapper mb-20">
-                                        <a href="#" class="cmn-btn-outline3 w-100">Reveal Contact</a>
+                                        <a href="tel:{{$ad->number}}" class="cmn-btn-outline3 w-100">Reveal Contact</a>
                                     </div>
                                 </div>
                             </div>
