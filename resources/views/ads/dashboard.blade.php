@@ -21,7 +21,7 @@
 
     <div class="userProfile mb-24">
         <div class="recentImg">
-            <img src="{{asset('images/ash.jpeg')}}" alt="images">
+            <img width="100" src="{{asset('images/ash.jpeg')}}" alt="images">
         </div>
         <div class="recentCaption">
             <div class="cap">

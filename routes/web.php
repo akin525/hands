@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\Admindashboard;
 use App\Http\Controllers\admin\AlladvertController;
 use App\Http\Controllers\admin\AllrequestController;
+use App\Http\Controllers\admin\CreatA;
 use App\Http\Controllers\admin\FundController;
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdvertController;
@@ -60,6 +61,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
+    Route::get('admin/createuser', [CreatA::class, 'createuser'])->name('admin/createuser');
+    Route::post('admin/submituser', [CreatA::class, 'submituser'])->name('admin/submituser');
     Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');
     Route::get('admin/checkads', [AlladvertController::class, 'alladvertrequest'])->name('admin/checkads');
     Route::get('admin/checkrequest', [AllrequestController::class, 'indexrequest'])->name('admin/checkrequest');
