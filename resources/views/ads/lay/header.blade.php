@@ -21,7 +21,7 @@
         <div class="responsive-mobile-menu">
             <div class="logo-wrapper">
                 <a href="{{url('ads')}}" class="logo">
-                    <img width="50" src="{{asset('images/dark.jpeg')}}" alt="images">
+                    <img width="50" src="{{asset('images/ash.jpeg')}}" alt="images">
                 </a>
             </div>
 
@@ -281,7 +281,7 @@
                         <div class="footer-widget widget  mb-24">
                             <div class="footer-tittle footer-tittle2">
                                 <div class="footer-logo mb-40">
-                                    <a href="#"><img width="100" src="{{asset('images/dark.jpeg')}}" alt="images"></a>
+                                    <a href="#"><img width="100" src="{{asset('images/ash.jpeg')}}" alt="images"></a>
                                 </div>
                                 <ul class="listing">
                                     <li class="listItem wow fadeInUp" data-wow-delay="0.0s"><a href="#" class="singleLinks"><i class="las la-map-marker icon"></i>11A, Omoluabi Shopping Complex, Ogo-Oluwa Oshogbo Osun State</a></li>

@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\Advert;
 use App\Models\RequestFund;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TransController extends Controller
 {
@@ -17,7 +18,12 @@ public function allrequest()
 }
 public function alladvert()
 {
-    $advert=Advert::where('username', Auth::user()->username)->get();
-    return view('advert', compact('advert'));
+    if (Auth::user()->usertype=='ads') {
+        $advert = Advert::where('username', Auth::user()->username)->get();
+        return view('advert', compact('advert'));
+    }else{
+        Alert::info('Message', 'Kindly register as an advertiser');
+        return view('auth.login');
+    }
 }
 }

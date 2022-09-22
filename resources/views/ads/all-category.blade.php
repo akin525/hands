@@ -11,12 +11,12 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="select-itms">
-                                    <select name="select" class="niceSelect">
-                                        <option value="">New York, USA</option>
-                                        <option value="">Location PK</option>
-                                        <option value="">Location US</option>
-                                        <option value="">Location UK</option>
-                                    </select>
+{{--                                    <select name="select" class="niceSelect">--}}
+{{--                                        <option value="">New York, USA</option>--}}
+{{--                                        <option value="">Location PK</option>--}}
+{{--                                        <option value="">Location US</option>--}}
+{{--                                        <option value="">Location UK</option>--}}
+{{--                                    </select>--}}
                                     <i class="las la-map-marker-alt  icon"></i>
                                 </div>
                             </div>

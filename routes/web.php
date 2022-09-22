@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\Admindashboard;
 use App\Http\Controllers\admin\AlladvertController;
 use App\Http\Controllers\admin\AllrequestController;
 use App\Http\Controllers\admin\FundController;
+use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdvertController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RequesfundController;
@@ -57,7 +58,7 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
     Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');
     Route::get('admin/checkads', [AlladvertController::class, 'alladvertrequest'])->name('admin/checkads');
@@ -71,20 +72,23 @@ Route::middleware(['auth'])->group(function () {
     Route::post('admin/postas', [AlladvertController::class, 'postalladvertadmin'])->name('admin/postas');
 
 });
+Route::get('admin', [AdminAuth::class, 'log'])
+    ->name('admin');
+Route::post('admin1', [AdminAuth::class, 'getin'])->name('admin1');
 
-
-Route::get('ads', [AdvertController::class, 'index'])->name('ads');
+Route::get('ads', [AdvertController::class, 'index'])
+    ->name('ads');
 Route::get('ads-detail/{id}', [AdvertController::class, 'adsdetails'])->name('ads-detail');
 Route::get('all-category/{id}', [AdvertController::class, 'adscat'])->name('all-category');
 
-Route::view('listads', 'ads.list-ads');
+Route::get('listads', [AdvertController::class, 'alladsloaded'])->name('listads');
 
 Route::get('/cover/{filename}', function ($filename) {
     $path = storage_path('app/cover/' . $filename);
 
-//    if (!File::exists($path)) {
-//        abort(404);
-//    }
+    if (!File::exists($path)) {
+        abort(404);
+    }
     $file = File::get($path);
     $type = File::mimeType($path);
 

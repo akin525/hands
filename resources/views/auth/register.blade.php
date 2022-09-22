@@ -100,6 +100,15 @@
                                         <span class="input-group-text"><i class="dw dw-"></i></span>
                                     </div>
                                 </div>
+                                <div class="input-group custom">
+                                    <select  name="usertype" class="form-control form-control-lg" >
+                                        <option value="fund">Fund Request</option>
+                                        <option value="ads">Advertise On Website</option>
+                                    </select>
+                                    <div class="input-group-append custom">
+                                        <span class="input-group-text"><i class="dw dw-"></i></span>
+                                    </div>
+                                </div>
                             <div class="input-group custom">
                                 <input type="password" name="password" class="form-control form-control-lg" placeholder="Enter your password">
                                 <div class="input-group-append custom">

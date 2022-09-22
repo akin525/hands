@@ -17,7 +17,18 @@ public function userdashboard()
 $user['request']=RequestFund::where('username', Auth::user()->username)->sum('amount');
 $user['request1']=RequestFund::where('username', Auth::user()->username)->where('status', 1)->sum('amount');
 $user['request2']=RequestFund::where('username', Auth::user()->username)->where('status', 0)->sum('amount');
-return view('dashboard', compact('user'));
+    if (Auth::user()->usertype=='ads'){
+        return view('ads/dashboard', compact('user'));
+
+    }elseif (Auth::user()->usertype=='fund'){
+        return view('dashboard', compact('user'));
+
+    }else{
+        Auth::logout();
+        Alert::info('Message', 'Kindly Contact the administrator');
+        return view('auth.login');
+    }
+
 }
 public function myaccount()
 {
@@ -90,6 +101,6 @@ if ($data['status']=='true') {
 }
 public function business()
 {
-    
+
 }
 }

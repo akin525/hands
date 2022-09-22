@@ -69,4 +69,11 @@ function adsdetails($request)
     return view('ads/ads-detail', compact('ad', 'all'));
 }
 
+function alladsloaded()
+{
+    $all=Advert::where('status', 1)->get();
+    return view('ads/list-ads', compact('all'));
+}
+
+
 }

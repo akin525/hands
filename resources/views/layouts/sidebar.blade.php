@@ -151,18 +151,12 @@
                         <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                     </a>
                 </li>
-                @if(Auth::user()->role=='admin')
-                <li>
-                    <a href="{{route('admin/dashboard')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-home"></span><span class="mtext">Admin</span>
-                    </a>
-                </li>
-                @endif
                 <li>
                     <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-board"></span><span class="mtext">Dashboard</span>
                     </a>
                 </li>
+                @if(Auth::user()->usertype=='ads')
                 <li>
                     <a href="{{url('business')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bookmark"></span><span class="mtext">Business Training</span>
@@ -173,6 +167,7 @@
                         <span class="micon dw dw-bookmark"></span><span class="mtext">All Advert</span>
                     </a>
                 </li>
+                @endif
                 <li>
                     <a href="{{url('fundraise')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-money"></span><span class="mtext">Fund Raising</span>
@@ -183,11 +178,13 @@
 {{--                        <span class="micon dw dw-money"></span><span class="mtext">Donation</span>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
+                @if(Auth::user()->usertype=='ads')
                 <li>
                     <a href="{{url('advert')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bookmark"></span><span class="mtext">Advertisement</span>
                     </a>
                 </li>
+                @endif
                 <li>
                 <li>
                     <a href="{{route('allrequest')}}" class="dropdown-toggle no-arrow">
