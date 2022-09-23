@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\AlladvertController;
 use App\Http\Controllers\admin\AllrequestController;
 use App\Http\Controllers\admin\CreatA;
 use App\Http\Controllers\admin\FundController;
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdvertController;
 use App\Http\Controllers\DashboardController;
@@ -61,6 +62,10 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
+    Route::get('admin/alluser', [UserController::class, 'listalluser'])->name('admin/alluser');
+    Route::get('admin/edituser/{id}', [UserController::class, 'editusers'])->name('admin/edituser');
+    Route::get('admin/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('admin/deleteuser');
+    Route::post('admin/updateuser', [UserController::class, 'updateuser'])->name('admin/updateuser');
     Route::get('admin/createuser', [CreatA::class, 'createuser'])->name('admin/createuser');
     Route::post('admin/submituser', [CreatA::class, 'submituser'])->name('admin/submituser');
     Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');

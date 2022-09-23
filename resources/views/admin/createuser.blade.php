@@ -65,7 +65,7 @@
                     <div class="col-sm-12 col-md-10">
                         <select class="form-control datetimepicker" name="role" required>
                                 <option value="user">User</option>
-                                <option value="user">Admin</option>
+                                <option value="admin">Admin</option>
                         </select>
                     </div>
                 </div>
