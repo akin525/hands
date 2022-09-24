@@ -4,13 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Title -->
-    <title>Helping Hand-Home One</title>
+    <title>ADE'S SUPPORTING HANDS VENTURE CAPITAL</title>
 
     <!-- ================================================================
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" href="https://www.ashsupport.com.ng/images/logo.jpeg">
+    <link rel="shortcut icon" type="image/png" href="https://ashsupport.com.ng/images/logo.jpeg">
     <meta content="Learn How To Grow Your Business Quick" name="description" />
 
     <!-- ================================================================
@@ -112,7 +112,7 @@
                             <li class="navbar-link"><a href="{{url('ads')}}">Advert</a></li>
                             <li><a href="{{url('about')}}">about</a></li>
                             <li><a href="{{url('event')}}">Promote Business</a></li>
-                            <li><a href="{{url('volunteer')}}">Fund Raising</a></li>
+{{--                            <li><a href="{{url('volunteer')}}">Fund Raising</a></li>--}}
 {{--                            <li><a href="{{route('login')}}">Login Here</a></li>--}}
 {{--                            <li><a href="{{url('contact')}}">Contact</a></li>--}}
                         </ul>
