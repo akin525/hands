@@ -14,6 +14,7 @@
                 </div>
             </div>
         </div>
+        @if (Auth::user()->usertype=='fund')
         <div class="row">
             <div class="col-xl-3 mb-30">
                 <div class="card-box height-100-p widget-style1">
@@ -139,7 +140,7 @@
                     <img src="images/aw.jpeg" alt="">
                 </div>
             </div>
-            
+
         </div>
         <div class="row">
             <div class="col-xl-8 mb-30">
@@ -207,5 +208,5 @@
                 </div>
             </div>
         </div>
-
+        @endif
 @endsection

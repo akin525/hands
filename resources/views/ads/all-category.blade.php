@@ -24,15 +24,6 @@
                                 <div class="SearchWrapper">
                                     <div class="searchBox-wrapper">
 
-                                        <form action="#" class="search-box">
-                                            <div class="input-form">
-                                                <input type="text" class=" keyup-input" placeholder="Search">
-
-                                                <div class="icon">
-                                                    <i class="las la-search"></i>
-                                                </div>
-                                            </div>
-                                        </form>
 
                                         <div class="category-searchbar search-showHide">
 
@@ -92,14 +83,15 @@ Product Suggestions
 
                     <div class="gridView customTab-content customTab-content-1 active">
                         <div class="row ">
+                            @foreach($cat as $ad)
                             <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
                                 <div class="singleFeature mb-24">
                                     <div class="featureImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
+                                        <a href="{{route('ads-detail', $ad->id)}}"><img src="{{url('/', $ad->cover_image)}}" alt="images"></a>
                                     </div>
                                     <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                         <span class="featurePricing">$139.40</span>
+                                        <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
+                                         <span class="featurePricing">₦{{number_format(intval($ad->amount *1))}}</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -107,260 +99,10 @@ Product Suggestions
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"> <img src="{{asset('assets/img/gallery/catitems2.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Samsung M32</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"> <img src="{{asset('assets/img/gallery/catitems3.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Persian cat</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems4.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Beats headphone</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems5.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"> <img src="{{asset('assets/img/gallery/catitems6.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6  col-md-12  col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"> <img src="{{asset('assets/img/gallery/catitems7.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6  col-md-12  col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6  col-md-12  col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="add_details.html"> <img src="{{asset('assets/img/gallery/catitems9.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                         <span class="featurePricing">$139.40</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 
-                    <div class="listingView customTab-content customTab-content-2">
-                        <div class="row ">
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$146,300</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems2.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Samsung M32</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$124.80</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems3.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Persian cat</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$34.80</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems4.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Beats headphone</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$150.19</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems5.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$99.99</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems6.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$380</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems7.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$99.99</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">$380</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="row justify-content-center">
                         <div class="col-lg-12">

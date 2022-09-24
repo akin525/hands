@@ -207,6 +207,9 @@
             <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
                 <ul class="navbar-nav">
                     <li><a href="{{url('home')}}">Home</a></li>
+                    @if(\Illuminate\Support\Facades\Auth::check())
+                    <li><a href="{{route('dashboard')}}">My Account</a></li>
+                    @endif
                     <li><a href="{{url('listads')}}">All Ads</a></li>
                     <li><a href="{{url('about')}}">About us</a></li>
                     <li><a href="{{url('contact')}}">contact</a></li>

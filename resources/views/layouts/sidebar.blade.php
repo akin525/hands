@@ -151,6 +151,7 @@
                         <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-board"></span><span class="mtext">Dashboard</span>
@@ -168,11 +169,13 @@
                     </a>
                 </li>
                 @endif
+                    @if(Auth::user()->usertype=='fund')
                 <li>
                     <a href="{{url('fundraise')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-money"></span><span class="mtext">Fund Raising</span>
                     </a>
                 </li>
+                    @endif
 {{--                <li>--}}
 {{--                    <a href="{{url('donate')}}" class="dropdown-toggle no-arrow">--}}
 {{--                        <span class="micon dw dw-money"></span><span class="mtext">Donation</span>--}}
@@ -185,22 +188,24 @@
                     </a>
                 </li>
                 @endif
-                <li>
+                    @if(Auth::user()->usertype=='fund')
                 <li>
                     <a href="{{route('allrequest')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-hammer"></span><span class="mtext">My Request</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{route('myaccount')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-user"></span><span class="mtext">My Account</span>
-                    </a>
-                </li>
+
 {{--                <li>--}}
 {{--                    <a href="{{route('dashboard')}}" class="dropdown-toggle no-arrow">--}}
 {{--                        <span class="micon dw dw-settings"></span><span class="mtext">Setting</span>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
+                    @endif
+                    <li>
+                        <a href="{{route('myaccount')}}" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user"></span><span class="mtext">My Account</span>
+                        </a>
+                    </li>
                 <li>
                     <a href="{{route('logout')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-light-bulb"></span><span class="mtext">Logout</span>

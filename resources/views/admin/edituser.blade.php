@@ -76,6 +76,8 @@
             <button type="submit" class="btn btn-success">Update User</button>
             <button type="button" class="btn btn-danger" id="warning">Delete User</button>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="sweetalert2.all.min.js"></script>
                 <script>
                     //Warning Message
                     $('#warning').click(function () {
@@ -84,13 +86,14 @@
                             text: "You won't be able to revert this!",
                             type: 'warning',
                             showCancelButton: true,
-                            confirmButtonClass: 'btn btn-success',
-                            confirmButtonUrl: 'btn btn-success',
                             cancelButtonClass: 'btn btn-danger',
                             confirmButtonText: 'Yes, delete it!'
-                        }).then(function () {
-                            window.location.href = "{{route('admin/deleteuser',$user->id)}}";
-
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire('Saved!', '', 'success')
+                            } else if (result.isDenied) {
+                                Swal.fire('Changes are not saved', '', 'info')
+                            }
                         })
                     });
 

@@ -55,25 +55,6 @@ Product Suggestions
 </span>
                                                             <a href="#" target="_blank" id="search_result_all" class="showAll">Show all</a>
                                                         </h6>
-                                                        <ul class="product-suggestion-list mt-4" id="search_result_products">
-                                                            <li class="list">
-                                                                <a href="#" class="item">
-                                                                    <div class="product-image"><img src="{{asset('assets/img/gallery/wishlist1.jpg')}}" alt="img"></div>
-                                                                    <div class="product-info">
-                                                                        <div class="product-info-top">
-                                                                            <h6 class="product-name">Fresh Fruits</h6>
-                                                                        </div>
-                                                                        <div class="product-price">
-                                                                            <div class="price-update-through">
-                                                                                <span class="flash-price fw-500">$200.00</span>
-                                                                                <span class="flash-old-prices">$240</span>
-                                                                            </div>
-                                                                            <span class="stock-out">In Stock</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -92,14 +73,15 @@ Product Suggestions
 
                     <div class="gridView customTab-content customTab-content-1 active">
                         <div class="row ">
+                            @foreach($all as$pa)
                             <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
                                 <div class="singleFeature mb-24">
                                     <div class="featureImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
+                                        <a href="{{route('ads-detail', $pa->id)}}"><img src="{{url('/', $pa->cover_image)}}" alt="images"></a>
                                     </div>
                                     <div class="featureCaption">
-                                        <h4><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h4>
-                                         <span class="featurePricing">₦139.40</span>
+                                        <h4><a href="{{route('ads-detail', $pa->id)}}" class="featureTittle">{{$pa->advert_name}}</a></h4>
+                                         <span class="featurePricing">₦{{number_format(intval($pa->amount *1))}}</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">NEW</span>
                                             <span class="pro-btn2">PROMTED</span>
@@ -107,140 +89,10 @@ Product Suggestions
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
 
-                    <div class="listingView customTab-content customTab-content-2">
-                        <div class="row ">
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦146,300</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems2.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Samsung M32</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦124.80</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems3.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Persian cat</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦34.80</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems4.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Beats headphone</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦150.19</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems5.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦99.99</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems6.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦380</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems7.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">4 Bed 2 storey house</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦99.99</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <a href="add_details.html"><img src="{{asset('assets/img/gallery/catitems8.jpg')}}" alt="images"></a>
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="add_details.html" class="featureTittle">Apple smartwatch 6</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
-                                        <span class="featurePricing">₦380</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
