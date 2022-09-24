@@ -46,20 +46,26 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'userdashboard'])->name('dashboard');
     Route::get('verify', [DashboardController::class, 'verify'])->name('verify');
     Route::get('myaccount', [DashboardController::class, 'myaccount'])->name('myaccount');
-    Route::get('allrequest', [TransController::class, 'allrequest'])->name('allrequest');
-    Route::get('advert', [TransController::class, 'alladvert'])->name('advert');
-    Route::get('request/{id}', [RequesfundController::class, 'fund'])->name('request');
     Route::post('update', [Updateuser::class, 'profile1'])->name('update');
     Route::post('send', [RequesfundController::class, 'submitfund'])->name('send');
-    Route::post('padvert', [AdvertController::class, 'advert'])->name('padvert');
-    Route::view('fundraise', 'fundraise');
 //    Route::view('advert', 'advert');
-    Route::view('donate', 'donate');
-    Route::view('donation', 'donation');
-    Route::view('business', 'business');
+
 
 });
 
+Route::middleware(['auth','ads'])->group(function () {
+    Route::get('advert', [TransController::class, 'alladvert'])->name('advert');
+    Route::post('padvert', [AdvertController::class, 'advert'])->name('padvert');
+    Route::view('business', 'business');
+    Route::view('fundraise', 'fundraise');
+
+});
+Route::middleware(['auth','fund'])->group(function () {
+    Route::view('donate', 'donate');
+    Route::view('donation', 'donation');
+    Route::get('allrequest', [TransController::class, 'allrequest'])->name('allrequest');
+    Route::get('request/{id}', [RequesfundController::class, 'fund'])->name('request');
+});
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
     Route::get('admin/alluser', [UserController::class, 'listalluser'])->name('admin/alluser');
