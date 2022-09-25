@@ -45,6 +45,8 @@
                                 <span class="badge badge-success">Approved</span>
                                     @elseif($fd->status==2)
                                         <span class="badge badge-danger">Rejected</span>
+                                    @elseif($fd->status==3)
+                                        <span class="badge badge-warning">Advert Stop</span>
                                     @endif
                                 </td>
 
@@ -54,11 +56,13 @@
                                 <a href="{{route('admin/dispads', $fd->id)}}"><i class="dw dw-cancel">Disapproved</i></a>
                             @elseif($fd->status==1)
                                <span class="badge badge-success">Running</span>
-                               <span class="badge badge-warning">Click to stop</span>
-                            @elseif($fd->status==2)
+                               <a href="{{route('admin/stopads', $fd->id)}}"><span class="badge badge-warning">Click to stop</span></a>
+                                @elseif($fd->status==2)
                                 <span class="badge badge-danger">Ads Rejected</span>
-                                    <span class="badge badge-warning">Reprocess</span>
-
+                                    <a href="{{route('admin/runads', $fd->id)}}"><span class="badge badge-warning">Reprocess</span></a>
+                                @elseif($fd->status==3)
+                                    <span class="badge badge-danger">Ads Stop</span>
+                                    <a href="{{route('admin/runads', $fd->id)}}"><span class="badge badge-success">Run again</span></a>
                                 @endif
                             </td>
                             <td><a href="#"><i class="dw dw-pencil">Edit</i></a></td>

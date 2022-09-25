@@ -74,6 +74,24 @@ function alladsloaded()
     $all=Advert::where('status', 1)->get();
     return view('ads/list-ads', compact('all'));
 }
+function stopadvert($request)
+{
+    $stop=Advert::where('id', $request)->first();
+    $top=3;
+    $stop->status=$top;
+    $stop->save();
+    Alert::success('Stop', 'Advert Successfully Stop');
+    return back();
+}
+function runagain($request)
+{
+    $run=Advert::where('id', $request)->first();
+    $ag=1;
+    $run->status=$ag;
+    $run->save();
+    Alert::success('Stop', 'Advert Successfully Running');
+    return back();
 
+}
 
 }
