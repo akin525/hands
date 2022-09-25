@@ -93,5 +93,29 @@ function runagain($request)
     return back();
 
 }
+function editadvert($request)
+{
+    $edit=Advert::where('id', $request)->first();
+    return view('admin/editads', compact('edit'));
+}
+function helptoupdateads(Request $request)
+{
+    $request->validate([
+        'id'=>'required',
+        'name'=>'required',
+        'text'=>'required',
+        'duration'=>'required',
+        'category'=>'required',
 
+    ]);
+    $update=Advert::where('id', $request->id)->first();
+    $update->advert_name=$request->name;
+    $update->content=$request->text;
+    $update->duration=$request->duration;
+    $update->category=$request->category;
+    $update->save();
+    $msg="Ads update successful";
+    Alert::success('Update', $msg);
+    return redirect('admin/checkads');
+}
 }

@@ -85,6 +85,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dispads/{id}', [AlladvertController::class, 'disapproveadvert'])->name('admin/dispads');
     Route::get('admin/stopads/{id}', [AdvertController::class, 'stopadvert'])->name('admin/stopads');
     Route::get('admin/runads/{id}', [AdvertController::class, 'runagain'])->name('admin/runads');
+    Route::get('admin/editads/{id}', [AdvertController::class, 'editadvert'])->name('admin/editads');
+    Route::post('admin/updateads', [AdvertController::class, 'helptoupdateads'])->name('admin/updateads');
     Route::post('admin/postas', [AlladvertController::class, 'postalladvertadmin'])->name('admin/postas');
 
 });

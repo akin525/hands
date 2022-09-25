@@ -65,7 +65,7 @@
                                     <a href="{{route('admin/runads', $fd->id)}}"><span class="badge badge-success">Run again</span></a>
                                 @endif
                             </td>
-                            <td><a href="#"><i class="dw dw-pencil">Edit</i></a></td>
+                            <td><a href="{{route('admin/editads', $fd->id)}}"><i class="dw dw-pencil">Edit</i></a></td>
                         </tr>
                     @endforeach
                     </tbody>
