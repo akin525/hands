@@ -22,10 +22,10 @@ class Admindashboard extends Controller
         $all['todayuser']=User::where('created_at', 'LIKE', $date . '%')->count();
         $all['request']=RequestFund::sum('amount');
         $all['wallet']=User::sum('balance');
-        $all['pendingr']=RequestFund::where('status', 0)->sum();
-        $all['pendinga']=Advert::where('status', 0)->sum();
-        $all['activea']=Advert::where('status', 1)->sum();
-        $all['activer']=RequestFund::where('status', 1)->sum();
+        $all['pendingr']=RequestFund::where('status', 0)->sum('amount');
+        $all['pendinga']=Advert::where('status', 0)->sum('amount');
+        $all['activea']=Advert::where('status', 1)->sum('amount');
+        $all['activer']=RequestFund::where('status', 1)->sum('amount');
 
         $today['requestp']=RequestFund::where([['status', '=', '0'], ['created_at', 'LIKE', $date . '%']])->count();
         $today['requesta']=RequestFund::where([['status', '=', '1'], ['created_at', 'LIKE', $date . '%']])->count();
