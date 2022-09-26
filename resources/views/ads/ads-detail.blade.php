@@ -67,7 +67,7 @@
                     <div class="sellerMessage mb-24">
                         <div class="singleFlexitem mb-24">
                             <div class="recentImg">
-                                <img src="{{asset('images/logo.jpeg')}}" alt="images">
+                                <img width="50" src="{{asset('images/logo.jpeg')}}" alt="images">
                             </div>
                             <div class="recentCaption">
                                 <h5><a href="#" class="featureTittle">{{$ad->username}}<img src="{{asset('assets/img/icon/checkMark.svg')}}" class="icon" alt="images"></a></h5>
