@@ -106,6 +106,7 @@ function helptoupdateads(Request $request)
     $request->validate([
         'id'=>'required',
         'name'=>'required',
+        'amount'=>'required',
         'text'=>'required',
         'duration'=>'required',
         'category'=>'required',
@@ -114,6 +115,7 @@ function helptoupdateads(Request $request)
 
     $update=Advert::where('id', $request->id)->first();
     $update->advert_name=$request->name;
+    $update->amount=$request->amount;
     $update->content=$request->text;
     $update->duration=$request->duration;
     $update->category=$request->category;
