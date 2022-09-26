@@ -16,13 +16,16 @@ class Admindashboard extends Controller
 {
     public function admindashboard()
     {
+        $date = Carbon::now()->format('Y-m-d');
+
+        $all['alluser']=User::count();
+        $all['todayuser']=User::where('created_at', 'LIKE', $date . '%')->count();
         $all['request']=RequestFund::sum('amount');
         $all['wallet']=User::sum('balance');
         $all['pendingr']=RequestFund::where('status', 0)->count();
         $all['pendinga']=Advert::where('status', 0)->count();
         $all['activea']=Advert::where('status', 1)->count();
         $all['activer']=RequestFund::where('status', 1)->count();
-        $date = Carbon::now()->format('Y-m-d');
 
         $today['requestp']=RequestFund::where([['status', '=', '0'], ['created_at', 'LIKE', $date . '%']])->count();
         $today['requesta']=RequestFund::where([['status', '=', '1'], ['created_at', 'LIKE', $date . '%']])->count();
