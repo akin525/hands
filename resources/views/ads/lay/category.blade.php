@@ -10,25 +10,25 @@
 {{--                    <img src="{{asset('assets/img/icon/caticon2.svg')}}" class="icon" alt="images"> <span> Mobile <span class="itemNumber">(1,299)</span></span>--}}
 {{--                </a></li>--}}
             <li class="listItem"><a href="{{route('all-category', 'Vehicles' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon3.svg')}}" class="icon" alt="images"> <span> Vehicles <span class="itemNumber">(1,200)</span></span>
+                    <img src="{{asset('assets/img/icon/caticon3.svg')}}" class="icon" alt="images"> <span> Vehicles <span class="itemNumber"></span></span>
                 </a></li>
             <li class="listItem"><a href="{{route('all-category', 'Appliances' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon4.svg')}}" class="icon" alt="images"> <span> Appliances <span class="itemNumber">(1,203)</span></span>
+                    <img src="{{asset('assets/img/icon/caticon4.svg')}}" class="icon" alt="images"> <span> Appliances <span class="itemNumber"></span></span>
                 </a></li>
             <li class="listItem"><a href="{{route('all-category', 'Fashions' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon5.svg')}}" class="icon" alt="images"> <span> Fashions <span class="itemNumber">(1,110)</span></span>
+                    <img src="{{asset('assets/img/icon/caticon5.svg')}}" class="icon" alt="images"> <span> Fashions <span class="itemNumber"></span></span>
                 </a></li>
             <li class="listItem"><a href="{{route('all-category', 'Properties' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon6.svg')}}" class="icon" alt="images"> <span> Properties <span class="itemNumber">(1,200)</span></span>
+                    <img src="{{asset('assets/img/icon/caticon6.svg')}}" class="icon" alt="images"> <span> Properties <span class="itemNumber"></span></span>
                 </a></li>
 {{--            <li class="listItem"><a href="{{route('all-category', 'Pets' )}}" class="items">--}}
 {{--                    <img src="{{asset('assets/img/icon/caticon7.svg')}}" class="icon" alt="images"> <span> Pets <span class="itemNumber">(1,012)</span></span>--}}
 {{--                </a></li>--}}
             <li class="listItem"><a href="{{route('all-category', 'Education' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon8.svg')}}" class="icon" alt="images"> <span> Educations <span class="itemNumber">(1,301)</span></span>
+                    <img src="{{asset('assets/img/icon/caticon8.svg')}}" class="icon" alt="images"> <span> Educations <span class="itemNumber"></span></span>
                 </a></li>
             <li class="listItem"><a href="a{{route('all-category', 'Businesses' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon9.svg')}}" class="icon" alt="images"> <span> Businesses <span class="itemNumber">(902)</span></span>
+                    <img src="{{asset('assets/img/icon/caticon9.svg')}}" class="icon" alt="images"> <span> Businesses <span class="itemNumber"></span></span>
                 </a></li>
 {{--            <li class="listItem"><a href="{{route('all-category', 'Sport' )}}" class="items">--}}
 {{--                    <img src="{{asset('assets/img/icon/caticon10.svg')}}" class="icon" alt="images"> <span> Sports <span class="itemNumber">(507)</span></span>--}}

@@ -49,6 +49,9 @@ public function advert(Request $request)
         'cover_image'=>$cover,
     ]);
 
+
+
+
     $user->ads_status='0n';
     $user->save();
 
@@ -71,7 +74,7 @@ function adsdetails($request)
 
 function alladsloaded()
 {
-    $all=Advert::where('status', 1)->get();
+    $all=Advert::where('status', 1)->paginate(6);
     return view('ads/list-ads', compact('all'));
 }
 function stopadvert($request)
@@ -108,6 +111,7 @@ function helptoupdateads(Request $request)
         'category'=>'required',
 
     ]);
+
     $update=Advert::where('id', $request->id)->first();
     $update->advert_name=$request->name;
     $update->content=$request->text;

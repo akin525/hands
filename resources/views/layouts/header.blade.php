@@ -161,7 +161,7 @@
                         <div class="footer_logo">
                             <a href="#"><img src="{{asset('images/logo.jpeg')}}" alt="logo"></a>
                         </div>
-                        <p>Autem vel eum iriure dolor in lorem hendrerit velit esse consequat, vel illum dolore feugiat nulla facilisis at vero eros et accumsan et iusto odio dign issim qui blandit praesent lupt...</p>
+{{--                        <p>Autem vel eum iriure dolor in lorem hendrerit velit esse consequat, vel illum dolore feugiat nulla facilisis at vero eros et accumsan et iusto odio dign issim qui blandit praesent lupt...</p>--}}
                     </div>
                 </div>
                 <!-- column End -->
@@ -241,7 +241,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="romana_footer_bottom_text text-center">
-                        <p>&copy;by crazycafe.net. All right reserved</p>
+                        <p>&copy; All right reserved</p>
                     </div>
                 </div>
                 <!-- column End -->

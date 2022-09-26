@@ -123,7 +123,7 @@
                                     Master
                                 </div>
                                 <div class="pricing-price">
-                                    <sup>₦</sup>200,000<sub></sub>
+                                    <sup>₦</sup>30,000<sub></sub>
                                 </div>
 
                                 <div class="cta">
@@ -156,7 +156,7 @@
                                  Ultimate
                                 </div>
                                 <div class="pricing-price">
-                                    <sup>₦</sup>300,000
+                                    <sup>₦</sup>20,000
                                 </div>
                                 <div class="cta">
                                     <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
@@ -172,7 +172,7 @@
                                     Ruby
                                 </div>
                                 <div class="pricing-price">
-                                    <sup>₦</sup>400,000<sub></sub>
+                                    <sup>₦</sup>10,000<sub></sub>
                                 </div>
                                 <div class="cta">
                                     <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
@@ -188,7 +188,7 @@
                                    Diamond
                                 </div>
                                 <div class="pricing-price">
-                                    <sup>₦</sup>500,000<sub></sub>
+                                    <sup>₦</sup>5,000<sub></sub>
                                 </div>
 
                                 <div class="cta">

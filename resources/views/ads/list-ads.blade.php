@@ -93,20 +93,14 @@ Product Suggestions
                         </div>
                     </div>
 
+                    <!-- Styles -->
+                    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+                    <!-- Scripts -->
+                    <script src="{{ asset('js/app.js') }}" defer></script>
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
-                            <div class="pagination mt-60">
-                                <ul class="pagination-list">
-                                    <li class=" wow fadeInRight" data-wow-delay="0.0s"><a href="#" class="page-number"><i class="las la-angle-left"></i></a></li>
-                                    <li><span class="page-number current">1</span></li>
-                                    <li><a href="#" class="page-number">2</a></li>
-                                    <li><a href="#" class="page-number">3</a></li>
-                                    <li><a href="#" class="page-number">4</a></li>
-                                    <li><a href="#" class="page-number">5</a></li>
-                                    <li class=" wow fadeInLeft" data-wow-delay="0.0s"><a href="#" class="page-number"><i class="las la-angle-right"></i></a></li>
-                                </ul>
-                            </div>
+                            {{$all->links()}}
                         </div>
                     </div>
                 </div>

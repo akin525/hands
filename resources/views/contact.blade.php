@@ -11,7 +11,7 @@
                     <div class="romana_allPage_text text-center">
                         <h1>contact</h1>
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a><span></span></li>
+                            <li><a href="{{route('home')}}">Home</a><span></span></li>
                             <li><a href="#">contact</a></li>
                         </ol>
                     </div>
@@ -29,7 +29,8 @@
         <div class="container">
             <div class="row ">
                 <div class="col-md-6 col-sm-12">
-                    <div id="g_Map"></div>
+{{--                    <div id="g_Map"></div>--}}
+                    <img width="400" src="{{asset('images/advert.png')}}" alt="">
                 </div>
                 <!-- column End -->
                 <div class="col-md-6 col-sm-12">
@@ -95,10 +96,10 @@
                     <div class="col-sm-4">
                         <div class="romana_single_contact clearfix">
                             <div class="romana_contact_icon">
-                                <a href="#"><i class="icofont icofont-ui-call"></i></a>
+                                <a href="tel:08169532894"><i class="icofont icofont-ui-call"></i></a>
                             </div>
                             <div class="romana_contact_info text-center">
-                                <p>+(00)111-222-333</p>
+                                <p>08169532894</p>
                                 <p>+(00)44-556-6678</p>
                             </div>
                         </div>
@@ -110,8 +111,8 @@
                                 <a href="#"><i class="icofont icofont-ui-message"></i></a>
                             </div>
                             <div class="romana_contact_info text-center">
-                                <p>crazycafe.net@gmail.com</p>
-                                <p>info@domainname.com</p>
+                                <p>ashsuppt@gmail.com</p>
+                                <p>info@ashsupport.com.ng/</p>
                             </div>
                         </div>
                     </div>
@@ -122,8 +123,9 @@
                                 <a href="#"><i class="icofont icofont-social-google-map"></i></a>
                             </div>
                             <div class="romana_contact_info text-center">
-                                <p>21,ParkStreet Avenue</p>
-                                <p>losAngeles, Newyork</p>
+                                <p>11A, Omoluabi Shopping Complex, Ogo-Oluwa Oshogbo <br>
+                                    Osun State</p>
+{{--                                <p>losAngeles, Newyork</p>--}}
                             </div>
                         </div>
                     </div>
@@ -139,7 +141,7 @@
     =================================================== -->
 @endsection
 @section('script')
-    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="{{asset('js/jquery-3.1.0.min.js')}}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7CQl6fRhagGok6CzFGOOPne2X1u1spoA"></script>
     <script type="text/javascript">
@@ -197,14 +199,14 @@
         map.setMapTypeId('gMap');
     </script>
     <!-- ================= Bootstrap min Js =========== -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
     <!-- ================= owl carousel min Js ======== -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 
     <!-- ================= progressbar Js ======== -->
-    <script src="js/jQuery-plugin-progressbar.js"></script>
+    <script src="{{asset('js/jQuery-plugin-progressbar.js')}}"></script>
 
     <!-- ================= Active Js ================== -->
-    <script src="js/active.js"></script>
+    <script src="{{asset('js/active.js')}}"></script>
 @endsection

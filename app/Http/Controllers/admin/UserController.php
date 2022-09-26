@@ -12,7 +12,8 @@ class UserController extends Controller
 function listalluser()
 {
     $all=User::all();
-    return view('admin/alluser', compact('all'));
+    $totaluser=User::count();
+    return view('admin/alluser', compact('all', 'totaluser'));
 }
 function editusers($request)
 {
