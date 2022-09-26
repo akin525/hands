@@ -87,14 +87,14 @@
                             type: 'warning',
                             showCancelButton: true,
                             cancelButtonClass: 'btn btn-danger',
+                            // cancelButtonUrl: window.location = "#";
                             confirmButtonText: 'Yes, delete it!'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                Swal.fire('Saved!', '', 'success')
-                            } else if (result.isDenied) {
-                                Swal.fire('Changes are not saved', '', 'info')
+                        }).then(function (result) {
+                            if (result.value) {
+                                console.log(window.url);
+                                window.location.href = "{{route('admin/deleteuser', $user->id)}}";
                             }
-                        })
+                        });
                     });
 
                 </script>
