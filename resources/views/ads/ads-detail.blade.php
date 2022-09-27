@@ -71,7 +71,7 @@
                                 <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
                                 @elseif($ads->username=='admin')
                                     <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
-                                @else
+                                @elseif(isset($user->profile))
                                     <img width="100" src="{{url('/', $user->profile)}}" alt="images">
                                 @endif
                             </div>
