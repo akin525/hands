@@ -4,7 +4,11 @@
     <div class="card-box pd-20  mb-30">
         <div class="row align-items-center">
             <div class="col-md-4">
-                <img src="{{asset('vendors/images/banner-img.png')}}" alt="">
+                @if($user->profile==NULL)
+                    <img src="{{asset('vendors/images/banner-img.png')}}" alt="">
+                @else
+                    <img src="{{url('/', $user->profile)}}" alt="">
+                @endif
             </div>
             <div class="col-md-8">
                 <h4 class="font-20 weight-500 mb-10 text-capitalize">
