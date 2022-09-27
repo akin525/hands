@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="{{asset('assets/css/plugin.css')}}">
 
-    <link rel="stylesheet" href-="{{asset('assets/css/main-style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/main-style.css')}}">
     @yield('styles')
 </head>
 <body>
