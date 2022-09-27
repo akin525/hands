@@ -25,7 +25,7 @@
                                 @if(Auth::user()->profile==NULL)
                                 <img src="{{asset('images/logo.jpeg')}}" alt="" class="avatar-photo">
                                 @else
-                                    <img src="{{url('/', Auth::user()->profile)}}" alt="" class="avatar-photo">
+                                    <img width="50" src="{{url('/', Auth::user()->profile)}}" alt="" class="avatar-photo">
                                 @endif
                                     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
