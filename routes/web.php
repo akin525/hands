@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'userdashboard'])->name('dashboard');
     Route::get('verify', [DashboardController::class, 'verify'])->name('verify');
     Route::get('myaccount', [DashboardController::class, 'myaccount'])->name('myaccount');
+    Route::get('deletepic', [Updateuser::class, 'removephoto'])->name('deletepic');
     Route::post('update', [Updateuser::class, 'profile1'])->name('update');
     Route::post('update', [Updateuser::class, 'profile1'])->name('update');
     Route::post('pic', [Updateuser::class, 'profilephoto'])->name('pic');

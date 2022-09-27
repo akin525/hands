@@ -39,6 +39,28 @@ class Updateuser
         return back();
 
     }
+    function  removephoto()
+    {
+        $user=User::where('username',Auth::user()->username)->first();
+
+
+        if(Storage::exists($user->profile)){
+            Storage::delete($user->profile);
+            /*
+                Delete Multiple File like this way
+                Storage::delete(['upload/test.png', 'upload/test2.png']);
+            */
+        }else{
+            Alert::error('Ooops', 'File does not exists');
+            return back();
+//            dd('File does not exists.');
+        }
+        $user->profile=NULL;
+        $user->save();
+        $msg="Profile Photo Remove Successful";
+        Alert::success('Deleted', $msg);
+        return back();
+    }
 
     public function profile1(Request $request)
     {
