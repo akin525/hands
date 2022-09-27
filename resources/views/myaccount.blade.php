@@ -22,13 +22,21 @@
                         <div class="pd-20 card-box height-100-p">
                             <div class="profile-photo">
                                 <a href="modal" data-toggle="modal" data-target="#modal" class="edit-avatar"><i class="fa fa-pencil"></i></a>
+                                @if(Auth::user()->profile==NULL)
                                 <img src="{{asset('images/logo.jpeg')}}" alt="" class="avatar-photo">
-                                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                                @else
+                                    <img src="{{url('/', Auth::user()->profile)}}" alt="" class="avatar-photo">
+                                @endif
+                                    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body pd-5">
                                                 <div class="img-container">
-                                                    <img id="image" src="{{asset('images/logo.jpeg')}}" alt="Picture">
+                                                    @if(Auth::user()->profile==NULL)
+                                                        <img id="image" src="{{asset('images/logo.jpeg')}}" alt="Picture">
+                                                    @else
+                                                        <img id="image" src="{{url('/', Auth::user()->profile)}}" alt="Picture">
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -40,6 +48,12 @@
                                 </div>
                             </div>
                             <h5 class="text-center h5 mb-0">{{Auth::user()->name}}</h5>
+                            <center>
+                            <form method="post" action="{{route('pic')}}" enctype="multipart/form-data">
+                                @csrf
+                                <input type="file" name="pic" required><button type="submit" class="badge badge-success">Upload</button>
+                            </form>
+                            </center>
                             <p class="text-center text-muted font-14">Member</p>
                             <div class="profile-info">
                                 <h5 class="mb-20 h5 text-blue">Contact Information</h5>

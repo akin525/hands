@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class Updateuser
@@ -20,6 +21,23 @@ class Updateuser
             return  view('update', compact('user'));
 
         }
+    }
+    function profilephoto(Request $request)
+    {
+        $request->validate([
+            'pic'=>'required',
+        ]);
+
+        $profile = Storage::put('profile', $request['pic']);
+
+        $user=User::where('username', Auth::user()->username)->first();
+
+        $user->profile=$profile;
+        $user->save();
+        $msg="Profile Picture Change Successfully ";
+        Alert::success('Success', $msg);
+        return back();
+
     }
 
     public function profile1(Request $request)

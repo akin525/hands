@@ -47,7 +47,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('verify', [DashboardController::class, 'verify'])->name('verify');
     Route::get('myaccount', [DashboardController::class, 'myaccount'])->name('myaccount');
     Route::post('update', [Updateuser::class, 'profile1'])->name('update');
-    Route::post('send', [RequesfundController::class, 'submitfund'])->name('send');
+    Route::post('update', [Updateuser::class, 'profile1'])->name('update');
+    Route::post('pic', [Updateuser::class, 'profilephoto'])->name('pic');
 //    Route::view('advert', 'advert');
 
 
@@ -103,6 +104,19 @@ Route::get('listads', [AdvertController::class, 'alladsloaded'])->name('listads'
 
 Route::get('/cover/{filename}', function ($filename) {
     $path = storage_path('app/cover/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+    return $response;
+})->name('cover');
+Route::get('/profile/{filename}', function ($filename) {
+    $path = storage_path('app/profile/' . $filename);
 
     if (!File::exists($path)) {
         abort(404);
