@@ -118,17 +118,4 @@ Route::get('/cover/{filename}', function ($filename) {
     $response->header("Content-Type", $type);
     return $response;
 })->name('cover');
-Route::get('/profile/{filename}', function ($filename) {
-    $path = storage_path('app/profile/' . $filename);
-
-    if (!File::exists($path)) {
-        abort(404);
-    }
-    $file = File::get($path);
-    $type = File::mimeType($path);
-
-    $response = Response::make($file, 200);
-    $response->header("Content-Type", $type);
-    return $response;
-})->name('cover');
 require __DIR__.'/auth.php';
