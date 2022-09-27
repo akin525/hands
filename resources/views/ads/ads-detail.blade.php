@@ -131,8 +131,8 @@
                         @foreach($all as $a)
                             <div class="borderStyle style1 wow fadeInLeft social" data-wow-delay="0.1s">
                                 <div class="singleFlexitem mb-24">
-                                    <div class="recentImg">
-                                        <img src="{{url('/', $a->cover_image)}}" alt="images">
+                                    <div class="">
+                                        <img width="100" src="{{url('/', $a->cover_image)}}" alt="images">
                                     </div>
                                     <div class="recentCaption">
                                         <h5><a href="{{route('ads-detail', $a->id)}}" class="featureTittle">{{$a->advert_name}}</a></h5>
