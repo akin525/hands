@@ -69,8 +69,8 @@
                     <div class="col-lg-3">
 
                         <div class="singleFeature mb-24">
-                            <div class="featureImg">
-                                <a href="{{url('/', $ad->cover_image)}}"><img src="{{url('/', $ad->cover_image)}}" alt="images"></a>
+                            <div class="">
+                                <a href="{{url('/', $ad->cover_image)}}"><img width="250" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
                             </div>
                             <div class="featureCaption">
                                 <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>

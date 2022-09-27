@@ -76,8 +76,8 @@ Product Suggestions
                             @foreach($all as$pa)
                             <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
                                 <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="{{route('ads-detail', $pa->id)}}"><img src="{{url('/', $pa->cover_image)}}" alt="images"></a>
+                                    <div class="">
+                                        <a href="{{route('ads-detail', $pa->id)}}"><img width="200" src="{{url('/', $pa->cover_image)}}" alt="images"></a>
                                     </div>
                                     <div class="featureCaption">
                                         <h4><a href="{{route('ads-detail', $pa->id)}}" class="featureTittle">{{$pa->advert_name}}</a></h4>
