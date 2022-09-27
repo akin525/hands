@@ -11,10 +11,13 @@
 
     <link rel="stylesheet" href="{{asset('assets/css/plugin.css')}}">
 
-    <link rel="stylesheet" href="{{asset('assets/css/main-style.css')}}">
+    <link rel="stylesheet" href-="{{asset('assets/css/main-style.css')}}">
     @yield('styles')
 </head>
 <body>
+@include('sweetalert::alert')
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
 <header class="header-style-01 whiteHeader">
 <nav class="navbar navbar-area headerBg2 navbar-expand-lg  plr">
     <div class="container-fluid container-two nav-container">
