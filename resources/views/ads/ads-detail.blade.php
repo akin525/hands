@@ -67,9 +67,9 @@
                     <div class="sellerMessage mb-24">
                         <div class="singleFlexitem mb-24">
                             <div class="recentImg">
-                                @if($user->profile==NULL)
+                                @if(!isset($user->profile))
                                 <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
-                                @elseif($ads->username=='admin')
+                                @elseif($ad->username=='admin')
                                     <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
                                 @elseif(isset($user->profile))
                                     <img width="100" src="{{url('/', $user->profile)}}" alt="images">
@@ -77,7 +77,9 @@
                             </div>
                             <div class="recentCaption">
                                 <h5><a href="#" class="featureTittle">{{$ad->username}}<img src="{{asset('assets/img/icon/checkMark.svg')}}" class="icon" alt="images"></a></h5>
+                                @if(isset($user->profile))
                                 <p class="featureCap">Member since {{$user->created_at}}</p>
+                                @endif
                             </div>
                         </div>
                             <div class="row">
