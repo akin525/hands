@@ -69,7 +69,8 @@ function adsdetails($request)
 {
     $ad=Advert::where('id', $request)->first();
     $all=Advert::latest()->limit(3)->get();
-    return view('ads/ads-detail', compact('ad', 'all'));
+    $user=User::where('username', $ad->username)->first();
+    return view('ads/ads-detail', compact('ad', 'all', 'user'));
 }
 
 function alladsloaded()

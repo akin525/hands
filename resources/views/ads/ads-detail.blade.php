@@ -67,11 +67,15 @@
                     <div class="sellerMessage mb-24">
                         <div class="singleFlexitem mb-24">
                             <div class="recentImg">
-                                <img width="50" src="{{asset('images/logo.jpeg')}}" alt="images">
+                                @if($user->profile==NULL)
+                                <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
+                                @else
+                                <img width="100" src="{{url('/', $user->profile)}}" alt="images">
+                                @endif
                             </div>
                             <div class="recentCaption">
                                 <h5><a href="#" class="featureTittle">{{$ad->username}}<img src="{{asset('assets/img/icon/checkMark.svg')}}" class="icon" alt="images"></a></h5>
-                                <p class="featureCap">Member since 2019</p>
+                                <p class="featureCap">Member since {{$user->created_at}}</p>
                             </div>
                         </div>
                             <div class="row">
