@@ -59,7 +59,6 @@ Route::middleware(['auth','ads'])->group(function () {
     Route::get('advert', [TransController::class, 'alladvert'])->name('advert');
     Route::post('padvert', [AdvertController::class, 'advert'])->name('padvert');
     Route::view('business', 'business');
-    Route::view('fundraise', 'fundraise');
 
 });
 Route::middleware(['auth','fund'])->group(function () {
@@ -68,6 +67,8 @@ Route::middleware(['auth','fund'])->group(function () {
     Route::get('allrequest', [TransController::class, 'allrequest'])->name('allrequest');
     Route::get('request/{id}', [RequesfundController::class, 'fund'])->name('request');
     Route::post('send', [RequesfundController::class, 'submitfund'])->name('send');
+    Route::view('fundraise', 'fundraise');
+
 });
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
