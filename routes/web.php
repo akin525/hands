@@ -67,6 +67,7 @@ Route::middleware(['auth','fund'])->group(function () {
     Route::view('donation', 'donation');
     Route::get('allrequest', [TransController::class, 'allrequest'])->name('allrequest');
     Route::get('request/{id}', [RequesfundController::class, 'fund'])->name('request');
+    Route::post('send', [RequesfundController::class, 'submitfund'])->name('send');
 });
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
