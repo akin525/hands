@@ -117,7 +117,11 @@
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 						<span class="user-icon">
-							<img src="{{asset('images/logo.jpeg')}}" alt="">
+                            @if(Auth::user()->profile==NULL)
+                                <img src="{{asset('images/logo.jpeg')}}" alt="">
+                            @else
+                                <img width="200" src="{{url('/', Auth::user()->profile)}}" alt="" >
+                            @endif
 						</span>
                     <span class="user-name">{{\Illuminate\Support\Facades\Auth::user()->name}}</span>
                 </a>
