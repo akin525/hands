@@ -157,13 +157,13 @@
                                     <img src="vendors/images/icon-Cash.png" alt="">
                                 </div>
                                 <div class="price-title">
-                                 Ultimate
+                                    Ultimate
                                 </div>
                                 <div class="pricing-price">
                                     <sup>₦</sup>20,000
                                 </div>
                                 <div class="cta">
-                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="{{route('request','LOW1')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                                     <sup>₦</sup>10,000<sub></sub>
                                 </div>
                                 <div class="cta">
-                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="{{route('request','LOW2')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -189,14 +189,14 @@
                                     <img src="vendors/images/icon-online-wallet.png" alt="">
                                 </div>
                                 <div class="price-title">
-                                   Diamond
+                                    Diamond
                                 </div>
                                 <div class="pricing-price">
                                     <sup>₦</sup>5,000<sub></sub>
                                 </div>
 
                                 <div class="cta">
-                                    <a href="#" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
+                                    <a href="{{route('request','LOW3')}}" class="btn btn-primary btn-rounded btn-lg">Request Now</a>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +205,7 @@
             </div>
             <div class="col-xl-4 mb-30">
                 <div class="card-box height-100-p pd-20">
-{{--                    <h2 class="h4 mb-20">Lead Target</h2>--}}
+                    {{--                    <h2 class="h4 mb-20">Lead Target</h2>--}}
                     <img src="images/pri.jpeg" alt="">
 
 
