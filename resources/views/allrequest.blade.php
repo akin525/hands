@@ -18,7 +18,7 @@
             </div>
         </div>
         <!-- Default Basic Forms Start -->
-        <div class="card-box mb-30">
+        <div class="card-box mb-30 card-body">
             <div class="pd-20">
                 <h4 class="text-blue h4">All Request</h4>
             </div>
@@ -42,16 +42,20 @@
                      <td>{{$fd->amount}}</td>
                      <td>{{$fd->duration}}</td>
                      <td>{{$fd->created_at}}</td>
-                        @if($fd->status==0)
-                     <td><span class="badge badge-warning">Pending</span> </td>
+                     <td>
+                         @if($fd->status==0)
+                         <span class="badge badge-warning">Pending</span>
                         @elseif($fd->status==1)
-                            <td><span class="badge badge-success">Approved</span> </td>
-                        @endif
+                             <span class="badge badge-success">Approved</span>
+                         @endif
+                     </td>
+
                     </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
 
 @endsection

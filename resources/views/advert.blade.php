@@ -84,7 +84,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Cover Image</label>
-                    <div class="dropzone" id="my-awesome-dropzone">
+                    <div class="#" >
                         <div class="fallback">
                         <input type="file"  name="cover"  required />
                         </div>
@@ -116,11 +116,13 @@
                                 <td>{{$fd->advert_name}}</td>
                                 <td>{{$fd->duration}}</td>
                                 <td>{{$fd->created_at}}</td>
-                                @if($fd->status==0)
-                                    <td><span class="badge badge-warning">Pending</span> </td>
+                                    <td>
+                                        @if($fd->status==0)
+                                        <span class="badge badge-warning">Pending</span>
                                 @elseif($fd->status==1)
-                                    <td><span class="badge badge-success">Approved</span> </td>
-                                @endif
+                                   <span class="badge badge-success">Approved</span>
+                                        @endif
+                                    </td>
                             </tr>
                         @endforeach
                         </tbody>
