@@ -28,7 +28,7 @@
                         </div>
                         <div class="right">
                             <div class="pricing-price">
-                                ₦30,000<span></span>
+                                ₦10,000<span></span>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="right">
                             <div class="pricing-price">
-                                ₦60,000<span></span>
+                                ₦20,000<span></span>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="right">
                             <div class="pricing-price">
-                                ₦90,000<span></span>
+                                ₦30,000<span></span>
                             </div>
                         </div>
                     </div>

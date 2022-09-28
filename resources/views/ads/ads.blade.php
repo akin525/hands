@@ -70,7 +70,7 @@
 
                         <div class="singleFeature mb-24">
                             <div class="">
-                                <a href="{{url('/', $ad->cover_image)}}"><img width="250" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
+                                <a href="{{url('/', $ad->cover_image)}}"><img width="200" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
                             </div>
                             <div class="featureCaption">
                                 <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
@@ -105,13 +105,13 @@
                     <div class="singlePrice mb-24">
                         <h4 class="priceTittle">Free</h4>
                         <ul class="listing">
-                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your ad will be promoted for 1 days and 1 post</blockquote></li>
+                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your ad will be promoted for 1 week and 2 post</blockquote></li>
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Get upto 10x times more responses</blockquote> </li>
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your Ad will be featured for 1st day</blockquote></li>
                         </ul>
                         <span class="price">₦0 <span class="subTittle"> /For Lifetime</span></span>
                         <div class="btn-wrapper">
-                            <a href="#" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -120,13 +120,13 @@
                     <div class="singlePrice mb-24">
                         <h4 class="priceTittle">Standard</h4>
                         <ul class="listing">
-                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for 3 days and 3 post</li>
+                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for 3 week and 3 post</li>
                             <li class="listItem"><i class="las la-check icon"></i>Get upto 10x times more responses</li>
                             <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for 3 day</li>
                         </ul>
-                        <span class="price">₦490<span class="subTittle"> /For 3 Days</span></span>
+                        <span class="price">₦1,500<span class="subTittle"> /For 3 Days</span></span>
                         <div class="btn-wrapper">
-                            <a href="#" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -135,13 +135,13 @@
                     <div class="singlePrice mb-24">
                         <h4 class="priceTittle">Premium</h4>
                         <ul class="listing">
-                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for a week</li>
+                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for a month</li>
                             <li class="listItem"><i class="las la-check icon"></i>Get upto 10x times more responses</li>
-                            <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for a week</li>
+                            <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for a month</li>
                         </ul>
-                        <span class="price">₦990<span class="subTittle"> /For A Week</span></span>
+                        <span class="price">₦5,000<span class="subTittle"> /For A Week</span></span>
                         <div class="btn-wrapper">
-                            <a href="#" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
