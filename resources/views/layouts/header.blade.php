@@ -58,6 +58,9 @@
 <div id="preloader">
     <div class="preloader_spinner"></div>
 </div>
+@include('sweetalert::alert')
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
 <!-- preloader end -->
 <!-- ==========================================================
     1.*Header_area start
