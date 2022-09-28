@@ -172,8 +172,8 @@
                     <i class="fa fa-home"></i>
                     <h2 class="title">basic</h2>
                     <span class="price-plan">
-                        <i class="fa fa-inr"></i>
-                        <span class="price">₦30,000</span>
+{{--                        <i class="fa fa-inr"></i>--}}
+                        <span class="price">₦10,000</span>
                         <span class="monthly_plan"></span>
                     </span>
                 </div>
@@ -196,8 +196,8 @@
                     <i class="fa fa-puzzle-piece"></i>
                     <h2 class="title">Advanced</h2>
                     <span class="price-plan">
-                        <i class="fa fa-inr"></i>
-                        <span class="price">₦60,000</span>
+{{--                        <i class="fa fa-inr"></i>--}}
+                        <span class="price">₦20,000</span>
                         <span class="monthly_plan"></span>
                     </span>
                 </div>
@@ -221,8 +221,8 @@
                     <i class="fa fa-users"></i>
                     <h2 class="title">Pro</h2>
                     <span class="price-plan">
-                        <i class="fa fa-inr"></i>
-                        <span class="price">₦90,000</span>
+{{--                        <i class="fa fa-inr"></i>--}}
+                        <span class="price">₦30,000</span>
                         <span class="monthly_plan"></span>
                     </span>
                 </div>
