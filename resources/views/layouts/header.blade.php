@@ -10,7 +10,7 @@
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" href="https://ashsupport.com.ng/images/logo.jpeg">
+    <link rel="shortcut icon"  href="https://ashsupport.com.ng//images/ash.jpeg">
     <meta content="Learn How To Grow Your Business Quick" name="description" />
 
     <!-- ================================================================

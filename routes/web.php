@@ -8,6 +8,7 @@ use App\Http\Controllers\admin\FundController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdvertController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RequesfundController;
 use App\Http\Controllers\TransController;
@@ -71,6 +72,7 @@ Route::middleware(['auth','fund'])->group(function () {
 
 });
 Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('admin/banner', [BannerCOntroller::class, 'loadbanner'])->name('admin/banner');
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
     Route::get('admin/alluser', [UserController::class, 'listalluser'])->name('admin/alluser');
     Route::get('admin/edituser/{id}', [UserController::class, 'editusers'])->name('admin/edituser');

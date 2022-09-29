@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="keywords" content="ads, advertise, advertising, classified, classified ads, database, directory, jobs, listing, local, portal" />
-    <meta name="description" content="Choose from 72 Premium classified ads Templates from the #1 source for classified ads Templates. Created by our Global Community of independent Web Developers." />
+    <meta name="description" content="ads, advertise, advertising, classified, classified ads, on Ashsupport.com.ng" />
     <title>Classified Ads</title>
-    <link rel="icon" type="image/x-icon" sizes="20x20" href="{{asset('assets/images/dark.jpeg')}}">
+    <link rel="icon"  sizes="20x20" href="https://ashsupport.com.ng//images/ash.jpeg">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/plugin.css')}}">

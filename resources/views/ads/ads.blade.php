@@ -109,7 +109,7 @@
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Get upto 10x times more responses</blockquote> </li>
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your Ad will be featured for 1st day</blockquote></li>
                         </ul>
-                        <span class="price">₦0 <span class="subTittle"> /For Lifetime</span></span>
+                        <span class="price">₦0 <span class="subTittle"> /For 2 Week</span></span>
                         <div class="btn-wrapper">
                             <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
@@ -124,7 +124,7 @@
                             <li class="listItem"><i class="las la-check icon"></i>Get upto 10x times more responses</li>
                             <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for 3 day</li>
                         </ul>
-                        <span class="price">₦1,500<span class="subTittle"> /For 3 Days</span></span>
+                        <span class="price">₦1,500<span class="subTittle"> /For 3 Week</span></span>
                         <div class="btn-wrapper">
                             <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
@@ -139,7 +139,7 @@
                             <li class="listItem"><i class="las la-check icon"></i>Get upto 10x times more responses</li>
                             <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for a month</li>
                         </ul>
-                        <span class="price">₦5,000<span class="subTittle"> /For A Week</span></span>
+                        <span class="price">₦3,000<span class="subTittle"> /For A Month</span></span>
                         <div class="btn-wrapper">
                             <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
