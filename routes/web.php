@@ -73,6 +73,9 @@ Route::middleware(['auth','fund'])->group(function () {
 });
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/banner', [BannerCOntroller::class, 'loadbanner'])->name('admin/banner');
+    Route::post('admin/uploadbanner', [BannerCOntroller::class, 'uploadbanner'])->name('admin/uploadbanner');
+    Route::post('admin/uploadbanner1', [BannerCOntroller::class, 'uploadbanner1'])->name('admin/uploadbanner1');
+    Route::post('admin/uploadbanner2', [BannerCOntroller::class, 'uploadbanner2'])->name('admin/uploadbanner2');
     Route::get('admin/dashboard', [Admindashboard::class, 'admindashboard'])->name('admin/dashboard');
     Route::get('admin/alluser', [UserController::class, 'listalluser'])->name('admin/alluser');
     Route::get('admin/edituser/{id}', [UserController::class, 'editusers'])->name('admin/edituser');
@@ -133,4 +136,17 @@ Route::get('/profile/{filename}', function ($filename) {
     $response->header("Content-Type", $type);
     return $response;
 })->name('profile');
+Route::get('/banner0/{filename}', function ($filename) {
+    $path = storage_path('app/banner0/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+    return $response;
+})->name('banner0');
 require __DIR__.'/auth.php';

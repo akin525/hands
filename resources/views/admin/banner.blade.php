@@ -68,8 +68,9 @@
             <canvas id= "canv1" ></canvas>
 
             <p>
-                <form method="post" action="" enctype="multipart/form-data">
-                Filename:
+                <form method="post" action="{{route('admin/uploadbanner')}}" enctype="multipart/form-data">
+                        @csrf
+                        Filename:
                 <input type="file" multiple="false" name="pic" accept="image/*" id=finput onchange="upload()">
                         <button type="submit" class="badge badge-success">Upload</button>
                     </form>
@@ -80,8 +81,12 @@
                     <canvas id= "canv2" ></canvas>
 
                 <p>
-                    Filename:
+                    <form method="post" action="{{route('admin/uploadbanner1')}}" enctype="multipart/form-data">
+                        @csrf
+                        Filename:
                     <input type="file" multiple="false" name="pic" accept="image/*" id=finput1 onchange="upload1()">
+                        <button type="submit" class="badge badge-success">upload</button>
+                    </form>
                 </p>
                 </center>
                 <center>
@@ -89,9 +94,13 @@
                     <canvas id= "canv3" ></canvas>
 
                 <p>
+                    <form method="post" action="{{route('admin/uploadbanner2')}}" enctype="multipart/form-data">
+                        @csrf
                     Filename:
                     <input type="file" multiple="false" name="pic" accept="image/*" id=finput2 onchange="upload2()">
-                </p>
+                        <button type="submit" class="badge badge-success">upload</button>
+                    </form>
+                        </p>
                 </center>
             </div>
         </div>

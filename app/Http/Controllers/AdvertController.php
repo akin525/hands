@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Advert;
+use App\Models\Banner;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,9 +16,10 @@ class AdvertController extends Controller
 {
     public function index()
     {
+        $banner=Banner::where('page',1)->first();
         $ads=Advert::where('status', 1)->get();
 
-        return view('ads/ads', compact('ads'));
+        return view('ads/ads', compact('ads', 'banner'));
     }
 public function advert(Request $request)
 {
@@ -75,8 +77,9 @@ function adsdetails($request)
 
 function alladsloaded()
 {
+    $banner=Banner::where('page', 2)->first();
     $all=Advert::where('status', 1)->paginate(6);
-    return view('ads/list-ads', compact('all'));
+    return view('ads/list-ads', compact('all', 'banner'));
 }
 function stopadvert($request)
 {
