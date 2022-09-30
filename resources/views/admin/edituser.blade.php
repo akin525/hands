@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-8">
                 <h4 class="font-20 weight-500 mb-10 text-capitalize">
-                    Editing  <div class="weight-600 font-30 text-blue">{{\Illuminate\Support\Facades\Auth::user()->name}}!</div>
+                    Editing  <div class="weight-600 font-30 text-blue">{{$user->name}}!</div>
                 </h4>
                 <p class="font-18 max-width-600">Note That any change made on this page will reflect on this particular user, and also if email is change, the new email will be use for the user to login back to the website</p>
             </div>
