@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Advert;
 use App\Models\Business;
 use App\Models\RequestFund;
 use Illuminate\Http\Request;
@@ -28,8 +29,9 @@ $user['request2']=RequestFund::where('username', Auth::user()->username)->where(
 //        Alert::info('Message', 'Kindly Contact the administrator');
 //        return view('auth.login');
 //    }
+    $advert=Advert::where('username', Auth::user()->username)->get();
 
-    return view('dashboard', compact('user'));
+    return view('dashboard', compact('user', 'advert'));
 
 
 }
