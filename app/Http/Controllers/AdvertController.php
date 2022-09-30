@@ -64,13 +64,13 @@ public function advert(Request $request)
 
 public function adscat($request)
 {
-    $cat=Advert::where('category', $request)->get();
+    $cat=Advert::where('category', $request)->where('status', 1)->get();
     return view('ads/all-category', compact('cat'));
 }
 function adsdetails($request)
 {
     $ad=Advert::where('id', $request)->first();
-    $all=Advert::latest()->limit(3)->get();
+    $all=Advert::where('status',1)->latest()->limit(3)->get();
     $user=User::where('username', $ad->username)->first();
     return view('ads/ads-detail', compact('ad', 'all', 'user'));
 }
