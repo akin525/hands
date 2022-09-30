@@ -71,7 +71,8 @@
                 <div class="form-group">
                     <label class="col-sm-12 col-md-2 col-form-label">Advert Content</label>
                     <div class="html-editor pd-20 card-box mb-30">
-                        <textarea class="textarea_editor form-control border-radius-0" name="text" placeholder="Enter text ..." required></textarea>
+{{--                        <textarea class="textarea_editor form-control border-radius-0" name="text" placeholder="Enter text ..." required></textarea>--}}
+                        <textarea class="form-control border-radius-0" name="text" placeholder="Enter text ..." required></textarea>
 
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                 <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Telephone</label>
                     <div class="col-sm-12 col-md-10">
-                        <input class="form-control" value="{{Auth::user()->number}}" type="tel" readonly>
+                        <input class="form-control" value="{{Auth::user()->number}}" type="number" name="number" >
                     </div>
                 </div>
                 <div class="form-group row">
