@@ -2,10 +2,6 @@
 
 @section('content')
     <style>
-        body{
-            margin: 25px;
-            font-family: verdana;
-        }
 
         h1{
             color: darkslategray;
@@ -62,7 +58,8 @@
 
             <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
             </script>
-            <div class="card-body">
+            <div class="card">
+                <div class="card-body">
                 <center>
             <h1>Upload and Your Banner 1</h1>
             <canvas id= "canv1" ></canvas>
@@ -102,6 +99,7 @@
                     </form>
                         </p>
                 </center>
+            </div>
             </div>
         </div>
 <script>

@@ -188,7 +188,7 @@
                 @if(Auth::user()->usertype=='ads')
                 <li>
                     <a href="{{url('advert')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-bookmark"></span><span class="mtext">Advertisement</span>
+                        <span class="micon dw dw-bookmark"></span><span class="mtext">Post Advert</span>
                     </a>
                 </li>
                 @endif
