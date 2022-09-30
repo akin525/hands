@@ -9,7 +9,7 @@
                 <div class="col-sm-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Category</a></li>
                             <li class="breadcrumb-item"><a href="#">{{$ad->category}}</a></li>
                         </ol>
@@ -52,14 +52,15 @@
 
                         <div class="descriptionFooter">
                             <div class="btn-wrapper">
-                                <a href="#" class="cmn-btn-outline2"><i class="lab la-font-awesome-flag icon"></i>Report</a>
+{{--                                <a href="#" class="cmn-btn-outline2"><i class="lab la-font-awesome-flag icon"></i>Report</a>--}}
                             </div>
-                            <div class="socialWrap">
-                                <a href="#" class="social"><i class="lab la-facebook-square"></i></a>
-                                <a href="#" class="social"><i class="lab la-twitter"></i></a>
-                                <a href="#" class="social"><i class="lab la-linkedin"></i></a>
-                                <a href="#" class="social"><i class="lar la-bell"></i></a>
-                            </div>
+{{--                            <div class="socialWrap">--}}
+{{--                                <a href="#" class="social"><i class="lab la-facebook-square"></i></a>--}}
+{{--                                <a href="#" class="social"><i class="lab la-twitter"></i></a>--}}
+{{--                                <a href="#" class="social"><i class="lab la-linkedin"></i></a>--}}
+{{--                                <a href="#" class="social"><i class="lar la-bell"></i></a>--}}
+{{--                            </div>--}}
+                            <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
                         </div>
                     </div>
                 </div>

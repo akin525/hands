@@ -69,10 +69,11 @@ public function adscat($request)
 }
 function adsdetails($request)
 {
+    $banner=Banner::where('page', 1)->first();
     $ad=Advert::where('id', $request)->first();
     $all=Advert::where('status',1)->latest()->limit(3)->get();
     $user=User::where('username', $ad->username)->first();
-    return view('ads/ads-detail', compact('ad', 'all', 'user'));
+    return view('ads/ads-detail', compact('ad', 'all', 'user', 'banner'));
 }
 
 function alladsloaded()
