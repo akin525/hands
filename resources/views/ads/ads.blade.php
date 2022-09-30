@@ -71,7 +71,7 @@
 
                         <div class="singleFeature mb-24">
                             <div class="">
-                                <a href="{{url('/', $ad->cover_image)}}"><img width="200" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
+                                <a href="{{route('ads-detail', $ad->id)}}"><img width="200" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
                             </div>
                             <div class="featureCaption">
                                 <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
@@ -127,7 +127,7 @@
                         </ul>
                         <span class="price">₦1,500<span class="subTittle"> /For 3 Week</span></span>
                         <div class="btn-wrapper">
-                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
+                            <a href="https://paystack.com/pay/uhls4fwdis" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
