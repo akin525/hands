@@ -15,10 +15,10 @@
                         </div>
                         <div class="col-xxl-5 col-xl-5 col-lg-5">
                             <div class="hero-man d-none d-lg-block">
-                                <img src="assets/img/hero/hero-man3.png" alt="images" class="tilt-effect " data-animation="fadeInRight" data-delay="0.2s">
+                                <img src="{{asset('assets/img/hero/hero-man3.png')}}" alt="images" class="tilt-effect " data-animation="fadeInRight" data-delay="0.2s">
 
                                 <div class=" shapeHero shapeHero6" data-animation="fadeInRight" data-delay="0.8s">
-                                    <img src="assets/img/hero/heroShape6.png" alt="images" class="heartbeat">
+                                    <img src="{{asset('assets/img/hero/heroShape6.png')}}" alt="images" class="heartbeat">
                                 </div>
                             </div>
                         </div>
