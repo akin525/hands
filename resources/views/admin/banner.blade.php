@@ -30,9 +30,9 @@
             </div>
             <div class="col-md-8">
                 <h4 class="font-20 weight-500 mb-10 text-capitalize">
-                    Upload Banner<div class="weight-600 font-30 text-blue">!</div>
+                    <div class="weight-600 font-30 text-blue">Upload Banner!</div>
                 </h4>
-                <p class="font-18 max-width-600">Note That: Any picture upload here will display on any of ur page been tag</p>
+                <p class="font-18 max-width-600">Note That: Any picture upload here will display on any of ur page been tag, and below uploading new one make sure you delete the old one</p>
             </div>
         </div>
     </div>
@@ -53,6 +53,49 @@
                 </div>
             </div>
         </div>
+        <div class="card-box mb-30">
+            <div class="pd-20">
+                <h4 class="text-blue h4">All Banner</h4>
+            </div>
+            <div class="pb-20">
+                <table class="table hover multiple-select-row data-table-export nowrap">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Picture</th>
+                        <th>Banner Id</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($banner as$fd)
+                        <tr>
+                            <td>{{$fd->id}}</td>
+                            <td><a href="{{url('/', $fd->picture)}}"><img width="50" src="{{url('/', $fd->picture)}}" alt="images"></a></td>
+                            <td>{{$fd->page}}</td>
+                            <td>
+                                @if($fd->status==0)
+                                    <span class="badge badge-warning">Pending</span>
+                                @elseif($fd->status==1)
+                                    <span class="badge badge-success">Approved</span>
+                                @elseif($fd->status==2)
+                                    <span class="badge badge-danger">Rejected</span>
+                                @elseif($fd->status==3)
+                                    <span class="badge badge-warning">Advert Stop</span>
+                                @endif
+                            </td>
+
+                            <td>
+                                <a href="{{route('admin/deletebanner', $fd->page)}}" class="badge badge-danger">Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <!-- Default Basic Forms Start -->
         <div class="card-box mb-30">
 
@@ -69,6 +112,7 @@
                         @csrf
                         Filename:
                 <input type="file" multiple="false" name="pic" accept="image/*" id=finput onchange="upload()">
+                        <input type="hidden" value="1" name="page">
                         <button type="submit" class="badge badge-success">Upload</button>
                     </form>
             </p>
@@ -82,6 +126,7 @@
                         @csrf
                         Filename:
                     <input type="file" multiple="false" name="pic" accept="image/*" id=finput1 onchange="upload1()">
+                        <input type="hidden" value="2" name="page">
                         <button type="submit" class="badge badge-success">upload</button>
                     </form>
                 </p>
@@ -95,6 +140,7 @@
                         @csrf
                     Filename:
                     <input type="file" multiple="false" name="pic" accept="image/*" id=finput2 onchange="upload2()">
+                        <input type="hidden" value="3" name="page">
                         <button type="submit" class="badge badge-success">upload</button>
                     </form>
                         </p>
@@ -102,7 +148,8 @@
             </div>
             </div>
         </div>
-<script>
+
+        <script>
     function upload(){
         var imgcanvas = document.getElementById("canv1");
         var fileinput = document.getElementById("finput");

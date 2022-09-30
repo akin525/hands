@@ -72,6 +72,7 @@ Route::middleware(['auth','fund'])->group(function () {
 
 });
 Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('admin/deletebanner/{id}', [BannerCOntroller::class, 'removebp'])->name('admin/deletebanner');
     Route::get('admin/banner', [BannerCOntroller::class, 'loadbanner'])->name('admin/banner');
     Route::post('admin/uploadbanner', [BannerCOntroller::class, 'uploadbanner'])->name('admin/uploadbanner');
     Route::post('admin/uploadbanner1', [BannerCOntroller::class, 'uploadbanner1'])->name('admin/uploadbanner1');

@@ -18,7 +18,13 @@ function uploadbanner(Request $request)
 {
     $request->validate([
         'pic'=>'required',
+        'page'=>'required',
     ]);
+    $banner=Banner::where('page', $request->page)->first();
+    if($banner){
+        Alert::warning('Ooops', 'Kindly delete the old one before uploading the new one');
+        return back();
+    }
     $b=Storage::put('banner0', $request['pic']);
     $create=Banner::create([
         'picture'=>$b,
@@ -32,7 +38,13 @@ function uploadbanner1(Request $request)
 {
     $request->validate([
         'pic'=>'required',
+        'page'=>'required',
     ]);
+    $banner=Banner::where('page', $request->page)->first();
+    if($banner){
+        Alert::warning('Ooops', 'Kindly delete the old one before uploading the new one');
+        return back();
+    }
     $b=Storage::put('banner0', $request['pic']);
     $create=Banner::create([
         'picture'=>$b,
@@ -46,7 +58,13 @@ function uploadbanner2(Request $request)
 {
     $request->validate([
         'pic'=>'required',
+        'page'=>'required',
     ]);
+    $banner=Banner::where('page', $request->page)->first();
+    if($banner){
+        Alert::warning('Ooops', 'Kindly delete the old one before uploading the new one');
+        return back();
+    }
     $b=Storage::put('banner0', $request['pic']);
     $create=Banner::create([
         'picture'=>$b,
