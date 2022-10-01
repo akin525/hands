@@ -33,33 +33,48 @@ public function advert(Request $request)
         'text'=>'required',
         'cover'=>'required',
     ]);
-//    if (Auth::user()->ads_status =='0n'){
+
+    $ad=Advert::where('username', Auth::user()->username)->count();
+    if (Auth::user()->ads_status =='0'){
+        if ($ad==3){
+            $msg="Kindly Upgrade your Account to Standard/Premium Plan";
+            Alert::warning('Ooops', $msg);
+        }
 //        Alert::warning('Warning', 'You have an active ads till running');
 //        return back();
-//    }
-    $user=User::where('username',Auth::user()->username)->first();
-    $cover = Storage::put('cover', $request['cover']);
-    $post=Advert::create([
-        'username'=>Auth::user()->username,
-        'advert_name'=>$request->name,
-        'address'=>$request->address,
-        'number'=>$request->number,
-        'amount'=>$request->amount,
-        'category'=>$request->category,
-        'duration'=>$request->duration,
-        'content'=>$request->text,
-        'cover_image'=>$cover,
-    ]);
+    }else if (Auth::user()->ads_status =='1') {
+        if ($ad == 6) {
+            $msg = "Kindly Upgrade your Account to Premium Plan";
+            Alert::warning('Ooops', $msg);
+        }
+    }else if (Auth::user()->ads_status =='2') {
+        if ($ad == 10) {
+            $msg = "Kindly Contact Admin For Upgrade";
+            Alert::warning('Ooops', $msg);
+        }
+    }else {
+        $user = User::where('username', Auth::user()->username)->first();
+        $cover = Storage::put('cover', $request['cover']);
+        $post = Advert::create([
+            'username' => Auth::user()->username,
+            'advert_name' => $request->name,
+            'address' => $request->address,
+            'number' => $request->number,
+            'amount' => $request->amount,
+            'category' => $request->category,
+            'duration' => $request->duration,
+            'content' => $request->text,
+            'cover_image' => $cover,
+        ]);
 
 
+        $user->ads_status = '0n';
+        $user->save();
 
-
-    $user->ads_status='0n';
-    $user->save();
-
-    $mg="Request Successful Submitted, Kindly Visit us at our office for confirmation";
-    Alert::info('Pending', $mg);
-    return back();
+        $mg = "Request Successful Submitted, Kindly Visit us at our office for confirmation";
+        Alert::info('Pending', $mg);
+    }
+        return back();
 }
 
 public function adscat($request)
