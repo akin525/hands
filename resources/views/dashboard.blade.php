@@ -215,11 +215,19 @@
 
         @else
             <div class="alert alert-success" role="alert">
-                @if(Auth::user()->ads_staus==0)
+                @if(Auth::user()->ads_status=="0")
                 <h4 class="alert-heading h4">Well done!</h4>
                 <p>Dear Customer Your Present Plan is Free Plan Kindly Upgrade to enjoy More Features</p>
                 <hr>
 {{--                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>--}}
+                @elseif(Auth::user()->ads_status=="1")
+                    <h4 class="alert-heading h4">Well done!</h4>
+                    <p>Dear Customer Your Present Plan is Standard Plan Kindly Upgrade to enjoy More Features</p>
+                    <hr>
+                @elseif(Auth::user()->ads_status=="2")
+                    <h4 class="alert-heading h4">Well done!</h4>
+                    <p>Dear Customer Your Present Plan is premium Plan Kindly Upgrade to enjoy More Features</p>
+                    <hr>
                 @endif
             </div>
             <div class="card-box mb-30">
