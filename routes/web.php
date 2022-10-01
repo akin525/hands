@@ -88,6 +88,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/createuser', [CreatA::class, 'createuser'])->name('admin/createuser');
     Route::post('admin/submituser', [CreatA::class, 'submituser'])->name('admin/submituser');
     Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');
+    Route::get('admin/adspay', [AlladvertController::class, 'alladspayment'])->name('admin/adspay');
     Route::get('admin/checkads', [AlladvertController::class, 'alladvertrequest'])->name('admin/checkads');
     Route::get('admin/checkrequest', [AllrequestController::class, 'indexrequest'])->name('admin/checkrequest');
     Route::get('admin/bookfund', [FundController::class, 'bookfund'])->name('admin/bookfund');

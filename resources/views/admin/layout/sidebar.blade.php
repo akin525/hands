@@ -175,6 +175,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{route('admin/adspay')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-money"></span><span class="mtext">All Ads-Payment</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('admin/checkrequest')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-fuel"></span><span class="mtext">Check RequestFund</span>
                     </a>

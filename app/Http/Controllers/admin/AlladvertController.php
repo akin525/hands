@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Models\Adspay;
 use App\Models\Advert;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
+use function GuzzleHttp\Promise\all;
 
 class AlladvertController
 {
@@ -74,5 +76,11 @@ function postalladvertadmin(Request $request)
     $mg="Advert post was Successful";
     Alert::success('Success', $mg);
     return back();
+}
+function alladspayment()
+{
+    $plan=Adspay::all();
+
+    return view('admin/adspayment', compact('plan'));
 }
 }
