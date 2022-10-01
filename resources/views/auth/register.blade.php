@@ -102,8 +102,8 @@
                                 </div>
                                 <div class="input-group custom">
                                     <select  name="usertype" class="form-control form-control-lg" >
-                                        <option value="fund">Fund Request</option>
                                         <option value="ads">Advertise On Website</option>
+                                        <option value="fund">Fund Request</option>
                                     </select>
                                     <div class="input-group-append custom">
                                         <span class="input-group-text"><i class="dw dw-"></i></span>
