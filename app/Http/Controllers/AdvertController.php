@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Adspay;
 use App\Models\Advert;
 use App\Models\Banner;
 use App\Models\User;
@@ -39,6 +40,7 @@ public function advert(Request $request)
         if ($ad==3){
             $msg="Kindly Upgrade your Account to Standard/Premium Plan";
             Alert::warning('Ooops', $msg);
+            return redirect('upgrade');
         }
 //        Alert::warning('Warning', 'You have an active ads till running');
 //        return back();
@@ -46,11 +48,13 @@ public function advert(Request $request)
         if ($ad == 6) {
             $msg = "Kindly Upgrade your Account to Premium Plan";
             Alert::warning('Ooops', $msg);
+            return redirect('upgrade');
         }
     }else if (Auth::user()->ads_status =='2') {
         if ($ad == 10) {
             $msg = "Kindly Contact Admin For Upgrade";
             Alert::warning('Ooops', $msg);
+            return redirect('upgrade');
         }
     }else {
         $user = User::where('username', Auth::user()->username)->first();
@@ -73,8 +77,9 @@ public function advert(Request $request)
 
         $mg = "Request Successful Submitted, Kindly Visit us at our office for confirmation";
         Alert::info('Pending', $mg);
-    }
         return back();
+    }
+
 }
 
 public function adscat($request)
@@ -143,5 +148,70 @@ function helptoupdateads(Request $request)
     $msg="Ads update successful";
     Alert::success('Update', $msg);
     return redirect('admin/checkads');
+}
+function upgrade()
+{
+    return view('upgrade');
+}
+function verifyads($request)
+{
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://api.paystack.co/transaction/verify/$request",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_SSL_VERIFYHOST => 0,
+        CURLOPT_SSL_VERIFYPEER => 0,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => array(
+            "Authorization: Bearer sk_live_bf53d008857c6e1fc8f41fd5484a394dfdf58eee",
+            "Cache-Control: no-cache",
+        ),
+    ));
+//curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+//curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0)
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    } else {
+//             echo $response;
+    }
+//        return $response;
+    $data=json_decode($response, true);
+
+//    return $data;
+    if ($data['status']=='true') {
+        $amount=$data["data"]["amount"]/100;
+        $user=User::where('username', Auth::user()->username)->first();
+        if ($amount=="1500"){
+            $nu=1;
+            $plan="Standard";
+        }elseif ($amount=="3000"){
+            $nu=2;
+            $plan="Premium";
+        }
+        $create=Adspay::create([
+            'username'=>Auth::user()->username,
+            'amount'=>$amount,
+            'plan'=>$plan,
+        ]);
+        $user->ads_status=$nu;
+        $user->save();
+        $mg="Account Upgrade Successfully";
+        Alert::success('Upgraded', $mg);
+        return redirect('advert');
+    }
+    $mg="Fail Transaction Contact Admin";
+    Alert::error('Ooops', $mg);
+    return back();
+
 }
 }

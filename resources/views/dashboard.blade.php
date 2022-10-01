@@ -214,6 +214,14 @@
         </div>
 
         @else
+            <div class="alert alert-success" role="alert">
+                @if(Auth::user()->ads_staus==0)
+                <h4 class="alert-heading h4">Well done!</h4>
+                <p>Dear Customer Your Present Plan is Free Plan Kindly Upgrade to enjoy More Features</p>
+                <hr>
+{{--                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>--}}
+                @endif
+            </div>
             <div class="card-box mb-30">
                 <div class="pd-20">
                     <h4 class="text-blue h4">All Advert</h4>

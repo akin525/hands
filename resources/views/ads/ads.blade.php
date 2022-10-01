@@ -112,7 +112,7 @@
                         </ul>
                         <span class="price">₦0 <span class="subTittle"> /For 2 Week</span></span>
                         <div class="btn-wrapper">
-                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('upgrade')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                         </ul>
                         <span class="price">₦1,500<span class="subTittle"> /For 3 Week</span></span>
                         <div class="btn-wrapper">
-                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('upgrade')}}" class="cmn-btn-outline1">Get Started</a>
 {{--                            <a href="https://paystack.com/pay/uhls4fwdis" class="cmn-btn-outline1">Get Started</a>--}}
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                         </ul>
                         <span class="price">₦3,000<span class="subTittle"> /For A Month</span></span>
                         <div class="btn-wrapper">
-                            <a href="{{route('login')}}" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('upgrade')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
