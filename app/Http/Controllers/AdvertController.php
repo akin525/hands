@@ -168,7 +168,7 @@ function verifyads($request)
         CURLOPT_SSL_VERIFYPEER => 0,
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => array(
-            "Authorization: Bearer sk_live_bf53d008857c6e1fc8f41fd5484a394dfdf58eee",
+            "Authorization: Bearer ".env('paystack_sk'),
             "Cache-Control: no-cache",
         ),
     ));

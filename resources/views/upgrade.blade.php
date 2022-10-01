@@ -78,7 +78,7 @@
 <script>
     function payWithPaystack(){
         var handler = PaystackPop.setup({
-            key: "pk_live_82f676bc05d5b14731e2b11b25f54526b112f64c",
+            key: "{{env('paystack_pk')}}",
             email: "{{\Illuminate\Support\Facades\Auth::user()->email}}",
             amount: "1500" *100,
             currency: "NGN",
