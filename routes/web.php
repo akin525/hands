@@ -59,6 +59,7 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth','ads'])->group(function () {
     Route::get('advert', [TransController::class, 'alladvert'])->name('advert');
     Route::get('upgrade', [AdvertController::class, 'upgrade'])->name('upgrade');
+    Route::get('listupgrade', [AdvertController::class, 'listupgrade'])->name('listupgrade');
     Route::get('verifyads/{id}', [AdvertController::class, 'verifyads'])->name('verifyads');
     Route::post('padvert', [AdvertController::class, 'advert'])->name('padvert');
     Route::view('business', 'business');

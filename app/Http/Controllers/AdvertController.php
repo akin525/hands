@@ -214,4 +214,9 @@ function verifyads($request)
     return back();
 
 }
+function listupgrade()
+{
+    $plan=Adspay::where('username', Auth::user()->username)->get();
+    return view('listupgrade', compact('plan'));
+}
 }

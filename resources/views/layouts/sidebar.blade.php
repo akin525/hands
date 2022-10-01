@@ -191,6 +191,16 @@
                         <span class="micon dw dw-bookmark"></span><span class="mtext">Post Advert</span>
                     </a>
                 </li>
+                    <li>
+                        <a href="{{route('upgrade')}}" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user3"></span><span class="mtext">Upgrade Account</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('listupgrade')}}" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-book"></span><span class="mtext">Upgrade List</span>
+                        </a>
+                    </li>
                 @endif
                     @if(Auth::user()->usertype=='fund')
                 <li>
@@ -210,6 +220,7 @@
                             <span class="micon dw dw-user"></span><span class="mtext">My Account</span>
                         </a>
                     </li>
+
                 <li>
                     <a href="{{route('logout')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-light-bulb"></span><span class="mtext">Logout</span>
