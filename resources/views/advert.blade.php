@@ -1,6 +1,28 @@
 @extends("layouts.sidebar")
 
 @section('content')
+    <style>
+
+        h1{
+            color: darkslategray;
+        }
+
+        p {
+            font-size: 12pt;
+            color: black;
+        }
+        canvas {
+            height: 175px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+        }
+
+        input {
+            font-family: verdana;
+            font-size: 12pt;
+        }
+    </style>
     <div class="min-height-200px">
         <div class="page-header">
             <div class="row">
@@ -83,12 +105,17 @@
                         <input class="form-control" value="{{Auth::user()->number}}" type="number" name="number" >
                     </div>
                 </div>
-                <div class="form-group row">
+                <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+                    <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Cover Image</label>
                     <div class="#" >
                         <div class="fallback">
-                        <input type="file"  name="cover"  required />
+                            <canvas id= "canv1" ></canvas>
+                            <input type="file"  name="cover" accept="image/*" id=finput onchange="upload()" required />
+{{--                            <canvas id= "canv2" ></canvas>--}}
+{{--                            <input type="file"  name="cover1"  required />--}}
                         </div>
+
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success">Request</button>
@@ -133,6 +160,27 @@
 
         </div>
     </div>
+    <script>
+        function upload(){
+            var imgcanvas = document.getElementById("canv1");
+            var fileinput = document.getElementById("finput");
+            var image = new SimpleImage(fileinput);
+            image.drawTo(imgcanvas);
+        }
+        function upload1(){
+            var imgcanvas = document.getElementById("canv2");
+            var fileinput = document.getElementById("finput1");
+            var image = new SimpleImage(fileinput);
+            image.drawTo(imgcanvas);
+        }
+        function upload2(){
+            var imgcanvas = document.getElementById("canv3");
+            var fileinput = document.getElementById("finput2");
+            var image = new SimpleImage(fileinput);
+            image.drawTo(imgcanvas);
+        }
+    </script>
+
 @endsection
 @section('script')
     <script>

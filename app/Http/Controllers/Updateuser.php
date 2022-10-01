@@ -50,16 +50,16 @@ class Updateuser
                 Delete Multiple File like this way
                 Storage::delete(['upload/test.png', 'upload/test2.png']);
             */
+            $user->profile=NULL;
+            $user->save();
+            $msg="Profile Photo Remove Successful";
+            Alert::success('Deleted', $msg);
+            return back();
         }else{
             Alert::error('Ooops', 'File does not exists');
             return back();
 //            dd('File does not exists.');
         }
-        $user->profile=NULL;
-        $user->save();
-        $msg="Profile Photo Remove Successful";
-        Alert::success('Deleted', $msg);
-        return back();
     }
 
     public function profile1(Request $request)

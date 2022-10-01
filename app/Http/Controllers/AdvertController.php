@@ -17,7 +17,7 @@ class AdvertController extends Controller
     public function index()
     {
         $banner=Banner::where('page',1)->first();
-        $ads=Advert::where('status', 1)->get();
+        $ads=Advert::where('status', 1)->latest()->limit(12)->get();
 
         return view('ads/ads', compact('ads', 'banner'));
     }
@@ -64,7 +64,7 @@ public function advert(Request $request)
 
 public function adscat($request)
 {
-    $cat=Advert::where('category', $request)->where('status', 1)->get();
+    $cat=Advert::where('category', $request)->where('status', 1)->paginate(6);
     return view('ads/all-category', compact('cat'));
 }
 function adsdetails($request)
