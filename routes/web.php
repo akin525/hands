@@ -154,4 +154,5 @@ Route::get('/banner0/{filename}', function ($filename) {
     $response->header("Content-Type", $type);
     return $response;
 })->name('banner0');
+Route::view('policy', 'policy');
 require __DIR__.'/auth.php';

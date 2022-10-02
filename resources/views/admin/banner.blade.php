@@ -13,6 +13,7 @@
         }
         canvas {
             height: 175px;
+            width: 90%;
             border-style: solid;
             border-width: 1px;
             border-color: black;
