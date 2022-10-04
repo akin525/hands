@@ -137,7 +137,7 @@
                                     </div>
                                     <div class="recentCaption">
                                         <h5><a href="{{route('ads-detail', $a->id)}}" class="featureTittle">{{$a->advert_name}}</a></h5>
-                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>
+{{--                                        <p class="featureCap">Dallas, Texas · <strong class="subCap">24hrs ago</strong></p>--}}
                                         <span class="featurePricing">₦{{number_format(intval($a->amount *1))}}</span>
                                         <div class="btn-wrapper">
                                             <span class="pro-btn1">RENOVETED</span>
