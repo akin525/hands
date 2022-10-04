@@ -56,7 +56,8 @@ public function advert(Request $request)
             Alert::warning('Ooops', $msg);
             return redirect('upgrade');
         }
-    }else {
+    }
+
         $user = User::where('username', Auth::user()->username)->first();
         $cover = Storage::put('cover', $request['cover']);
         $post = Advert::create([
@@ -80,7 +81,6 @@ public function advert(Request $request)
         return back();
     }
 
-}
 
 public function adscat($request)
 {
