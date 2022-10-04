@@ -73,8 +73,7 @@ public function advert(Request $request)
         ]);
 
 
-        $user->ads_status = '0n';
-        $user->save();
+
 
         $mg = "Request Successful Submitted, Kindly Visit us at our office for confirmation";
         Alert::info('Pending', $mg);
