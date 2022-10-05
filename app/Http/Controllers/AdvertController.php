@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\Adspay;
 use App\Models\Advert;
 use App\Models\Banner;
+use App\Models\Sponsor;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,10 +18,11 @@ class AdvertController extends Controller
 {
     public function index()
     {
+        $sponsor=Sponsor::where('status', 1)->latest()->limit(12)->get();
         $banner=Banner::where('page',1)->first();
         $ads=Advert::where('status', 1)->latest()->limit(12)->get();
 
-        return view('ads/ads', compact('ads', 'banner'));
+        return view('ads/ads', compact('ads', 'banner', 'sponsor'));
     }
 public function advert(Request $request)
 {
@@ -37,21 +39,21 @@ public function advert(Request $request)
 
     $ad=Advert::where('username', Auth::user()->username)->count();
     if (Auth::user()->ads_status =='0'){
-        if ($ad==3){
-            $msg="Kindly Upgrade your Account to Standard/Premium Plan";
+        if ($ad==5){
+            $msg="Kindly Upgrade your Account Membership Account";
             Alert::warning('Ooops', $msg);
             return redirect('upgrade');
         }
 //        Alert::warning('Warning', 'You have an active ads till running');
 //        return back();
     }else if (Auth::user()->ads_status =='1') {
-        if ($ad == 6) {
-            $msg = "Kindly Upgrade your Account to Premium Plan";
+        if ($ad == 20) {
+            $msg="Kindly Upgrade your Account Membership Account";
             Alert::warning('Ooops', $msg);
             return redirect('upgrade');
         }
     }else if (Auth::user()->ads_status =='2') {
-        if ($ad == 10) {
+        if ($ad == 60) {
             $msg = "Kindly Contact Admin For Upgrade";
             Alert::warning('Ooops', $msg);
             return redirect('upgrade');

@@ -65,7 +65,27 @@
                 </div>
             </div>
             <div class="row">
-                @foreach($ads as $ad)
+                @foreach($sponsor as $ad)
+
+                    <div class="col-lg-3">
+
+                        <div class="singleFeature mb-24">
+                            <div class="">
+                                <a href="{{route('ads-detail', $ad->id)}}"><img width="200" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
+                            </div>
+                            <div class="featureCaption">
+                                <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
+                                {{--                                <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>--}}
+                                <span class="featurePricing">₦{{number_format(intval($ad->amount *1))}}</span>
+                                <div class="btn-wrapper">
+                                    <span class="pro-btn2">Sponsor By Ashsupport</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            @foreach($ads as $ad)
 
                     <div class="col-lg-3">
 

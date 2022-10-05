@@ -193,7 +193,7 @@
                 </li>
                     <li>
                         <a href="{{route('upgrade')}}" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-user3"></span><span class="mtext">Upgrade Account</span>
+                            <span class="micon dw dw-user3"></span><span class="mtext">Membership Account</span>
                         </a>
                     </li>
                     <li>
