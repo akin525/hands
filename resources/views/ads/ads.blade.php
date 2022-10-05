@@ -71,10 +71,10 @@
 
                         <div class="singleFeature mb-24">
                             <div class="">
-                                <a href="{{route('ads-detail', $ad->id)}}"><img width="200" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
+                                <a href="{{route('ads-detail1', $ad->id)}}"><img width="200" src="{{url('/', $ad->cover_image)}}" alt="images"></a>
                             </div>
                             <div class="featureCaption">
-                                <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
+                                <h4><a href="{{route('ads-detail1', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
                                 {{--                                <p class="featureCap">Los Angels, CA · <strong class="subCap">12hrs ago</strong></p>--}}
                                 <span class="featurePricing">₦{{number_format(intval($ad->amount *1))}}</span>
                                 <div class="btn-wrapper">

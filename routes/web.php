@@ -112,6 +112,7 @@ Route::post('admin1', [AdminAuth::class, 'getin'])->name('admin1');
 
 Route::get('ads', [AdvertController::class, 'index'])
     ->name('ads');
+Route::get('ads-detail1/{id}', [AdvertController::class, 'adsdetails1'])->name('ads-detail1');
 Route::get('ads-detail/{id}', [AdvertController::class, 'adsdetails'])->name('ads-detail');
 Route::get('all-category/{id}', [AdvertController::class, 'adscat'])->name('all-category');
 

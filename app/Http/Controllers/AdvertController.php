@@ -88,6 +88,14 @@ public function adscat($request)
     $cat=Advert::where('category', $request)->where('status', 1)->paginate(6);
     return view('ads/all-category', compact('cat'));
 }
+function adsdetails1($request)
+{
+    $banner=Banner::where('page', 1)->first();
+    $ad=Sponsor::where('id', $request)->first();
+    $all=Advert::where('status',1)->latest()->limit(3)->get();
+    $user=User::where('username', $ad->username)->first();
+    return view('ads/ads-detail', compact('ad', 'all', 'user', 'banner'));
+}
 function adsdetails($request)
 {
     $banner=Banner::where('page', 1)->first();
