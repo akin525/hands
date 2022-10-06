@@ -124,28 +124,28 @@
                 <div class="col-lg-4 col-md-6">
 
                     <div class="singlePrice mb-24">
-                        <h4 class="priceTittle">Free</h4>
+                        <h4 class="priceTittle">Try free</h4>
                         <ul class="listing">
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your ad will be promoted for 1 week and 5 post</blockquote></li>
-                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Get upto 10x times more responses</blockquote> </li>
-                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your Ad will be featured for 1st day</blockquote></li>
+                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Get upto 5x times more responses</blockquote> </li>
+                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your Ad will be featured for 1 day</blockquote></li>
                         </ul>
                         <span class="price">₦0 <span class="subTittle"> /For 5 Post</span></span>
                         <div class="btn-wrapper">
-                            <a href="{{route('upgrade')}}" class="cmn-btn-outline1">Get Started</a>
+                            <a href="{{route('dashboard')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
 
                     <div class="singlePrice mb-24">
-                        <h4 class="priceTittle">Standard</h4>
+                        <h4 class="priceTittle">Standard Subscribe</h4>
                         <ul class="listing">
-                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for 4 week and 20 post</li>
+                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for 4 week and 30 post</li>
                             <li class="listItem"><i class="las la-check icon"></i>Get upto 10x times more responses</li>
                             <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for 30 day</li>
                         </ul>
-                        <span class="price">₦1,000<span class="subTittle"> /For 1 Month</span></span>
+                        <span class="price">₦1,200<span class="subTittle"> /For 1 Month</span></span>
                         <div class="btn-wrapper">
                             <a href="{{route('upgrade')}}" class="cmn-btn-outline1">Get Started</a>
 {{--                            <a href="https://paystack.com/pay/uhls4fwdis" class="cmn-btn-outline1">Get Started</a>--}}
@@ -155,13 +155,13 @@
                 <div class="col-lg-4 col-md-6">
 
                     <div class="singlePrice mb-24">
-                        <h4 class="priceTittle">Premium</h4>
+                        <h4 class="priceTittle">Premium Subscription</h4>
                         <ul class="listing">
-                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for three month</li>
+                            <li class="listItem"><i class="las la-check icon"></i>Your ad will be promoted for two month</li>
                             <li class="listItem"><i class="las la-check icon"></i>Get upto 10x times more responses</li>
-                            <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for 3 month</li>
+                            <li class="listItem"><i class="las la-check icon"></i>Your Ad will be featured for 2 month</li>
                         </ul>
-                        <span class="price">₦2,500<span class="subTittle"> /For 3 Month</span></span>
+                        <span class="price">₦2,500<span class="subTittle"> /For 2 Month</span></span>
                         <div class="btn-wrapper">
                             <a href="{{route('upgrade')}}" class="cmn-btn-outline1">Get Started</a>
                         </div>

@@ -105,6 +105,7 @@ function adsdetails($request)
     return view('ads/ads-detail', compact('ad', 'all', 'user', 'banner'));
 }
 
+
 function alladsloaded()
 {
     $banner=Banner::where('page', 2)->first();

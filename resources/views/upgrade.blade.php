@@ -28,26 +28,26 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <span class="price">₦1,000<span class="subTittle"> /For 30 Days</span></span>
+                            <span class="price">₦1,200<span class="subTittle"> /For 30 Days</span></span>
                             <ul class="selectCategories">
                                 <li class="listItem">30 Days</li>
-                                <li class="listItem">20 Posts</li>
+                                <li class="listItem">30 Posts</li>
                                 <li class="listItem">Promotion</li>
                             </ul>
                         </div>
 
                         <div class="singlePlan  mb-24">
                             <div class="top">
-                                <h4 class="priceTittle">3 Month</h4>
+                                <h4 class="priceTittle">2 Month</h4>
                                 <label class="checkWrap">
                                     <input type="checkbox" onclick="payWithPaystack2()">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <span class="price">₦2,500<span class="subTittle"> /For 3 Month</span></span>
+                            <span class="price">₦2,500<span class="subTittle"> /For 2 Month</span></span>
                             <ul class="selectCategories">
-                                <li class="listItem">90 Days</li>
-                                <li class="listItem">20 Posts</li>
+                                <li class="listItem">60 Days</li>
+                                <li class="listItem">Unlimited Post</li>
                                 <li class="listItem">Promotion</li>
                             </ul>
                         </div>
@@ -80,7 +80,7 @@
         var handler = PaystackPop.setup({
             key: "{{env('paystack_pk')}}",
             email: "{{\Illuminate\Support\Facades\Auth::user()->email}}",
-            amount: "1000" *100,
+            amount: "1200" *100,
             currency: "NGN",
             ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
             firstname: '{{\Illuminate\Support\Facades\Auth::user()->name}}',
