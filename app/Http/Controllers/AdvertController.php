@@ -85,7 +85,7 @@ public function advert(Request $request)
 
 public function adscat($request)
 {
-    $cat=Advert::where('category', $request)->where('status', 1)->paginate(6);
+    $cat=Advert::where('category', $request)->where('status', 1)->latest()->paginate(6);
     return view('ads/all-category', compact('cat'));
 }
 function adsdetails1($request)
@@ -108,7 +108,7 @@ function adsdetails($request)
 function alladsloaded()
 {
     $banner=Banner::where('page', 2)->first();
-    $all=Advert::where('status', 1)->paginate(6);
+    $all=Advert::where('status', 1)->latest()->paginate(9);
     return view('ads/list-ads', compact('all', 'banner'));
 }
 function stopadvert($request)
