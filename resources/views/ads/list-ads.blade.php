@@ -3,9 +3,6 @@
 @section('content')
     <div class="section-padding2 plr">
         <div class="container-fluid">
-            <center>
-            <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
-            </center>
             <div class="row">
 
                 @include('ads.lay.category')
@@ -108,6 +105,9 @@ Product Suggestions
                     </div>
                 </div>
             </div>
+            <center>
+                <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
+            </center>
         </div>
     </div>
 @endsection
