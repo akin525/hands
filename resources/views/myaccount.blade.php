@@ -27,7 +27,7 @@
                                 @else
                                     <img width="200" src="{{url('/', Auth::user()->profile)}}" alt="" class="avatar-photo">
                                 @endif
-                                    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body pd-5">
@@ -71,6 +71,19 @@
                                         Nigeria
                                     </li>
                                 </ul>
+                                @if(Auth::user()->ads_status=="0")
+                                <center>
+                                    <img class="align-content-center" width="100" src="{{asset('images/mem.png')}}">
+                                </center>
+                                @elseif(Auth::user()->ads_status=="1")
+                                    <center>
+                                        <img class="align-content-center" width="100" src="{{asset('images/mem3.png')}}">
+                                    </center>
+                                @elseif(Auth::user()->ads_status=="2")
+                                    <center>
+                                        <img class="align-content-center" width="100" src="{{asset('images/mem4.png')}}">
+                                    </center>
+                                @endif
                             </div>
                         </div>
                     </div>

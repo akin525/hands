@@ -12,9 +12,18 @@
                 </div>
                 <div class="col-md-8">
                     <h4 class="font-20 weight-500 mb-10 text-capitalize">
-                        Welcome back <div class="weight-600 font-30 text-blue">{{\Illuminate\Support\Facades\Auth::user()->name}}!</div>
+                        Welcome back <div class="weight-600 font-30 text-blue">{{\Illuminate\Support\Facades\Auth::user()->name}}!
+                            @if(Auth::user()->ads_status=="0")
+                                    <img width="100" src="{{asset('images/mem.png')}}">
+                            @elseif(Auth::user()->ads_status=="1")
+                                    <img  width="100" src="{{asset('images/mem3.png')}}">
+                            @elseif(Auth::user()->ads_status=="2")
+                                    <img  width="100" src="{{asset('images/mem4.png')}}">
+                            @endif
+                        </div>
                     </h4>
-                    <p class="font-18 max-width-600">ur work would be unimaginable without the people who work eagerly to improve the lives of network individuals at home and abroad.</p>
+                    <p class="font-18 max-width-600">ur work would be unimaginable without the people who work eagerly to improve the lives of network individuals at home and abroad.
+                    </p>
                 </div>
             </div>
         </div>
@@ -217,17 +226,23 @@
             <div class="alert alert-success" role="alert">
                 @if(Auth::user()->ads_status=="0")
                 <h4 class="alert-heading h4">Well done!</h4>
-                <p>Dear Customer Your Present Plan is Free Plan Kindly Upgrade to enjoy More Features</p>
-                <hr>
+                    <h3>Dear Customer Your Present Plan is Free Plan Kindly Upgrade to enjoy More Features
+                        <img width="100" src="{{asset('images/mem.png')}}">
+                    </h3>
+                <br>
 {{--                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>--}}
                 @elseif(Auth::user()->ads_status=="1")
                     <h4 class="alert-heading h4">Well done!</h4>
-                    <p>Dear Customer Your Present Plan is Standard Plan Kindly Upgrade to enjoy More Features</p>
-                    <hr>
+                    <h4>Dear Customer Your Present Plan is Standard Plan Kindly Upgrade to enjoy More Features
+                        <img width="100" src="{{asset('images/mem3.png')}}">
+                    </h4>
+                    <br>
                 @elseif(Auth::user()->ads_status=="2")
                     <h4 class="alert-heading h4">Well done!</h4>
-                    <p>Dear Customer Your Present Plan is premium Plan Kindly Upgrade to enjoy More Features</p>
-                    <hr>
+                    <h4>Dear Customer Your Present Plan is premium Plan Kindly Upgrade to enjoy More Features
+                        <img width="100" src="{{asset('images/mem4.png')}}">
+                    </h4>
+                    <br>
                 @endif
             </div>
             <div class="card-box mb-30">
