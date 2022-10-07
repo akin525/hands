@@ -4,7 +4,9 @@
     <div class="section-padding2 plr">
         <div class="container-fluid">
             <div class="row">
-
+                <center>
+                    <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
+                </center>
                 @include('ads.lay.category')
                 <div class="col-xxl-9 col-xl-9  col-lg-8 col-md-7">
                     <div class="viewItems">
@@ -71,6 +73,7 @@ Product Suggestions
                         </div>
                     </div>
 
+
                     <div class="gridView customTab-content customTab-content-1 active">
                         <div class="row ">
                             @foreach($all as$pa)
@@ -105,9 +108,7 @@ Product Suggestions
                     </div>
                 </div>
             </div>
-            <center>
-                <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
-            </center>
+
         </div>
     </div>
 @endsection

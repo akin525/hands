@@ -27,6 +27,7 @@
                                     <img src="{{url('/', $ad->cover_image)}}" class="img-fluid" alt="image">
                                 </a>
                             </div>
+                            <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
                         </div>
                     </div>
 
@@ -60,7 +61,6 @@
 {{--                                <a href="#" class="social"><i class="lab la-linkedin"></i></a>--}}
 {{--                                <a href="#" class="social"><i class="lar la-bell"></i></a>--}}
 {{--                            </div>--}}
-                            <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
                         </div>
                     </div>
                 </div>

@@ -57,6 +57,8 @@
     <section class="featureListing bottom-padding2">
         <div class="container">
             <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
+            <br>
+            <br>
             <div class="row">
                 <div class="col-xl-8 col-lg-7 col-md-10 col-sm-10">
                     <div class="section-tittle mb-50">
