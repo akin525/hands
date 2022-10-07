@@ -249,7 +249,7 @@
         <div class="row ">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                 <div class="romana_better_place_text text-center">
-                    <h2>Advertise Your Business With Us, Kindly Click below to view all advert</h2>
+                    <h2><b>Advertise Your Business With Us, Kindly Click below to view all advert</b></h2>
                     <div class="romana_better_place_btn">
                         <a href="{{url('listads')}}" class="hvr-box-shadow-outset">All Advert</a>
                     </div>
@@ -309,12 +309,12 @@
 ============================================================ -->
 
 
-<div class="romana_better_place_area">
+<div class="romana_better_place_area" style="background-image: url(images/ju.jpeg)">
     <div class="container">
         <div class="row ">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                 <div class="romana_better_place_text text-center">
-                    <h2>JOIN US TODAY TO MAKE YOUR ORGANIZATION(BUSINESS) MORE pROFITABLE</h2>
+                    <h2><b>JOIN US TODAY TO MAKE YOUR ORGANIZATION(BUSINESS) MORE PROFITABLE</b></h2>
                    <div class="romana_better_place_btn">
                         <a href="{{route('register')}}" class="hvr-box-shadow-outset">Become a Member</a>
                     </div>
