@@ -244,7 +244,7 @@
     </div>
 </div>
 
-<div class="romana_better_place_area">
+<div class="romana_better_place_area" style="background-image: url(images/bok.jpeg)">
     <div class="container">
         <div class="row ">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
