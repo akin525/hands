@@ -234,6 +234,24 @@
 
 <div class="main-container">
     <div class="pd-ltr-20">
+
+        <center>
+            <div class="container-fluid">
+                <div class="row column_title">
+                    <div class="card card-body align-content-center">
+                        <a href="{{route('app', 'Ashsupport.apk')}}" class="font-weight-bold text-center">
+                            <b>Download  our Mobile App</b>
+                            <img width="300" src="{{asset('images/play.png')}}" alt="">
+
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </center>
+        <br>
+        <br>
     @yield('content')
     </div>
 </div>

@@ -115,6 +115,7 @@
                             <li class="navbar-link"><a href="{{url('ads')}}">Advert</a></li>
                             <li><a href="{{url('about')}}">about</a></li>
                             <li><a href="{{url('event')}}">Promote Business</a></li>
+{{--                            <li><a href="{{route('app', 'Ashsupport.apk')}}">Dashboard App</a></li>--}}
 {{--                            <li><a href="{{url('volunteer')}}">Fund Raising</a></li>--}}
 {{--                            <li><a href="{{route('login')}}">Login Here</a></li>--}}
 {{--                            <li><a href="{{url('contact')}}">Contact</a></li>--}}
@@ -127,12 +128,14 @@
                             {{--                        <li class="search"><a href="#"><i class="icofont icofont-search"></i></a></li>--}}
                             <li class="donation"><a href="{{route('dashboard')}}" class="hvr-box-shadow-outset">Dashboard</a></li>
 {{--                            <li class="donation"><a href="{{route('myaccount')}}" class="hvr-box-shadow-outset">{{Auth::user()->name}}</a></li>--}}
+                            <li class="donation"><a href="{{route('app', 'Ashsupport.apk')}}" class="hvr-box-shadow-outset">Download App</a></li>
                         </ul>
                     @else
                     <ul class="cartSearch">
 {{--                        <li class="search"><a href="#"><i class="icofont icofont-search"></i></a></li>--}}
 {{--                        <li class="donation"><a href="{{route('login')}}" class="hvr-box-shadow-outset">Donate Now</a></li>--}}
                         <li class="donation"><a href="{{route('login')}}" class="hvr-box-shadow-outset">Login</a></li>
+                        <li class="donation"><a href="{{route('app', 'Ashsupport.apk')}}" class="hvr-box-shadow-outset">Download App</a></li>
                     </ul>
                 @endif
                     <!-- cartSearch End -->

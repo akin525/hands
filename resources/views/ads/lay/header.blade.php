@@ -49,6 +49,7 @@
                     <li><a href="{{url('listads')}}">All Ads</a></li>
                     <li><a href="{{url('about')}}">About us</a></li>
                     <li><a href="{{url('contact')}}">contact</a></li>
+                    <li><a href="{{route('app', 'Ashsupport.apk')}}">Download App</a></li>
                 </ul>
             </div>
         </div>
@@ -64,10 +65,14 @@
                         <h6 class="ac-title">User Account</h6>
                         <ul class="ac-list">
                             <li class="list">
-                                <a class="list-title" href={{route('dashboard')}}"> <i class="lar la-user-circle icon"></i> My Account </a>
+                                <a class="list-title" href="{{route('dashboard')}}"> <i class="lar la-user-circle icon"></i> My Account </a>
                             </li>
                             <li class="list">
                                 <a class="list-title" href="{{route('logout')}}"> <i class="las la-sign-out-alt icon"></i> Logout</a>
+                            </li>
+
+                            <li class="list">
+                                <a class="list-title" href="{{route('app', 'Ashsupport.apk')}}"> <i class="las la-sign-out-alt icon"></i> Download App</a>
                             </li>
                         </ul>
                     </div>

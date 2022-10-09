@@ -157,5 +157,18 @@ Route::get('/banner0/{filename}', function ($filename) {
     $response->header("Content-Type", $type);
     return $response;
 })->name('banner0');
+Route::get('/app/{filename}', function ($filename) {
+    $path = storage_path('app/myapp/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+    return $response;
+})->name('app');
 Route::view('policy', 'policy');
 require __DIR__.'/auth.php';
