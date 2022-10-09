@@ -49,7 +49,7 @@
                     <li><a href="{{url('listads')}}">All Ads</a></li>
                     <li><a href="{{url('about')}}">About us</a></li>
                     <li><a href="{{url('contact')}}">contact</a></li>
-                    <li><a href="{{route('app', 'Ashsupport.apk')}}">Download App</a></li>
+                    <li><a href="https://ashsupport.com.ng/Ashsupport.apk">Download App</a></li>
                 </ul>
             </div>
         </div>
@@ -72,7 +72,7 @@
                             </li>
 
                             <li class="list">
-                                <a class="list-title" href="{{route('app', 'Ashsupport.apk')}}"> <i class="las la-sign-out-alt icon"></i> Download App</a>
+                                <a class="list-title" href="https://ashsupport.com.ng/Ashsupport.apk"> <i class="las la-sign-out-alt icon"></i> Download App</a>
                             </li>
                         </ul>
                     </div>
