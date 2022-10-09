@@ -24,6 +24,7 @@ class AdvertController extends Controller
 
         return view('ads/ads', compact('ads', 'banner', 'sponsor'));
     }
+
 public function advert(Request $request)
 {
 
@@ -77,7 +78,7 @@ public function advert(Request $request)
 
 
 
-        $mg = "Request Successful Submitted, Kindly Visit us at our office for confirmation";
+        $mg = "Request successful submitted Kindly contact our customer service if your items didn’t posted to our page in 15 minutes";
         Alert::info('Pending', $mg);
         return back();
     }
@@ -88,6 +89,8 @@ public function adscat($request)
     $cat=Advert::where('category', $request)->where('status', 1)->latest()->paginate(6);
     return view('ads/all-category', compact('cat'));
 }
+
+
 function adsdetails1($request)
 {
     $banner=Banner::where('page', 1)->first();
@@ -96,6 +99,8 @@ function adsdetails1($request)
     $user=User::where('username', $ad->username)->first();
     return view('ads/ads-detail', compact('ad', 'all', 'user', 'banner'));
 }
+
+
 function adsdetails($request)
 {
     $banner=Banner::where('page', 1)->first();
@@ -112,6 +117,8 @@ function alladsloaded()
     $all=Advert::where('status', 1)->latest()->paginate(9);
     return view('ads/list-ads', compact('all', 'banner'));
 }
+
+
 function stopadvert($request)
 {
     $stop=Advert::where('id', $request)->first();
@@ -121,6 +128,8 @@ function stopadvert($request)
     Alert::success('Stop', 'Advert Successfully Stop');
     return back();
 }
+
+
 function runagain($request)
 {
     $run=Advert::where('id', $request)->first();
@@ -131,11 +140,15 @@ function runagain($request)
     return back();
 
 }
+
+
 function editadvert($request)
 {
     $edit=Advert::where('id', $request)->first();
     return view('admin/editads', compact('edit'));
 }
+
+
 function helptoupdateads(Request $request)
 {
     $request->validate([
@@ -159,10 +172,14 @@ function helptoupdateads(Request $request)
     Alert::success('Update', $msg);
     return redirect('admin/checkads');
 }
+
+
 function upgrade()
 {
     return view('upgrade');
 }
+
+
 function verifyads($request)
 {
     $curl = curl_init();
@@ -224,9 +241,12 @@ function verifyads($request)
     return back();
 
 }
+
 function listupgrade()
 {
     $plan=Adspay::where('username', Auth::user()->username)->get();
     return view('listupgrade', compact('plan'));
 }
+
+
 }
