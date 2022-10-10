@@ -110,7 +110,7 @@
         </div>
         <h2 class="modialTittle">Post Your <span>Ad</span> ?</h2>
         <div class="btn-wrapper">
-            <a href="" class="cmn-btn02">Yes , Post ad</a>
+            <a href="{{route('advert')}}" class="cmn-btn02">Yes , Post ad</a>
         </div>
     </div>
 @yield('content')
