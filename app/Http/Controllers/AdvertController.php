@@ -36,6 +36,7 @@ public function advert(Request $request)
         'category'=>'required',
         'text'=>'required',
         'cover'=>'required',
+        'add'=>'required',
     ]);
 
     $ad=Advert::where('username', Auth::user()->username)->count();
@@ -63,6 +64,7 @@ public function advert(Request $request)
 
         $user = User::where('username', Auth::user()->username)->first();
         $cover = Storage::put('cover', $request['cover']);
+        $other = Storage::put('cover', $request['add']);
         $post = Advert::create([
             'username' => Auth::user()->username,
             'advert_name' => $request->name,
@@ -73,6 +75,7 @@ public function advert(Request $request)
             'duration' => $request->duration,
             'content' => $request->text,
             'cover_image' => $cover,
+            'other' => $other,
         ]);
 
 

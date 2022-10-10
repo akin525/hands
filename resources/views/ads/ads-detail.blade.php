@@ -50,17 +50,19 @@
                             <h4 class="priceTittle">Description</h4>
                             <p class="pera">{!! $ad->content !!}</p>
                         </div>
+                        <h2>Other Images</h2>
+                        <img width="200" src="{{url('/', $ad->other)}}">
 
                         <div class="descriptionFooter">
                             <div class="btn-wrapper">
 {{--                                <a href="#" class="cmn-btn-outline2"><i class="lab la-font-awesome-flag icon"></i>Report</a>--}}
                             </div>
-{{--                            <div class="socialWrap">--}}
-{{--                                <a href="#" class="social"><i class="lab la-facebook-square"></i></a>--}}
-{{--                                <a href="#" class="social"><i class="lab la-twitter"></i></a>--}}
-{{--                                <a href="#" class="social"><i class="lab la-linkedin"></i></a>--}}
-{{--                                <a href="#" class="social"><i class="lar la-bell"></i></a>--}}
-{{--                            </div>--}}
+                            <div class="socialWrap">
+                                <a href="#" class="social"><i class="lab la-facebook-square"></i></a>
+                                <a href="#" class="social"><i class="lab la-twitter"></i></a>
+                                <a href="#" class="social"><i class="lab la-linkedin"></i></a>
+                                <a href="#" class="social"><i class="lar la-bell"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
