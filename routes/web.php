@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\AlladvertController;
 use App\Http\Controllers\admin\AllrequestController;
 use App\Http\Controllers\admin\CreatA;
 use App\Http\Controllers\admin\FundController;
+use App\Http\Controllers\admin\PlanController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdvertController;
@@ -90,6 +91,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/post-advert', [AlladvertController::class, 'postadvertadmin'])->name('admin/post-advert');
     Route::get('admin/sponsor-advert', [AlladvertController::class, 'sponsor'])->name('admin/sponsor-advert');
     Route::get('admin/adspay', [AlladvertController::class, 'alladspayment'])->name('admin/adspay');
+    Route::get('admin/plan', [PlanController::class, 'plan'])->name('admin/plan');
+    Route::get('admin/editplan/{id}', [PlanController::class, 'editplan'])->name('admin/editplan');
+    Route::post('admin/po', [PlanController::class, 'postplan'])->name('admin/po');
+    Route::post('admin/upo', [PlanController::class, 'updateplan'])->name('admin/upo');
     Route::get('admin/checkads', [AlladvertController::class, 'alladvertrequest'])->name('admin/checkads');
     Route::get('admin/checkrequest', [AllrequestController::class, 'indexrequest'])->name('admin/checkrequest');
     Route::get('admin/bookfund', [FundController::class, 'bookfund'])->name('admin/bookfund');

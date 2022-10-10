@@ -164,6 +164,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{route('admin/plan')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-pen"></span><span class="mtext">Plan</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('admin/sponsor-advert')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-boat"></span><span class="mtext">Post Sponsor Ads</span>
                     </a>

@@ -19,38 +19,23 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="promotionQuality">
-
+                        @foreach($plan as $pa)
                         <div class="singlePlan  mb-24">
                             <div class="top">
-                                <h4 class="priceTittle">1 Month</h4>
+                                <h4 class="priceTittle">{{$pa->plan}}</h4>
                                 <label class="checkWrap">
-                                    <input type="checkbox" value="1" name="" onclick="payWithPaystack()">
-                                    <span class="checkmark"></span>
+                                    <input type="checkbox" @if(Auth::user()->ads_status==$pa->id) id="warning" @else onclick="payWithPaystack({{$pa->amount}})" @endif @if(Auth::user()->ads_status==$pa->id)checked="checked"@endif>
+                                  <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <span class="price">₦1,200<span class="subTittle"> /For 30 Days</span></span>
+                            <span class="price">₦{{number_format(intval($pa->amount *1))}}<span class="subTittle"> /For {{$pa->days}} Days</span></span>
                             <ul class="selectCategories">
-                                <li class="listItem">30 Days</li>
-                                <li class="listItem">30 Posts</li>
+                                <li class="listItem">{{$pa->days}} Days</li>
+                                <li class="listItem">{{$pa->limit}} Posts</li>
                                 <li class="listItem">Promotion</li>
                             </ul>
                         </div>
-
-                        <div class="singlePlan  mb-24">
-                            <div class="top">
-                                <h4 class="priceTittle">2 Month</h4>
-                                <label class="checkWrap">
-                                    <input type="checkbox" onclick="payWithPaystack2()">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <span class="price">₦2,500<span class="subTittle"> /For 2 Month</span></span>
-                            <ul class="selectCategories">
-                                <li class="listItem">60 Days</li>
-                                <li class="listItem">Unlimited Post</li>
-                                <li class="listItem">Promotion</li>
-                            </ul>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>
@@ -74,13 +59,45 @@
 </div>
         </div>
     </div>
-<script src="https://js.paystack.co/v1/inline.js"></script>
-<script>
-    function payWithPaystack(){
+
+    <script>
+        //Warning Message
+        $('#warning').click(function () {
+            swal({
+                title: 'Ooops',
+                text: "You are Already On This Plan",
+                type: 'warning',
+                showCancelButton: false,
+                cancelButtonClass: 'btn btn-danger',
+                // cancelButtonUrl: window.location = "#";
+                // confirmButtonText: 'Yes, delete it!'
+            }).then(function (result) {
+                    {{--window.location.href = "{{route('dashboard)}}";--}}
+            });
+        });
+
+    </script>
+    <script src="{{asset('src/plugins/sweetalert2/sweetalert2.all.js')}}"></script>
+    <script src="{{asset('src/plugins/sweetalert2/sweet-alert.init.js')}}"></script>
+    <script src="{{asset('vendors/scripts/core.js')}}"></script>
+    <script src="{{asset('vendors/scripts/script.min.js')}}"></script>
+    <script src="{{asset('vendors/scripts/process.js')}}"></script>
+    <script src="{{asset('vendors/scripts/layout-settings.js')}}"></script>
+    <script src="{{asset('src/plugins/apexcharts/apexcharts.min.js')}}"></script>
+    <script src="{{asset('src/plugins/datatables/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('src/plugins/datatables/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('src/plugins/datatables/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('src/plugins/datatables/js/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('vendors/scripts/dashboard.js')}}"></script>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script>
+    function payWithPaystack(amount){
         var handler = PaystackPop.setup({
             key: "{{env('paystack_pk')}}",
             email: "{{\Illuminate\Support\Facades\Auth::user()->email}}",
-            amount: "1200" *100,
+            amount: amount *100,
             currency: "NGN",
             ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
             firstname: '{{\Illuminate\Support\Facades\Auth::user()->name}}',
@@ -102,40 +119,6 @@
             onClose: function(){
                 alert('window closed');
                 window.location='{{route('upgrade')}}';
-            }
-        });
-        handler.openIframe();
-    }
-</script>
-<script>
-    function payWithPaystack2(){
-        var handler = PaystackPop.setup({
-            key: "pk_live_82f676bc05d5b14731e2b11b25f54526b112f64c",
-            email: "{{\Illuminate\Support\Facades\Auth::user()->email}}",
-            amount: "2500" *100,
-            currency: "NGN",
-            ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-            firstname: '{{\Illuminate\Support\Facades\Auth::user()->name}}',
-            // label: "Optional string that replaces customer email"
-            metadata: {
-                custom_fields: [
-                    {
-                        display_name: "Mobile Number",
-                        variable_name: "{{\Illuminate\Support\Facades\Auth::user()->number}}",
-                        value: "+2348146328645"
-                    }
-                ]
-            },
-            callback: function(response){
-                //alert('Deposit successful. transaction refference number is ' + response.reference);
-                window.location='{{ route('verifyads', '/') }}/'+response.reference;
-
-
-            },
-            onClose: function(){
-                alert('window closed');
-                window.location='{{route('upgrade')}}';
-
             }
         });
         handler.openIframe();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Adspay;
+use App\Models\Adsplan;
 use App\Models\Advert;
 use App\Models\Banner;
 use App\Models\Sponsor;
@@ -21,8 +22,9 @@ class AdvertController extends Controller
         $sponsor=Sponsor::where('status', 1)->latest()->limit(12)->get();
         $banner=Banner::where('page',1)->first();
         $ads=Advert::where('status', 1)->latest()->limit(12)->get();
+        $plan=Adsplan::where('status', 1)->get();
 
-        return view('ads/ads', compact('ads', 'banner', 'sponsor'));
+        return view('ads/ads', compact('ads', 'banner', 'sponsor', 'plan'));
     }
 
 public function advert(Request $request)
@@ -40,27 +42,13 @@ public function advert(Request $request)
     ]);
 
     $ad=Advert::where('username', Auth::user()->username)->count();
-    if (Auth::user()->ads_status =='0'){
-        if ($ad==5){
+    $plan=Adsplan::where('id', Auth::user()->ads_status)->first();
+        if ($ad==$plan->limit){
             $msg="Kindly Upgrade your Account Membership Account";
             Alert::warning('Ooops', $msg);
             return redirect('upgrade');
         }
-//        Alert::warning('Warning', 'You have an active ads till running');
-//        return back();
-    }else if (Auth::user()->ads_status =='1') {
-        if ($ad == 20) {
-            $msg="Kindly Upgrade your Account Membership Account";
-            Alert::warning('Ooops', $msg);
-            return redirect('upgrade');
-        }
-    }else if (Auth::user()->ads_status =='2') {
-        if ($ad == 60) {
-            $msg = "Kindly Contact Admin For Upgrade";
-            Alert::warning('Ooops', $msg);
-            return redirect('upgrade');
-        }
-    }
+
 
         $user = User::where('username', Auth::user()->username)->first();
         $cover = Storage::put('cover', $request['cover']);
@@ -179,7 +167,8 @@ function helptoupdateads(Request $request)
 
 function upgrade()
 {
-    return view('upgrade');
+    $plan=Adsplan::where('status', 1)->get();
+    return view('upgrade', compact('plan'));
 }
 
 
