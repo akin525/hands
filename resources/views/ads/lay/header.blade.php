@@ -8,11 +8,7 @@
     <title>Classified Ads</title>
     <link rel="icon"  sizes="20x20" href="https://ashsupport.com.ng//images/ash.jpeg">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="{{asset('assets/css/plugin.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/main-style.css')}}">

@@ -1,3 +1,8 @@
+<!-- Styles -->
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 <div class="col-xxl-3  col-xl-3 col-lg-4 col-md-5">
     <div class="cateSidebar">
         <h5 class="catTittle2">All Categories</h5>
