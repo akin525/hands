@@ -60,10 +60,12 @@ function postallsponoradvert(Request $request)
         'text'=>'required',
         'number'=>'required',
         'cover'=>'required',
+        'add'=>'required',
     ]);
 
     $user=User::where('username',Auth::user()->username)->first();
     $cover = Storage::put('cover', $request['cover']);
+    $other = Storage::put('cover', $request['add']);
     $post=Sponsor::create([
         'username'=>'admin',
         'advert_name'=>$request->name,
@@ -74,6 +76,7 @@ function postallsponoradvert(Request $request)
         'duration'=>$request->duration,
         'content'=>$request->text,
         'cover_image'=>$cover,
+        'other' => $other,
         'status'=>1,
     ]);
 
