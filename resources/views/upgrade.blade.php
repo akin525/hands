@@ -34,6 +34,7 @@
                                 <li class="listItem">{{$pa->limit}} Posts</li>
                                 <li class="listItem">Promotion</li>
                             </ul>
+                            <butt0n type="button" onclick="payWithPaystack({{$pa->amount}}) "></butt0n>
                         </div>
                         @endforeach
 
@@ -101,7 +102,7 @@
             email: "{{\Illuminate\Support\Facades\Auth::user()->email}}",
             amount: amount *100,
             currency: "NGN",
-            ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+            ref: 'planupgrade'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
             firstname: '{{\Illuminate\Support\Facades\Auth::user()->name}}',
             // label: "Optional string that replaces customer email"
             metadata: {

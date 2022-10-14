@@ -8,6 +8,7 @@ use App\Models\Adspay;
 use App\Models\Adsplan;
 use App\Models\Advert;
 use App\Models\Banner;
+use App\Models\Plan;
 use App\Models\Sponsor;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -43,7 +44,7 @@ public function advert(Request $request)
 
     $ad=Advert::where('username', Auth::user()->username)->count();
     $plan=Adsplan::where('id', Auth::user()->ads_status)->first();
-        if ($ad==$plan->limit){
+        if ($ad>=$plan->limit){
             $msg="Kindly Upgrade your Account Membership Account";
             Alert::warning('Ooops', $msg);
             return redirect('upgrade');
@@ -210,19 +211,14 @@ function verifyads($request)
     if ($data['status']=='true') {
         $amount=$data["data"]["amount"]/100;
         $user=User::where('username', Auth::user()->username)->first();
-        if ($amount=="1500"){
-            $nu=1;
-            $plan="Standard";
-        }elseif ($amount=="3000"){
-            $nu=2;
-            $plan="Premium";
-        }
+        $plan=Adsplan::where('amount', $amount)->first();
         $create=Adspay::create([
             'username'=>Auth::user()->username,
             'amount'=>$amount,
-            'plan'=>$plan,
+            'plan'=>$plan->id,
+            'refid'=>$request,
         ]);
-        $user->ads_status=$nu;
+        $user->ads_status=$plan->id;
         $user->save();
         $mg="Account Upgrade Successfully";
         Alert::success('Upgraded', $mg);
@@ -232,6 +228,14 @@ function verifyads($request)
     Alert::error('Ooops', $mg);
     return back();
 
+}
+function insertplan($request)
+{
+    $create=Adspay::create([
+        'username'=>Auth::user()->username,
+        'amount'=>0,
+        'plan'=>$request,
+    ]);
 }
 
 function listupgrade()
