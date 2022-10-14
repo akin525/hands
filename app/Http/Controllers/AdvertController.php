@@ -44,11 +44,11 @@ public function advert(Request $request)
 
     $ad=Advert::where('username', Auth::user()->username)->count();
     $plan=Adsplan::where('id', Auth::user()->ads_status)->first();
-        if ($ad>=$plan->limit){
-            $msg="Kindly Upgrade your Account Membership Account";
-            Alert::warning('Ooops', $msg);
-            return redirect('upgrade');
-        }
+//        if ($ad>=$plan->limit){
+//            $msg="Kindly Upgrade your Account Membership Account";
+//            Alert::warning('Ooops', $msg);
+//            return redirect('upgrade');
+//        }
 
 
         $user = User::where('username', Auth::user()->username)->first();
