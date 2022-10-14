@@ -44,12 +44,6 @@ public function advert(Request $request)
 
     $ad=Advert::where('username', Auth::user()->username)->count();
     $plan=Adsplan::where('id', Auth::user()->ads_status)->first();
-//        if ($ad>=$plan->limit){
-//            $msg="Kindly Upgrade your Account Membership Account";
-//            Alert::warning('Ooops', $msg);
-//            return redirect('upgrade');
-//        }
-
 
         $user = User::where('username', Auth::user()->username)->first();
         $cover = Storage::put('cover', $request['cover']);
@@ -67,12 +61,21 @@ public function advert(Request $request)
             'other' => $other,
         ]);
 
+    if ($ad>=$plan->limit){
+        $msg="Kindly Upgrade your Account Membership Account for instant post";
+        Alert::info('Pending', $msg);
+        return redirect('upgrade');
+    }else{
+        $post->status=1;
+        $plan->save();
 
-
-
-        $mg = "Request successful submitted Kindly contact our customer service if your items didn’t posted to our page in 15 minutes";
-        Alert::info('Pending', $mg);
+        $mg="Advert Successful posted";
+        Alert::success('Successful', $mg);
         return back();
+    }
+//        $mg = "Request successful submitted Kindly contact our customer service if your items didn’t posted to our page in 15 minutes";
+//        Alert::info('Pending', $mg);
+//        return back();
     }
 
 
