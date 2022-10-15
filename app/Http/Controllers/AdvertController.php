@@ -62,17 +62,18 @@ public function advert(Request $request)
         ]);
 
     if ($ad>=$plan->limit){
-        $msg="Kindly Upgrade your Account Membership Account for instant post";
-        Alert::info('Pending', $msg);
-        return redirect('upgrade');
+//        $msg="Kindly Upgrade your Account Membership Account for instant post";
+//        Alert::info('Pending', $msg);
+//        return redirect('upgrade');
     }else{
         $post->status=1;
-        $plan->save();
+        $post->save();
 
-        $mg="Advert Successful posted";
-        Alert::success('Successful', $mg);
-        return back();
     }
+
+    $mg="Advert Successful posted";
+    Alert::success('Successful', $mg);
+    return back();
 //        $mg = "Request successful submitted Kindly contact our customer service if your items didn’t posted to our page in 15 minutes";
 //        Alert::info('Pending', $mg);
 //        return back();
