@@ -116,18 +116,16 @@
                         </div>
 
                     </div>
-                        <br>
-                        <br>
-
-                        <label class="col-sm-12 col-md-2 col-form-label">Addition Image</label>
-                        <div class="#" >
-                            <div class="fallback">
-                                <canvas id= "canv2" ></canvas>
-                                <input type="file"  name="add" accept="image/*" id=finput1 onchange="upload1()" required />
-                         </div>
-
+                    </div>
+                        <div class="form-group row">
+                            <label class="col-sm-12 col-md-2 col-form-label">Addition Image</label>
+                            <div class="#" >
+                                <div class="fallback">
+                                    <canvas id= "canv2" ></canvas>
+                                    <input type="file"  name="add" accept="image/*" id=finput1 onchange="upload1()" required />
+                                </div>
+                            </div>
                         </div>
-                </div>
                 <button type="submit" class="btn btn-success">Request</button>
             </form>
 
