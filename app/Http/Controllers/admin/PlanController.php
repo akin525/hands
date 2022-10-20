@@ -20,12 +20,14 @@ class PlanController extends Controller
         $request->validate([
             'name'=>'required',
             'limit'=>'required',
+            'narration'=>'required',
             'amount'=>'required',
             'day'=>'required',
         ]);
         $create=Adsplan::create([
             'plan'=>$request->name,
             'amount'=>$request->amount,
+            'narration'=>$request->narration,
             'limit'=>$request->limit,
             'days'=>$request->day,
         ]);
@@ -38,6 +40,7 @@ class PlanController extends Controller
         $request->validate([
             'id'=>'required',
             'name'=>'required',
+            'narration'=>'required',
             'limit'=>'required',
             'amount'=>'required',
             'day'=>'required',
@@ -47,6 +50,7 @@ class PlanController extends Controller
        $pon->plan=$request->name;
        $pon->amount=$request->amount;
        $pon->limit=$request->limit;
+       $pon->narration=$request->narration;
        $pon->days=$request->day;
        $pon->save();
         $msg="Plan Successful Updated";

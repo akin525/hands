@@ -130,7 +130,7 @@
                         <h4 class="priceTittle">{{$pa->plan}}</h4>
                         <ul class="listing">
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your ad will be promoted for {{$pa->days}} Days and {{$pa->limit}} post</blockquote></li>
-                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Get upto 5x times more responses</blockquote> </li>
+                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">{{$pa->narration}}</blockquote> </li>
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your Ad will be featured for {{$pa->days}} days</blockquote></li>
                         </ul>
                         <span class="price">₦{{number_format(intval($pa->amount *1))}}<span class="subTittle"> /For {{$pa->limit}} Post</span></span>

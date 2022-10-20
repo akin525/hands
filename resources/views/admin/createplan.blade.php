@@ -49,6 +49,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label class="col-sm-12 col-md-2 col-form-label">Advert Post Narration</label>
+                    <div class="col-sm-12 col-md-10">
+                        <input class="form-control" name="narration"  type="number" placeholder="Enter Narration" required>
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Number Of Days</label>
                     <div class="col-sm-12 col-md-10">
                         <input class="form-control" name="day"  type="number" placeholder="Enter Number Days" required>
@@ -71,6 +77,7 @@
                     <th>Plan</th>
                     <th>Amount</th>
                     <th>Limit</th>
+                    <th>Narration</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -82,6 +89,7 @@
                         <td>{{$fd->plan}}</td>
                         <td>{{$fd->amount}}</td>
                         <td>{{$fd->limit}}</td>
+                        <td>{{$fd->narration}}</td>
                         <td>
                             @if($fd->status==0)
                                 <span class="badge badge-warning">Not Active</span>

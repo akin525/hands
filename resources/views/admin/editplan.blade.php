@@ -44,6 +44,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label class="col-sm-12 col-md-2 col-form-label">Narration</label>
+                    <div class="col-sm-12 col-md-10">
+                        <input class="form-control" name="narration" value="{{$plan->narration}}"  type="text" placeholder="Enter  Narration" required>
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label class="col-sm-12 col-md-2 col-form-label">Advert Post Limit</label>
                     <div class="col-sm-12 col-md-10">
                         <input class="form-control" name="limit" value="{{$plan->limit}}"  type="number" placeholder="Enter limit" required>
