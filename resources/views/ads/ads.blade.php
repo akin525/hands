@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 @endforeach
-
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location='{{url('listads')}}'">See More</button>
             </div>
         </div>
     </section>
