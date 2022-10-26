@@ -176,4 +176,6 @@ Route::get('/app/{filename}', function ($filename) {
     return $response;
 })->name('app');
 Route::view('policy', 'policy');
+
+
 require __DIR__.'/auth.php';

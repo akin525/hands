@@ -13,7 +13,7 @@
                                 <h1>Give a hand to make <br> the <span>better</span> world.</h1>
                                 <p>Bringing Help and Hope to Hurting People</p>
                                 <div class="romana_slider_btn">
-                                    <a href="{{url('ads')}}" class="hvr-box-shadow-outset">Ads</a>
+                                    <a href="{{url('ads')}}" class="hvr-box-shadow-outset">View Items</a>
                                 </div>
                                 <div class="slider_prg">
                                     <div class="slider_prg_in"></div>
@@ -34,7 +34,7 @@
                             <div class="romana_hero_text">
                                 <h1>Give a hand to make <br> the <span>better</span> world.</h1>
                                 <div class="romana_slider_btn">
-                                    <a href="{{url('ads')}}" class="hvr-box-shadow-outset">Advert</a>
+                                    <a href="{{url('ads')}}" class="hvr-box-shadow-outset">View Items</a>
                                 </div>
                                 <div class="slider_prg">
                                     <div class="slider_prg_in"></div>
@@ -283,7 +283,7 @@
         <div class="row ">
             <div class="col-sm-6 col-xs-12">
                 <div class="">
-                        <img src="{{asset('images/ab.jpeg')}}" class=" img-responsive" alt="">
+                        <img src="{{asset('images/tr.png')}}" class=" img-responsive" alt="">
                 </div>
             </div>
             <!-- column End -->

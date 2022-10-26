@@ -88,7 +88,7 @@
                 <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-5 position-relative">
 
                     <div class="aboutImg  tilt-effect mr-40">
-                        <img  src="{{asset('images/pri.jpeg')}}" alt="images" class="bouncingAnimations">
+                        <img  src="{{asset('images/tr.png')}}" alt="images" class="bouncingAnimations">
                     </div>
                 </div>
                 <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-7">

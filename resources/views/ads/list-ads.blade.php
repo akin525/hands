@@ -77,7 +77,7 @@ Product Suggestions
                     <div class="gridView customTab-content customTab-content-1 active">
                         <div class="row ">
                             @foreach($all as$pa)
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
+                            <div class="col-xl-3  col-lg-6  col-md-12 col-sm-6">
                                 <div class="singleFeature mb-24">
                                     <center>
                                     <div class="">
