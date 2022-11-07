@@ -112,7 +112,7 @@
                     <nav id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="navbar-link"><a href="{{url('home')}}">Home</a></li>
-                            <li class="navbar-link"><a href="{{url('ads')}}">Advert</a></li>
+                            <li class="navbar-link"><a href="{{url('items')}}">View Item</a></li>
                             <li><a href="{{url('about')}}">about</a></li>
                             <li><a href="{{url('event')}}">Promote Business</a></li>
 {{--                            <li><a href="{{route('app', 'Ashsupport.apk')}}">Dashboard App</a></li>--}}
