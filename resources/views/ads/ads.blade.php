@@ -131,7 +131,7 @@
                         <ul class="listing">
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your item will be promoted for {{$pa->days}} Days </blockquote></li>
                             <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">{{$pa->narration}}</blockquote> </li>
-                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your Ad will be featured for {{$pa->days}} days</blockquote></li>
+                            <li class="listItem"><i class="las la-check icon"></i><blockquote class="priceTag">Your item will be featured for {{$pa->days}} days</blockquote></li>
                         </ul>
                         <span class="price">₦{{number_format(intval($pa->amount *1))}}<span class="subTittle"> /For {{$pa->limit}} Post</span></span>
                         <div class="btn-wrapper">
