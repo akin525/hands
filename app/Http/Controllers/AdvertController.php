@@ -112,7 +112,9 @@ function adsdetails($request)
 function alladsloaded()
 {
     $banner=Banner::where('page', 2)->first();
-    $all=Advert::where('status', 1)->latest()->paginate(9);
+    $all=Advert::where('status', 1)
+        ->orderByRaw('updated_at  DESC')
+        ->paginate(12);
     return view('ads/list-ads', compact('all', 'banner'));
 }
 
