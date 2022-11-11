@@ -23,7 +23,7 @@ class AdvertController extends Controller
         $sponsor=Sponsor::where('status', 1)->latest()->limit(12)->get();
         $banner=Banner::where('page',1)->first();
         $ads=Advert::where('status', 1)
-            ->orderByRaw('updated_at - created_at DESC')
+            ->orderByRaw('updated_at  DESC')
             ->limit(12)->get();
         $plan=Adsplan::where('status', 1)->get();
 
