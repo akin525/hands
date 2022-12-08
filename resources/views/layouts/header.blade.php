@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Title -->
-    <title>ADE'S SUPPORTING HANDS VENTURE CAPITAL</title>
+    <title>ADE'S SUPPORTING HANDS Business Consultant </title>
 
     <!-- ================================================================
         ***Favicon***

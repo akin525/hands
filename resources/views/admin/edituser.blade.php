@@ -91,7 +91,6 @@
                             type: 'warning',
                             showCancelButton: true,
                             cancelButtonClass: 'btn btn-danger',
-                            // cancelButtonUrl: window.location = "#";
                             confirmButtonText: 'Yes, delete it!'
                         }).then(function (result) {
                             if (result.value) {

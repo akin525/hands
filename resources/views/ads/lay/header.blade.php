@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="keywords" content="ads, advertise, advertising, classified, classified ads, database, directory, jobs, listing, local, portal" />
     <meta name="description" content="Promoting Good And Services on Ashsupport.com.ng" />
-    <title>Classified Ads</title>
+    <title>View Items</title>
     <link rel="icon"  sizes="20x20" href="https://ashsupport.com.ng//images/ash.jpeg">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
 
