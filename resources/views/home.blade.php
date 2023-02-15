@@ -27,7 +27,7 @@
                 <!-- container end -->
             </div>
             <!-- item one end -->
-            <div class="hero_slider_bg" style="background-image: url(images/slider_bg3.jpg)">
+            <div class="hero_slider_bg" style="background-image: url(images/dop.jpeg)">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">

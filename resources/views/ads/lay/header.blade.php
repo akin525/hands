@@ -214,7 +214,7 @@
                     <div class="row">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
-                                <p class="pera wow fadeInDown" data-wow-delay="0.0s">© 2022 , Ashsupport All Rights Reserved</p>
+                                <p class="pera wow fadeInDown" data-wow-delay="0.0s">© 2023 , Ashsupport All Rights Reserved</p>
                             </div>
                         </div>
                     </div>

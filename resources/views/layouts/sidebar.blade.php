@@ -168,7 +168,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('ads')}}" class="dropdown-toggle no-arrow">
+                    <a href="{{url('promotion')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bookmark"></span><span class="mtext">All Advert</span>
                     </a>
                 </li>
