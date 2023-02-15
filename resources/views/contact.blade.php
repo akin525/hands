@@ -11,7 +11,7 @@
                     <div class="romana_allPage_text text-center">
                         <h1>contact</h1>
                         <ol class="breadcrumb">
-                            <li><a href="{{route('home')}}">Home</a><span></span></li>
+                            <li><a href="{{url('home')}}">Home</a><span></span></li>
                             <li><a href="#">contact</a></li>
                         </ol>
                     </div>
