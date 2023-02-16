@@ -314,7 +314,7 @@
         <div class="row ">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                 <div class="romana_better_place_text text-center">
-                    <h2><b>JOIN US TODAY TO MAKE YOUR ORGANIZATION(BUSINESS) MORE PROFITABLE</b></h2>
+                    <h2><b>(Business consultancy).  And maybe we should remove that background of advertise your business with us</b></h2>
                    <div class="romana_better_place_btn">
                         <a href="{{route('register')}}" class="hvr-box-shadow-outset">Become a Member</a>
                     </div>
