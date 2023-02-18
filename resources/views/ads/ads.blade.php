@@ -10,7 +10,7 @@
                         <div class="col-xxl-6 col-xl-7 col-lg-7 ">
                             <div class="heroCaption">
                                 <h1 class="tittle" data-animation="fadeInUp" data-delay="0.1s">Buy and sell anything <span class="lineBrack">you want</span> </h1>
-                                <p class="pera" data-animation="fadeInUp" data-delay="0.3s">Countrys most loved and trusted classified ad listing website. Browse thousand of items near you Browse thousand.</p>
+{{--                                <p class="pera" data-animation="fadeInUp" data-delay="0.3s">Countrys most loved and trusted classified ad listing website. Browse thousand of items near you Browse thousand.</p>--}}
                             </div>
                         </div>
                         <div class="col-xxl-5 col-xl-5 col-lg-5">

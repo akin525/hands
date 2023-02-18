@@ -64,9 +64,10 @@ Product Suggestions
 
                                     </div>
 
+                                    <br>
                                     <div class="view">
-                                        <button class="customTab active" data-toggle-target=".customTab-content-1"><i class="las la-th-large"></i></button>
-                                        <button class="customTab" data-toggle-target=".customTab-content-2"><i class="las la-bars"></i></button>
+{{--                                        <button class="customTab active" data-toggle-target=".customTab-content-1"><i class="las la-th-large"></i></button>--}}
+{{--                                        <button class="customTab" data-toggle-target=".customTab-content-2"><i class="las la-bars"></i></button>--}}
                                     </div>
                                 </div>
                             </div>
