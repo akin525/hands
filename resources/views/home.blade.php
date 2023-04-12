@@ -181,10 +181,10 @@
                     <ul>
                         <li>Once Payment</li>
                         <li>Last for: One Month</li>
-                        <li>Email Marketing</li>
-                        <li>Internet Support</li>
-                        <li>Business Promotion</li>
-                        <li>Customer Report Service</li>
+                        <li>Training program</li>
+                        <li>Training support</li>
+                        <li>Strategic planning</li>
+                        <li>Financial service</li>
                     </ul>
                     <button type="button" onclick="window.location='{{url('business')}}'" class="btn btn-info">Register Now</button>
                 </div>
@@ -205,11 +205,11 @@
                     <ul>
                         <li>Once Payment</li>
                         <li>Last for: Two Month</li>
-                        <li>Email Marketing</li>
-                        <li>Internet Support</li>
+                        <li>Skills training</li>
+                        <li>Strategic Planning</li>
+                        <li>Financial Service</li>
                         <li>Business Promotion</li>
-                        <li>Business Support</li>
-                        <li>Customer Report Service</li>
+                        <li>Development</li>
                     </ul>
                     <button type="button" onclick="window.location='{{url('business')}}'" class="btn btn-info active">Register Now</button>
                 </div>
@@ -230,12 +230,12 @@
                     <ul>
                         <li>Once Payment</li>
                         <li>Last for: Four Month</li>
-                        <li>Email Marketing</li>
-                        <li>Internet Support</li>
+                        <li>Training and development</li>
+                        <li>Brand management</li>
                         <li>Business Promotion</li>
-                        <li>Business Support</li>
-                        <li>E-book For Business Support</li>
-                        <li>Customer Report Service</li>
+                        <li>Financial service</li>
+                        <li>Portfolio management</li>
+                        <li>Business support</li>
                     </ul>
                     <button type="button" class="btn btn-info" onclick="window.location='{{url('business')}}'">Register Now</button>
                 </div>
@@ -244,21 +244,21 @@
     </div>
 </div>
 
-<div class="romana_better_place_area" style="background-image: url(images/bok.jpeg)">
-    <div class="container">
-        <div class="row ">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                <div class="romana_better_place_text text-center">
-                    <h2><b>Advertise Your Business With Us, Kindly Click below to view all advert</b></h2>
-                    <div class="romana_better_place_btn">
-                        <a href="{{url('listads')}}" class="hvr-box-shadow-outset">All Advert</a>
-                    </div>
-                </div>
-            </div>
-            <!-- column End -->
-        </div>
-        <!-- row End -->
-    </div>
+{{--<div class="romana_better_place_area" style="background-image: url(images/bok.jpeg)">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row ">--}}
+{{--            <div class="col-sm-10 col-sm-offset-1 col-xs-12">--}}
+{{--                <div class="romana_better_place_text text-center">--}}
+{{--                    <h2><b>Advertise Your Business With Us, Kindly Click below to view all advert</b></h2>--}}
+{{--                    <div class="romana_better_place_btn">--}}
+{{--                        <a href="{{url('listads')}}" class="hvr-box-shadow-outset">All Advert</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <!-- column End -->--}}
+{{--        </div>--}}
+{{--        <!-- row End -->--}}
+{{--    </div>--}}
     <!-- container End -->
 </div>
 
@@ -274,7 +274,7 @@
                 <div class="romana_section_title text-center">
                     <h2>about us</h2>
                     <p>ADE'S SUPPORTING HANDS
-                        <br>VENTURE CAPITAL</p>
+                        <br>BUSINESS CONSULTANT</p>
                 </div>
             </div>
             <!-- column End -->
@@ -287,16 +287,16 @@
                 </div>
             </div>
             <!-- column End -->
-            <div class="col-sm-6 col-xs-12">
-                <div class="romana_about_text">
-                    <h3>Save the life to make the better world</h3>
-                    <p><span>Pure Hands has played a substantial role in providing various programs to the people of Yemen across many different areas such as Food Security, Health,</span></p>
-                    <p>Livelihood, WASH, Child Protection, Capacity Building, Reconstruction, and Seasonal Projects. To improve the lives of millions of Yemenis devastated by the ongoing crisis, Pure Hands provides access to basic necessities for survival; food, water, and medicine. </p>
-                    <div class="romana_about_btn">
-                        <a href="{{url('about')}}" class="hvr-box-shadow-outset">read more</a>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="col-sm-6 col-xs-12">--}}
+{{--                <div class="romana_about_text">--}}
+{{--                    <h3>Save the life to make the better world</h3>--}}
+{{--                    <p><span>Pure Hands has played a substantial role in providing various programs to the people of Yemen across many different areas such as Food Security, Health,</span></p>--}}
+{{--                    <p>Livelihood, WASH, Child Protection, Capacity Building, Reconstruction, and Seasonal Projects. To improve the lives of millions of Yemenis devastated by the ongoing crisis, Pure Hands provides access to basic necessities for survival; food, water, and medicine. </p>--}}
+{{--                    <div class="romana_about_btn">--}}
+{{--                        <a href="{{url('about')}}" class="hvr-box-shadow-outset">read more</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <!-- column End -->
         </div>
         <!-- row End -->

@@ -171,51 +171,51 @@
                     </div>
                 </div>
                 <!-- column End -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer_menu">
-                        <h2>Recent Causes</h2>
-                        <ul>
-                            <li><i class="icofont icofont-thin-right"></i><a href="#">Food for children</a></li>
-                            <li><i class="icofont icofont-thin-right"></i><a href="#">water for children</a></li>
-                            <li><i class="icofont icofont-thin-right"></i><a href="#">education for children</a></li>
-                            <li><i class="icofont icofont-thin-right"></i><a href="#">safety for children</a></li>
-                            <li><i class="icofont icofont-thin-right"></i><a href="#">medical support</a></li>
-                        </ul>
-                    </div>
-                </div>
+{{--                <div class="col-md-3 col-sm-6">--}}
+{{--                    <div class="footer_menu">--}}
+{{--                        <h2>Recent Causes</h2>--}}
+{{--                        <ul>--}}
+{{--                            <li><i class="icofont icofont-thin-right"></i><a href="#">Food for children</a></li>--}}
+{{--                            <li><i class="icofont icofont-thin-right"></i><a href="#">water for children</a></li>--}}
+{{--                            <li><i class="icofont icofont-thin-right"></i><a href="#">education for children</a></li>--}}
+{{--                            <li><i class="icofont icofont-thin-right"></i><a href="#">safety for children</a></li>--}}
+{{--                            <li><i class="icofont icofont-thin-right"></i><a href="#">medical support</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <!-- column End -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer_recent_news">
-                        <h2>Recent News</h2>
-                        <div class="romana_single_footer_news">
-                            <div class="romana_single_footer_news_img">
-                                <img src="images/footer_img1.jpg" alt="">
-                            </div>
-                            <div class="romana_single_footer_news_text">
-                                <a href="news-detail.html"><h3>Childrens are sturving</h3></a>
-                                <p>November 14, 2016</p>
-                            </div>
-                        </div>
-                        <div class="romana_single_footer_news">
-                            <div class="romana_single_footer_news_img">
-                                <img src="images/footer_img2.jpg" alt="">
-                            </div>
-                            <div class="romana_single_footer_news_text">
-                                <a href="news-detail.html"><h3>Childrens are sturving</h3></a>
-                                <p>November 14, 2016</p>
-                            </div>
-                        </div>
-                        <div class="romana_single_footer_news">
-                            <div class="romana_single_footer_news_img">
-                                <img src="images/footer_img3.jpg" alt="">
-                            </div>
-                            <div class="romana_single_footer_news_text">
-                                <a href="news-detail.html"><h3>Childrens are sturving</h3></a>
-                                <p>November 14, 2016</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="col-md-3 col-sm-6">--}}
+{{--                    <div class="footer_recent_news">--}}
+{{--                        <h2>Recent News</h2>--}}
+{{--                        <div class="romana_single_footer_news">--}}
+{{--                            <div class="romana_single_footer_news_img">--}}
+{{--                                <img src="images/footer_img1.jpg" alt="">--}}
+{{--                            </div>--}}
+{{--                            <div class="romana_single_footer_news_text">--}}
+{{--                                <a href="news-detail.html"><h3>Childrens are sturving</h3></a>--}}
+{{--                                <p>November 14, 2016</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="romana_single_footer_news">--}}
+{{--                            <div class="romana_single_footer_news_img">--}}
+{{--                                <img src="images/footer_img2.jpg" alt="">--}}
+{{--                            </div>--}}
+{{--                            <div class="romana_single_footer_news_text">--}}
+{{--                                <a href="news-detail.html"><h3>Childrens are sturving</h3></a>--}}
+{{--                                <p>November 14, 2016</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="romana_single_footer_news">--}}
+{{--                            <div class="romana_single_footer_news_img">--}}
+{{--                                <img src="images/footer_img3.jpg" alt="">--}}
+{{--                            </div>--}}
+{{--                            <div class="romana_single_footer_news_text">--}}
+{{--                                <a href="news-detail.html"><h3>Childrens are sturving</h3></a>--}}
+{{--                                <p>November 14, 2016</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <!-- column End -->
                 <div class="col-md-2 col-md-offset-1 col-sm-6">
                     <div class="footer_contact">
