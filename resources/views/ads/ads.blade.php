@@ -31,20 +31,20 @@
 
     <section class="aboutArea section-padding sectionBg1">
         <div class="container position-relative">
-{{--            <div class="row justify-content-center">--}}
-{{--                <div class="col-xxl-6 col-xl-7 col-lg-6">--}}
-{{--                    <div class="about-caption about-caption2 mb-15  text-center">--}}
-{{--                        <div class="section-tittle section-tittle2 mb-55">--}}
-{{--                            <h2 class="tittle wow fadeInUp" data-wow-delay="0.0s">Earn cash by selling<br> or Find anything you desire</h2>--}}
-{{--                            <p class="wow fadeInUp" data-wow-delay="0.2s">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humo or randomised words which don't look even slightlys</p>--}}
-{{--                        </div>--}}
-{{--                        <div class="btn-wrapper">--}}
-{{--                            <a href="{{route('advert')}}" class="cmn-btn2  mb-10 wow fadeInLeft" data-wow-delay="0.3s">Post your Items</a>--}}
-{{--                            <a href="{{url('promotion')}}" class="cmn-btn2 mb-10 wow fadeInRight" data-wow-delay="0.3s">Browse Items</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-7 col-lg-6">
+                    <div class="about-caption about-caption2 mb-15  text-center">
+                        <div class="section-tittle section-tittle2 mb-55">
+                            <h2 class="tittle wow fadeInUp" data-wow-delay="0.0s">Earn cash by selling<br> or Find anything you desire</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Looks so Good on the Outside, It'll Make You Feel Good Inside. Get the Most Out of Life.</p>
+                        </div>
+                        <div class="btn-wrapper">
+                            <a href="{{route('advert')}}" class="cmn-btn2  mb-10 wow fadeInLeft" data-wow-delay="0.3s">Post your Items</a>
+                            <a href="{{url('promotion')}}" class="cmn-btn2 mb-10 wow fadeInRight" data-wow-delay="0.3s">Browse Items</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="aboutShape aboutShape1">
                 <img src="assets/img/gallery/aboutShape1.png" alt="images" class="bouncingAnimation">

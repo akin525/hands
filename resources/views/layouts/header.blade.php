@@ -224,7 +224,7 @@
                             <p>Call us <span>08169532894</span></p>
                         </div>
                         <div class="romana_single_contact">
-                            <p>Email us<span>ashsuppt@gmail.com</span></p>
+                            <p>Email us<span>ashnigcare@gmail.com</span></p>
                         </div>
                         <div class="romana_single_contact">
                             <address>
