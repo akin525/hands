@@ -5,7 +5,7 @@
 {{--    ============================================================ -->--}}
     <section class="romana_hero_area">
         <div class="hero_slider">
-            <div class="hero_slider_bg"  style="background-image: url(images/dop.jpeg)">
+            <div class="hero_slider_bg"  style="background-image: url(images/home_ash.png)">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
@@ -27,12 +27,12 @@
                 <!-- container end -->
             </div>
             <!-- item one end -->
-            <div class="hero_slider_bg" style="background-image: url(images/dop.jpeg)">
+            <div class="hero_slider_bg" style="background-image: url(images/ash_home_2.png)">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="romana_hero_text">
-                                <h1>Give a hand to make <br> the <span>better</span> world.</h1>
+                                <h1>Let's join hands to make  <br> the world a better place.</h1>
                                 <div class="romana_slider_btn">
                                     <a href="{{url('items')}}" class="hvr-box-shadow-outset">View Items</a>
                                 </div>
