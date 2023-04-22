@@ -741,7 +741,7 @@ form.searchForm input + input {
   to {
     width: 100%; } }
 .hero_slider_bg {
-  background: url(../../images/slider_bg.jpg);
+  /*background: url(../../images/slider_bg.jpg);*/
   height: 578px;
   position: relative; }
 
