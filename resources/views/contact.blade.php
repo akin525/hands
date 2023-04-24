@@ -100,7 +100,7 @@
                             </div>
                             <div class="romana_contact_info text-center">
                                 <p>08169532894</p>
-                                <p>+(00)44-556-6678</p>
+{{--                                <p>+(00)44-556-6678</p>--}}
                             </div>
                         </div>
                     </div>
@@ -111,8 +111,8 @@
                                 <a href="#"><i class="icofont icofont-ui-message"></i></a>
                             </div>
                             <div class="romana_contact_info text-center">
-                                <p>ashsuppt@gmail.com</p>
-                                <p>info@ashsupport.com.ng/</p>
+{{--                                <p>ashsuppt@gmail.com</p>--}}
+                                <p>info@ashsupport.com.ng</p>
                             </div>
                         </div>
                     </div>

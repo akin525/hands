@@ -74,7 +74,7 @@
                 <div class="col-xxl-5 col-xl-7 col-lg-8 col-md-9 col-sm-10">
                     <div class="section-tittle section-tittle6 text-center mb-90">
                         <h2 class="tittle">Our story <span class="lineBrack"></span> started in 2022</h2>
-                        <p>I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The 12 subjects applied 4 mL of hand sanitizer for 30 seconds per application, 20 applications over a 30 min period (total exposure time 10 min).</p>
+{{--                        <p>I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The 12 subjects applied 4 mL of hand sanitizer for 30 seconds per application, 20 applications over a 30 min period (total exposure time 10 min).</p>--}}
                     </div>
                 </div>
             </div>

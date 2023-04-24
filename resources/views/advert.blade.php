@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                         </div>
-                <button type="submit" class="btn btn-success">Request</button>
+                <button type="submit" class="btn btn-success">Post</button>
             </form>
 
         </div>
