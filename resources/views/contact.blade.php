@@ -111,7 +111,7 @@
                                 <a href="#"><i class="icofont icofont-ui-message"></i></a>
                             </div>
                             <div class="romana_contact_info text-center">
-{{--                                <p>ashsuppt@gmail.com</p>--}}
+{{--                                <p>ashnigcare@gmail.com</p>--}}
                                 <p>info@ashsupport.com.ng</p>
                             </div>
                         </div>

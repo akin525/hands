@@ -130,7 +130,7 @@
                                 <ul class="listing">
                                     <li class="listItem wow fadeInUp" data-wow-delay="0.0s"><a href="#" class="singleLinks"><i class="las la-map-marker icon"></i>11A, Omoluabi Shopping Complex, Ogo-Oluwa Oshogbo Osun State</a></li>
                                     <li class="listItem wow fadeInUp" data-wow-delay="0.1s"><a href="#" class="singleLinks"><i class="las la-phone icon"></i>08169532894</a></li>
-                                    <li class="listItem wow fadeInUp" data-wow-delay="0.3s"><a href="#" class="singleLinks"><i class="las la-envelope icon"></i><span class="__cf_email__" data-cfemail="ashsuppt@gmail.com">ashsuppt@gmail.com</span></a></li>
+                                    <li class="listItem wow fadeInUp" data-wow-delay="0.3s"><a href="#" class="singleLinks"><i class="las la-envelope icon"></i><span class="__cf_email__" data-cfemail="ashnigcare@gmail.com">ashnigcare@gmail.com</span></a></li>
                                 </ul>
                             </div>
                         </div>
