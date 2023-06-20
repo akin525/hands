@@ -94,18 +94,28 @@
                                         </div>
                                     </div>
                                 </div>
+                                <center>
                                 <form action="#" class="contactSeller">
                                 <div class="col-lg-4">
                                     <div class="btn-wrapper mb-20">
                                         <a href="tel:{{$ad->number}}" class="cmn-btn-outline3 w-100">Reveal Contact</a>
                                     </div>
                                 </div>
+                                </form>
+                                </center>
                             </div>
-                        </form>
 
+                        @if($user->chat_link != null)
                         <div class="btn-wrapper">
-                            <a href="#" onclick="document.getElementById('id01').style.display='block'" class="cmn-btn-outline2 w-100"><i class="las la-comments icon"></i>Message seller</a>
+                            <a  href="#" onclick="openPopup()" class="cmn-btn-outline2 w-100"><i class="las la-comments icon"></i>Message seller</a>
                         </div>
+                        @endif
+                        <script type="text/javascript">
+                            function openPopup() {
+                                var popup = window.open("{{$user->chat_link}}", "PopupWindow", "width=500,height=500");
+                                // Customize the width and height values as per your needs
+                            }
+                        </script>
                         <div id="id01" class="modal">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                             <form class="modal-content" action="#">
@@ -114,10 +124,11 @@
 {{--                                    <p>Are you sure you want to delete your account?</p>--}}
                                     <textarea class="form-control" name="message" placeholder="Kindly Type Your Message........" required></textarea>
                                     <br>
-                                        <button type="button" class="btn btn-success"><i class="dw dw-diagonal-arrow"></i> Send</button>
+                                        <button type="button"  class="btn btn-success"><i class="dw dw-diagonal-arrow"></i> Send</button>
                                 </div>
                             </form>
                         </div>
+
                         <script>
                             // Get the modal
                             var modal = document.getElementById('id01');
@@ -155,6 +166,17 @@
     </div>
 @endsection
 @section('script')
+    <script type="text/javascript">
+        function loadTawkTo() {
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/619093ea6885f60a50bbb339/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        }
+    </script>
     <script src="{{asset('assets/js/popper.min.js')}}"></script>
     <script src="{{asset('assets/js/bootstrap.js')}}"></script>
 

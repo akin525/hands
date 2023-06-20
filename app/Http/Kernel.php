@@ -66,5 +66,7 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\Admin::class,
         'fund' => \App\Http\Middleware\Fund::class,
         'ads' => \App\Http\Middleware\Ads::class,
+        'chatlinknotnull' => \App\Http\Middleware\ChatLinkNotNullMiddleware::class,
+
     ];
 }

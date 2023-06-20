@@ -13,6 +13,7 @@ use App\Models\Sponsor;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -81,6 +82,36 @@ public function advert(Request $request)
 //        return back();
     }
 
+    public function linkuodate(Request $request)
+    {
+        $request->validate([
+            'link' => ['required',  'url'],
+
+        ]);
+
+        $update=User::where('username', Auth::user()->username)->first();
+        $update->chat_link=$request->link;
+        $update->save();
+
+        if (Session::has('advert')) {
+            $intendedUrl = Session::pull('advert');
+            return redirect($intendedUrl);
+        }
+
+        // Redirect to a fallback route if there is no intended URL
+        return redirect()->route('dashboard');
+
+    }
+    public function updatelink()
+    {
+
+
+        Alert::info('Notice', 'please kindly update your chat tawkwo link to enable your customer to chat uou up');
+        // Redirect to a fallback route if there is no intended URL
+        return view('updatelink');
+
+    }
+
 
 public function adscat($request)
 {
@@ -105,6 +136,7 @@ function adsdetails($request)
     $ad=Advert::where('id', $request)->first();
     $all=Advert::where('status',1)->latest()->limit(3)->get();
     $user=User::where('username', $ad->username)->first();
+//    return $user;
     return view('ads/ads-detail', compact('ad', 'all', 'user', 'banner'));
 }
 

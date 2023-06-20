@@ -44,6 +44,8 @@ Route::get('/logout', function(){
     Alert::Success('Logout', 'You Have Successful Logout');
     return view('auth.login')->with('success', 'Logout Successful');
 });
+Route::get('updatelink', [AdvertController::class, 'updatelink'])->name('updatelink');
+Route::post('link', [AdvertController::class, 'linkuodate'])->name('link');
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'userdashboard'])->name('dashboard');
     Route::get('verify', [DashboardController::class, 'verify'])->name('verify');
@@ -58,12 +60,18 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['auth','ads'])->group(function () {
-    Route::get('advert', [TransController::class, 'alladvert'])->name('advert');
     Route::get('upgrade', [AdvertController::class, 'upgrade'])->name('upgrade');
     Route::get('listupgrade', [AdvertController::class, 'listupgrade'])->name('listupgrade');
     Route::get('verifyads/{id}', [AdvertController::class, 'verifyads'])->name('verifyads');
-    Route::post('padvert', [AdvertController::class, 'advert'])->name('padvert');
+
+    Route::group(['middleware' => 'chatlinknotnull'], function () {
+        Route::post('padvert', [AdvertController::class, 'advert'])->name('padvert');
+        Route::get('advert', [TransController::class, 'alladvert'])->name('advert');
+
+    });
+
     Route::view('business', 'business');
+
 
 });
 Route::middleware(['auth','fund'])->group(function () {
@@ -136,7 +144,7 @@ Route::get('/cover/{filename}', function ($filename) {
     $response->header("Content-Type", $type);
     return $response;
 })->name('cover');
-Route::get('/profile/{filename}', function ($filename) {
+Route::get('/profile/{filename}', function ($filename ) {
     $path = storage_path('app/profile/' . $filename);
 
     if (!File::exists($path)) {
