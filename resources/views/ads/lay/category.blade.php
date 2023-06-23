@@ -30,7 +30,7 @@
 {{--                    <img src="{{asset('assets/img/icon/caticon7.svg')}}" class="icon" alt="images"> <span> Pets <span class="itemNumber">(1,012)</span></span>--}}
 {{--                </a></li>--}}
             <li class="listItem"><a href="{{route('all-category', 'Education' )}}" class="items">
-                    <img src="{{asset('assets/img/icon/caticon8.svg')}}" class="icon" alt="images"> <span> Educations <span class="itemNumber"></span></span>
+                    <img src="{{asset('assets/img/icon/caticon2.svg')}}" class="icon" alt="images"> <span> Phone Gadgets <span class="itemNumber"></span></span>
                 </a></li>
             <li class="listItem"><a href="a{{route('all-category', 'Businesses' )}}" class="items">
                     <img src="{{asset('assets/img/icon/caticon9.svg')}}" class="icon" alt="images"> <span> Businesses <span class="itemNumber"></span></span>

@@ -106,7 +106,7 @@ public function advert(Request $request)
     {
 
 
-        Alert::info('Notice', 'please kindly update your chat tawkwo link to enable your customer to chat uou up');
+        Alert::info('Notice', 'please kindly update your chat tawk-to link to enable your customer to chat uou up');
         // Redirect to a fallback route if there is no intended URL
         return view('updatelink');
 

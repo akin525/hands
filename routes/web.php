@@ -45,6 +45,7 @@ Route::get('/logout', function(){
     return view('auth.login')->with('success', 'Logout Successful');
 });
 Route::get('updatelink', [AdvertController::class, 'updatelink'])->name('updatelink');
+
 Route::post('link', [AdvertController::class, 'linkuodate'])->name('link');
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'userdashboard'])->name('dashboard');

@@ -46,7 +46,7 @@
                     @if(\Illuminate\Support\Facades\Auth::check())
                     <li><a href="{{route('dashboard')}}">My Account</a></li>
                     @endif
-                    <li><a href="{{url('promotion')}}">Promotion</a></li>
+                    <li><a href="{{url('promotion')}}">All Items</a></li>
                     <li><a href="{{url('about')}}">About us</a></li>
                     <li><a href="{{url('contact')}}">contact</a></li>
                     <li><a href="https://play.google.com/store/apps/details?id=com.ashsupport">Download App</a></li>
