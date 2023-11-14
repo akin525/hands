@@ -1,188 +1,266 @@
 @extends("layouts.header")
-
+@section('tittle', 'Homepage')
 @section('content')
-{{--    2.*Hero_area start--}}
-{{--    ============================================================ -->--}}
-    <section class="romana_hero_area">
-        <div class="hero_slider">
-            <div class="hero_slider_bg"  style="background-image: url(images/home_ash.png) ">
-                <div class="container">
+
+    <section class="hero-section" style="background-color: #fff8e5; background-image:url({{asset('new/assets/img/background.png')}})">
+        <div class="container">
+            <div class="row hero-one-slider owl-carousel owl-theme">
+                <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-xs-12">
-                            <div class="romana_hero_text">
-                                <h1>Give a hand to make <br> the <span>better</span> world.</h1>
-                                <p>Bringing Help and Hope to Hurting People</p>
-                                <div class="romana_slider_btn">
-                                    <a href="{{url('items')}}" class="hvr-box-shadow-outset">View Items</a>
+                        <div class="col-lg-5">
+                            <div class="hero-text">
+                                <h1>Buy and sell anything you want</h1>
+                                <h3>We are your local best home boarding service giving you complete</h3>
+                                <a href="#" class="button">View Item</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="hero-img">
+                                <img src="{{asset('shop.png')}}" alt="img">
+                                <img src="{{asset('new/assets/img/hero-shaps.png')}}" alt="hero-shaps" class="img-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="hero-text">
+                                <h1>Give a hand to make the better world.</h1>
+                                <h3>Bringing Help and Hope to Hurting People</h3>
+                                <a href="#" class="button">View Item</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="hero-img">
+                                <img src="{{asset('shop1.png')}}" alt="img">
+                                <img src="{{asset('new/assets/img/hero-shaps.png')}}" alt="hero-shaps" class="img-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-2">
+        <img src="{{asset('new/assets/img/dabal-foot-1.png')}}" alt="hero-shaps" class="img-3">
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-4">
+    </section>
+
+    <section class="gap no-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="welcome-to">
+                        <h2>Welcome to Ashmakets Company</h2>
+                        <p>We Grow Your Business Quick And Promoting Good And Services on Ashsupport.com</p>
+                        <div class="row mt-lg-5">
+                            <div class="col-md-6">
+                                <div class="pet-grooming">
+                                    <i><img src="{{asset('new/assets/img/welcome-to-1.png')}}" alt="icon"></i>
+                                    <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"/>
+                                    </svg>
+                                    <a href="{{url('items')}}"><h4>Shops</h4></a>
+                                    <p>Let's Join Hands To Make
+                                        The World A Better Place.</p>
                                 </div>
-                                <div class="slider_prg">
-                                    <div class="slider_prg_in"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="pet-grooming mb-0">
+                                    <i><img src="{{asset('new/assets/img/welcome-to-2.png')}}" alt="icon"></i>
+                                    <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"/>
+                                    </svg>
+                                    <a href="#"><h4>Grow Business</h4></a>
+                                    <p>Learn How To Grow Your Business Quick</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- column end -->
                     </div>
-                    <!-- row end -->
                 </div>
-                <!-- container end -->
-            </div>
-            <!-- item one end -->
-            <div class="hero_slider_bg" style="background-image: url(images/ash_home_2.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="romana_hero_text">
-                                <h1>Let's join hands to make  <br> the world a better place.</h1>
-                                <div class="romana_slider_btn">
-                                    <a href="{{url('items')}}" class="hvr-box-shadow-outset">View Items</a>
-                                </div>
-                                <div class="slider_prg">
-                                    <div class="slider_prg_in"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- column end -->
+                <div class="col-lg-6">
+                    <div class="dog-walker two d-block">
+{{--                        <img src="{{asset('new/assets/img/puppies.png')}}" class="puppies" alt="puppies">--}}
+                        <img src="{{asset('shop3.png')}}" class="w-100" alt="dog walker">
+{{--                        <img src="{{asset('new/assets/img/line.png')}}" class="line" alt="line">--}}
+{{--                        <img src="{{asset('new/assets/img/dabal-foot.png')}}" class="dabal-foot" alt="dabal-foot">--}}
+                        <img src="{{asset('new/assets/img/haddi.png')}}" class="haddi" alt="haddi">
                     </div>
-                    <!-- row end -->
                 </div>
-                <!-- container end -->
             </div>
-            <!-- item two end -->
         </div>
     </section>
-    <!-- HeroSlider area end -->
-    <!-- ==========================================================
 
-3.*romana_charity_area start
-============================================================ -->
-<div class="romana_charity_area">
-    <div class="romana_charity_date">
-        <h2>Business Idea</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-md-offset-2 col-sm-6 col-sm-offset-6 col-xs-12">
-                <div class="romana_progress_circle">
-                    <div class="romana_progress_circle_top">
-                        <div class="progress-bar position" data-percent="85" data-duration="1000" data-color="#fff,black">
+    <section class="gap">
+        <div class="container">
+            <div class="heading">
+                <img src="{{asset('new/assets/img/heading-img.png')}}" alt="heading-img">
+                <h6>Find Healthy Product By Category</h6>
+                <h2>Browse By Categories</h2>
+            </div>
+            <div class="row slider-categorie owl-carousel owl-theme">
+                <div class="col-lg-12 item">
+                    <div class="food-categorie">
+                        <img src="{{asset('new/assets/img/food-categorie-2.png')}}" alt="food-categorie">
+                        <a href="our-products.html">Businesses </a>
+                    </div>
+                </div>
+                <div class="col-lg-12 item">
+                    <div class="food-categorie">
+                        <img src="{{asset('new/assets/img/food-categorie-3.png')}}" alt="food-categorie">
+                        <a href="our-products.html">Animal Feed</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 item">
+                    <div class="food-categorie">
+                        <img src="{{asset('new/assets/img/food-categorie-4.png')}}" alt="food-categorie">
+                        <a href="our-products.html">Accessories</a>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="gap section-healthy-product" style="background-image: url({{asset('new/assets/img/healthy-product.png')}}); background-color: #f5f5f5;">
+        <div class="container">
+            <div class="heading">
+                <img src="{{asset('new/assets/img/heading-img.png')}}" alt="heading-img">
+                <h6>Find OurProduct</h6>
+                <h2>Ashmarkets Products</h2>
+            </div>
+            <div class="row">
+                @foreach($ads as $shop)
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="healthy-product">
+                        <div class="healthy-product-img">
+                            <img width="300" src="{{url('/', $shop->cover_image)}}" alt="Product">
+                            <ul class="star">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <div class="add-to-cart">
+                                <a href="{{route('ads-detail', $shop->id)}}">View Product</a>
+                                <a href="#" class="heart-wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <span>{{$shop->category}}</span>
+                        <a href="{{route('ads-detail', $shop->id)}}">{{$shop->advert_name}}</a>
+                        <h6>₦{{number_format(intval($shop->amount *1))}}</h6>
+                    </div>
+                </div>
+                @endforeach
+                <div class="col-lg-9">
+                    <div class="deal-of-the-week">
+                        <div class="healthy-product-img">
+                            <h6>Deal of the Week</h6>
+                            <img width="300" src="{{url('/', $shop->cover_image)}}" alt="Product">
+                            <ul class="star">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="healthy-product">
+                            <span{{$shop->category}}</span>
+                            <a href="{{route('ads-detail', $shop->id)}}">{{$shop->advert_name}}</a>
+                            <h6>₦{{number_format(intval($shop->amount *1))}}</h6>
+                            <h5>up to 14% off</h5>
+                            <div class="add-to-cart">
+                                <a href="#" class="button">View Product</a>
+                                <a href="#" class="heart-wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                            <div id="countdown">
+                                <ul>
+                                    <li><span id="days"></span>days</li>
+                                    <li><span id="hours"></span>Hour</li>
+                                    <li><span id="minutes"></span>Min</li>
+                                    <li class="mb-0"><span id="seconds"></span>Sec</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-{{--                    <div class="romana_progress_circle_bottom">--}}
-{{--                        <div class="romana_progress_circle_bottom_single">--}}
-{{--                            <p>Raised <span>₦25,654</span></p>--}}
-{{--                        </div>--}}
-{{--                        <div class="romana_progress_circle_bottom_single">--}}
-{{--                            <p>goal <span>₦35,659</span></p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                 </div>
             </div>
-            <!-- column End -->
-            <div class="col-md-6 col-xs-12">
-                <div class="romana_charity_text">
-                    <h2>Grow Your Business</h2>
-                    <h3>Learn How To Grow Your Business Quick</h3>
-                    <p>We are to help you raise your petty business and make more profit from it !!
-                        Get register now for your business training
-                    </p>
-                    <div class="romana_charity_btn">
-                        <a href="{{url('business')}}" class="hvr-box-shadow-outset">Register Now</a>
+        </div>
+    </section>
+
+    <section class="gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-1.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="100" ></h2>
+                                <span>+</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-2.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="99" ></h2>
+                                <span>%</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text mb-sm-0">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-3.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="2" ></h2>
+                                <span>k</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text mb-0">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-4.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="400" ></h2>
+                                <span>+</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- column End -->
         </div>
-        <!-- row End -->
-    </div>
-    <!-- container End -->
-</div>
+    </section>
 
-@include('ads.pricing')
-{{--<div class="romana_better_place_area" style="background-image: url(images/bok.jpeg)">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row ">--}}
-{{--            <div class="col-sm-10 col-sm-offset-1 col-xs-12">--}}
-{{--                <div class="romana_better_place_text text-center">--}}
-{{--                    <h2><b>Advertise Your Business With Us, Kindly Click below to view all advert</b></h2>--}}
-{{--                    <div class="romana_better_place_btn">--}}
-{{--                        <a href="{{url('listads')}}" class="hvr-box-shadow-outset">All Advert</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <!-- column End -->--}}
-{{--        </div>--}}
-{{--        <!-- row End -->--}}
-{{--    </div>--}}
-    <!-- container End -->
-</div>
-
-
-<!-- ==========================================================
-
-5.*romana_about_area start
-============================================================ -->
-<div class="romana_about_area romana_section_padding">
-    <div class="container">
-        <div class="row ">
-            <div class="col-xs-12">
-                <div class="romana_section_title text-center">
-                    <h2>about us</h2>
-                    <p>ADE'S SUPPORTING HANDS
-                        <br>BUSINESS CONSULTANT</p>
+    <div class="gap">
+        <div class="container">
+            <div class="mockup">
+                <h3>Register your business with us and <span>Get 5% off</span> their next order</h3>
+                <div class="mockup-img">
+                    <img src="{{asset('shop.png')}}" alt="mockup">
+                </div>
+                <div class="mockup-text">
+                    <p>We are your best home boarding service giving you complete</p>
+                    <a href="{{route('register')}}" class="button">Register Now</a>
                 </div>
             </div>
-            <!-- column End -->
         </div>
-        <!-- row End -->
-        <div class="row ">
-            <div class="col-sm-6 col-xs-12">
-                <div class="">
-                        <img src="{{asset('images/tr.png')}}" class=" img-responsive" alt="">
-                </div>
-            </div>
-            <!-- column End -->
-{{--            <div class="col-sm-6 col-xs-12">--}}
-{{--                <div class="romana_about_text">--}}
-{{--                    <h3>Save the life to make the better world</h3>--}}
-{{--                    <p><span>Pure Hands has played a substantial role in providing various programs to the people of Yemen across many different areas such as Food Security, Health,</span></p>--}}
-{{--                    <p>Livelihood, WASH, Child Protection, Capacity Building, Reconstruction, and Seasonal Projects. To improve the lives of millions of Yemenis devastated by the ongoing crisis, Pure Hands provides access to basic necessities for survival; food, water, and medicine. </p>--}}
-{{--                    <div class="romana_about_btn">--}}
-{{--                        <a href="{{url('about')}}" class="hvr-box-shadow-outset">read more</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-            <!-- column End -->
-        </div>
-        <!-- row End -->
     </div>
-    <!-- container End -->
-</div>
-<!-- ==========================================================
-
-6.*romana_better_place_area start
-============================================================ -->
-
-
-<div class="romana_better_place_area" >
-    <div class="container">
-        <div class="row ">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                <div class="romana_better_place_text text-center">
-                    <h2><b>JOIN US TODAY TO MAKE YOUR ORGANIZATION(BUSINESS) MORE PROFITABLE</b></h2>
-                   <div class="romana_better_place_btn">
-                        <a href="{{route('register')}}" class="hvr-box-shadow-outset">Become a Member</a>
-                    </div>
-                </div>
-            </div>
-            <!-- column End -->
-        </div>
-        <!-- row End -->
-    </div>
-    <!-- container End -->
-</div>
-<!--=============================================
-    7.*romana_donation_area  start
-===============================================-->
-<!-- ==========================================================
 @endsection

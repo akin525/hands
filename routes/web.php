@@ -33,8 +33,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-
-Route::view('home', 'home');
+Route::get('/', [AdvertController::class, 'homeloading'])->name('home');
+Route::get('home', [AdvertController::class, 'homeloading'])->name('home');
 Route::view('about', 'about');
 Route::view('event', 'event');
 Route::view('volunteer', 'volunteer');

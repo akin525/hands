@@ -19,16 +19,32 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class AdvertController extends Controller
 {
+
+    function homeloading()
+    {
+        $ads=Advert::where('status', 1)
+            ->orderByRaw('updated_at  DESC')
+            ->limit(5)->get();
+       $ads1=Advert::where('status', 1)
+           ->inRandomOrder()->orderBy('id', 'desc')
+            ->first();
+
+       return view('home', compact('ads', 'ads1' ));
+    }
     public function index()
     {
         $sponsor=Sponsor::where('status', 1)->latest()->limit(12)->get();
         $banner=Banner::where('page',1)->first();
         $ads=Advert::where('status', 1)
             ->orderByRaw('updated_at  DESC')
-            ->limit(12)->get();
+            ->paginate('9');
         $plan=Adsplan::where('status', 1)->get();
 
-        return view('ads/ads', compact('ads', 'banner', 'sponsor', 'plan'));
+        $top=Advert::where('status', 1)
+            ->orderByRaw('updated_at  DESC')
+            ->limit(3)->get();
+
+        return view('ads/ads', compact('ads', 'banner', 'sponsor', 'plan', 'top'));
     }
 
 public function advert(Request $request)

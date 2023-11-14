@@ -1,169 +1,143 @@
-@extends("ads.lay.header")
+@extends("layouts.header")
 
 @section('content')
-
-    <div class="proDetails section-padding2">
+    <section class="banner" style="background-color: #fff8e5; background-image:url({{asset('new/assets/img/banner.png')}})">
         <div class="container">
-
-            <div class="row mb-40">
-                <div class="col-sm-12">
-                    <nav aria-label="breadcrumb">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-text">
+                        <h2>{{$ad->category}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Category</a></li>
-                            <li class="breadcrumb-item"><a href="#">{{$ad->category}}</a></li>
+                            <li class="breadcrumb-item">
+                                <a href="{{route('home')}}">Home</a>,
+                            </li>
+                            {{--                            <li class="breadcrumb-item active" aria-current="page">shop</li>--}}
+                            {{--                            <li class="breadcrumb-item active" aria-current="page">Our Products</li>--}}
                         </ol>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-7 col-lg-12">
-
-                    <div class="product-detail-desc" >
-                        <div class="shop-details-gallery-slider global-slick-init slider-inner-margin sliderArrow" data-asNavFor=".shop-details-gallery-nav" data-infinite="true" data-arrows="false" data-dots="false" data-slidesToShow="1" data-swipeToSlide="true" data-fade="true" data-autoplay="true" data-autoplaySpeed="2500" data-prevArrow='<div class="prev-icon"><i class="las la-angle-left"></i></div>' data-nextArrow='<div class="next-icon"><i class="las la-angle-right"></i></div>' data-responsive='[{"breakpoint": 1800,"settings": {"slidesToShow": 1}},{"breakpoint": 1600,"settings": {"slidesToShow": 1}},{"breakpoint": 1400,"settings": {"slidesToShow": 1}},{"breakpoint": 1200,"settings": {"slidesToShow": 1}},{"breakpoint": 991,"settings": {"slidesToShow": 1}},{"breakpoint": 768, "settings": {"slidesToShow": 1}},{"breakpoint": 576, "settings": {"slidesToShow": 1}}]'>
-                            <div class="single-main-image">
-                                <a href="#" class="long-img">
-                                    <img src="{{url('/', $ad->cover_image)}}" class="img-fluid" alt="image">
-                                </a>
-                            </div>
-                            <a href="{{url('/', $banner->picture)}}"> <img width="800" src="{{url('/', $banner->picture)}}" alt="banner"></a>
-                        </div>
-                    </div>
-
-                    <div class="proDescription">
-
-                        <div class="descriptionTop">
-                            <h4><a href="#" class="detailsTittle">{{$ad->advert_name}}<i class="lar la-heart icon"></i></a></h4>
-                            <p class="detailsCap">Posted on {{$ad->created_at}}</p>
-                            <span class="detailsPricing">₦{{number_format(intval($ad->amount *1))}}</span>
-                            <div class="infoSingle">
-{{--                                <ul class="listing">--}}
-{{--                                    <li class="listItem"><i class="las la-bed icon"></i>2 Bed</li>--}}
-{{--                                    <li class="listItem"><i class="las la-bath icon"></i>2 Bath</li>--}}
-{{--                                    <li class="listItem"><i class="las la-map-marker-alt icon"></i>8502 Preston Rd. Inglewood, Maine</li>--}}
-{{--                                </ul>--}}
-                            </div>
-                        </div>
-
-                        <div class="descriptionMid">
-                            <h4 class="priceTittle">Description</h4>
-                            <p class="pera">{!! $ad->content !!}</p>
-                        </div>
-                        <h2>Other Images</h2>
-                        <img width="200" src="{{url('/', $ad->other)}}">
-
-                        <div class="descriptionFooter">
-                            <div class="btn-wrapper">
-{{--                                <a href="#" class="cmn-btn-outline2"><i class="lab la-font-awesome-flag icon"></i>Report</a>--}}
-                            </div>
-                            <div class="socialWrap">
-                                <a href="#" class="social"><i class="lab la-facebook-square"></i></a>
-                                <a href="#" class="social"><i class="lab la-twitter"></i></a>
-                                <a href="#" class="social"><i class="lab la-linkedin"></i></a>
-                                <a href="#" class="social"><i class="lar la-bell"></i></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-12">
-                    <div class="sellerMessage mb-24">
-                        <div class="singleFlexitem mb-24">
-                            <div class="recentImg">
-                                @if(!isset($user->profile))
-                                <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
-                                @elseif($ad->username=='admin')
-                                    <img width="100" src="{{asset('images/logo.jpeg')}}" alt="images">
-                                @elseif(isset($user->profile))
-                                    <img width="100" src="{{url('/', $user->profile)}}" alt="images">
-                                @endif
-                            </div>
-                            <div class="recentCaption">
-                                <h5><a href="#" class="featureTittle">{{$ad->username}}<img src="{{asset('assets/img/icon/checkMark.svg')}}" class="icon" alt="images"></a></h5>
-                                @if(isset($user->profile))
-                                <p class="featureCap">Member since {{$user->created_at}}</p>
-                                @endif
-                            </div>
+                <div class="col-lg-6">
+                    <div class="banner-img">
+                        <div class="banner-img-1">
+                            <svg width="260" height="260" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                            </svg>
+                            <img src="{{asset('shop1.png')}}" alt="banner">
                         </div>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="input-form">
-
-                                        <div class="icon"><i class="las la-phone"></i>
-                                            <a href="tel:{{$ad->number}}"> {{$ad->number}} </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <center>
-                                <form action="#" class="contactSeller">
-                                <div class="col-lg-4">
-                                    <div class="btn-wrapper mb-20">
-                                        <a href="tel:{{$ad->number}}" class="cmn-btn-outline3 w-100">Reveal Contact</a>
-                                    </div>
-                                </div>
-                                </form>
-                                </center>
-                            </div>
-
-                        @if($user->chat_link != null)
-                        <div class="btn-wrapper">
-                            <a  href="#" onclick="openPopup()" class="cmn-btn-outline2 w-100"><i class="las la-comments icon"></i>Message seller</a>
+                        <div class="banner-img-2">
+                            <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                            </svg>
+                            <img src="{{asset('shop.png')}}" alt="banner">
                         </div>
-                        @endif
-                        <script type="text/javascript">
-                            function openPopup() {
-                                var popup = window.open("{{$user->chat_link}}", "PopupWindow", "width=500,height=500");
-                                // Customize the width and height values as per your needs
-                            }
-                        </script>
-                        <div id="id01" class="modal">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <form class="modal-content" action="#">
-                                <div class="container">
-                                    <h4>Contact The Vendor</h4>
-{{--                                    <p>Are you sure you want to delete your account?</p>--}}
-                                    <textarea class="form-control" name="message" placeholder="Kindly Type Your Message........" required></textarea>
-                                    <br>
-                                        <button type="button"  class="btn btn-success"><i class="dw dw-diagonal-arrow"></i> Send</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <script>
-                            // Get the modal
-                            var modal = document.getElementById('id01');
-
-                            // When the user clicks anywhere outside of the modal, close it
-                            window.onclick = function(event) {
-                                if (event.target == modal) {
-                                    modal.style.display = "none";
-                                }
-                            }
-                        </script>
                     </div>
-                    <section class="recentListing">
-                        @foreach($all as $a)
-                            <div class="borderStyle style1 wow fadeInLeft social" data-wow-delay="0.1s">
-                                <div class="singleFlexitem mb-24">
-                                    <div class="">
-                                        <img width="100" src="{{url('/', $a->cover_image)}}" alt="images">
-                                    </div>
-                                    <div class="recentCaption">
-                                        <h5><a href="{{route('ads-detail', $a->id)}}" class="featureTittle">{{$a->advert_name}}</a></h5>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">RENOVETED</span>
-                                            <span class="pro-btn2">PROMOTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </section>
                 </div>
             </div>
         </div>
-    </div>
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-2">
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-4">
+    </section>
+
+    <section class="gap no-bottom">
+        <div class="container">
+            <div class="row product-info-section">
+                <div class="col-lg-7 p-0">
+                    <div class="pd-gallery">
+                        <ul class="pd-imgs">
+                            <li class="li-pd-imgs nav-active">
+                                <a href="JavaScript:void(0)">
+                                    <img alt="product" src="{{url('/', $ad->cover_image)}}"
+
+                            </li>
+                            <li class="li-pd-imgs">
+                                <a href="JavaScript:void(0)">
+                                    <img alt="toys" src="{{url('/', $ad->other)}}">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pd-main-img">
+                            <img id="NZoomImg" alt="product" src="{{url('/', $ad->cover_image)}}" >
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="product-info p-60">
+                        <div class="d-flex align-items-center">
+                            <div class="start d-flex align-items-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span>12 Reviews</span>
+                        </div>
+                        <h3>{{$ad->advert_name}}</h3>
+                        <form class="variations_form">
+                            <div class="stock">
+            <span class="price">
+              <del>
+              <span class="woocommerce-Price-amount">
+              <bdi>
+                <span class="woocommerce-Price-currencySymbol">₦</span>{{number_format(intval($ad->amount +3000 *1))}}</bdi>
+              </span>
+              </del>
+              <ins>
+                  <span class="woocommerce-Price-amount amount">
+                    <bdi>
+                    <span class="woocommerce-Price-currencySymbol">₦</span>{{number_format(intval($ad->amount *1))}}</bdi>
+                  </span>
+                </ins>
+            </span>
+                                <h6><span>In stock</span></h6>
+                            </div>
+                            <div class="quantity">
+                                <h6>Quantity</h6>
+                                <input type="number" class="input-text" step="1" min="1" name="quantity" value="1">
+                            </div>
+                            <div class="add-to-cart">
+                                <a href="tel:{{$ad->number}}" class="button">Contact Customer</a>
+{{--                                <a href="#" class="heart-wishlist">--}}
+{{--                                    <i class="fa-regular fa-heart"></i>--}}
+{{--                                </a>--}}
+
+                                @if($user->chat_link != null)
+                                    <div class="btn-wrapper">
+                                        <a  href="#" onclick="openPopup()" class="cmn-btn-outline2 w-100"><i class="fa fa-message"></i>Message seller</a>
+                                    </div>
+                                <script type="text/javascript">
+                                    function openPopup() {
+                                        var popup = window.open("{{$user->chat_link}}", "PopupWindow", "width=500,height=500");
+                                        // Customize the width and height values as per your needs
+                                    }
+                                </script>
+                                @endif
+                            </div>
+                            <ul class="product_meta">
+                                <li><span class="theme-bg-clr">Category:</span>
+                                    <ul class="pd-cat">
+                                        <li><a href="#">{{$ad->category}}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gap">
+        <div class="container">
+            <div class="information">
+                <h3>Product Details</h3>
+                <div class="boder-bar"></div>
+                <p>{!! $ad->content !!}</p>
+            </div>
+        </div>
+    </section>
+
 @endsection
 @section('script')
     <script type="text/javascript">
