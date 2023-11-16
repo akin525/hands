@@ -1,107 +1,176 @@
-@extends("ads.lay.header")
-
+@extends("layouts.header")
+@section('tiitle', 'About-Us')
 @section('content')
 
-    <div class="sliderArea heroAboutStyle plr ">
-        <div class="slider-active">
-            <div class="single-slider heroPadding d-flex align-items-center">
-                <div class="container-fluid ">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-xxl-6 col-xl-7 col-lg-5 col-md-12">
-                            <div class="heroCaption mb-50">
-                                <h1 class="tittle" data-animation="fadeInUp" data-delay="0.0s">We make buying-selling online easier</h1>
-                                <div class="btn-wrapper">
-                                    <a href="{{route('login')}}" class="cmn-btn04 mr-15 mb-10 wow fadeInLeft" data-wow-delay="0.3s">Sign up</a>
-                                    <a href="{{url('listads')}}" class="browseBtn mb-10 wow fadeInLeft" data-wow-delay="0.3s">Browse ads <i class="las la-angle-right icon"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="countDown">
-                                <div class="row">
-                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                        <div class="single mb-24 wow fadeInLeft" data-wow-delay="0.2s">
-                                            <div class="single-counter">
-                                                <span class="counter odometer" data-count="4.05"></span>
-                                                <p class="icon">+</p>
-                                            </div>
-                                            <div class="pera-count">
-                                                <p class="pera">Years in the industry</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                        <div class="single mb-24 wow fadeInLeft" data-wow-delay="0.4s">
-                                            <div class="single-counter">
-                                                <span class="counter odometer" data-count="1300"></span>
-                                                <p class="icon">+</p>
-                                            </div>
-                                            <div class="pera-count ">
-                                                <p>Employees working</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                        <div class="single mb-24 wow fadeInLeft" data-wow-delay="0.6s">
-                                            <div class="single-counter">
-                                                <span class="counter odometer" data-count="20"></span>
-                                                <p class="icon">K</p>
-                                            </div>
-                                            <div class="pera-count">
-                                                <p>Active registered users</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-xxl-6 col-xl-5 col-lg-7 ">
-                            <div class="hero-man d-none d-lg-block f-right">
-                                <img src="assets/img/hero/aboutHero.png" alt="images" class="tilt-effect " data-animation="fadeInRight" data-delay="0.3s">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="storyArewa ">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xxl-5 col-xl-7 col-lg-8 col-md-9 col-sm-10">
-                    <div class="section-tittle section-tittle6 text-center mb-90">
-                        <h2 class="tittle">Our story <span class="lineBrack"></span> started in 2022</h2>
-{{--                        <p>I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The 12 subjects applied 4 mL of hand sanitizer for 30 seconds per application, 20 applications over a 30 min period (total exposure time 10 min).</p>--}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section class="aboutArea section-padding2 sectionBg3">
+    <section class="banner" style="background-color: #fff8e5; background-image:url({{asset('new/assets/img/banner.png')}})">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-5 position-relative">
-
-                    <div class="aboutImg  tilt-effect mr-40">
-                        <img  src="{{asset('images/tr.png')}}" alt="images" class="bouncingAnimations">
+                <div class="col-lg-6">
+                    <div class="banner-text">
+                        <h2>About-Us</h2>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="{{route('home')}}">Home</a>
+                            </li>
+                            {{--                            <li class="breadcrumb-item active" aria-current="page">shop</li>--}}
+                            {{--                            <li class="breadcrumb-item active" aria-current="page">Our Products</li>--}}
+                        </ol>
                     </div>
                 </div>
-                <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-7">
-                    <div class="about-caption m-0">
-                        <div class="row justify-content-center">
-                            <div class="section-tittle section-tittle6 m-0">
-                                <h2 class="tittle p-0">We’re working to make the world a better place </h2>
+                <div class="col-lg-6">
+                    <div class="banner-img">
+                        <div class="banner-img-1">
+                            <svg width="260" height="260" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                            </svg>
+                            <img src="{{asset('shop1.png')}}" alt="banner">
+                        </div>
+                        <div class="banner-img-2">
+                            <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                            </svg>
+                            <img src="{{asset('shop.png')}}" alt="banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-2">
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-4">
+    </section>
+
+    <section class="gap about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="heading two">
+                        <h2>Welcome To AshMarkets</h2>
+                    </div>
+                    <div class="love-your-pets">
+                        <p>We make buying-selling online easier</p>
+                        <ul class="list">
+                            <li><img src="{{asset('new/assets/img/list.png')}}" alt="list">Our story started in 2022</li>
+                            <li><img src="{{asset('new/assets/img/list.png')}}" alt="list">We’re working to make the world a better place</li>
+                            <li><img src="{{asset('new/assets/img/list.png')}}" alt="list">Experienced pet owners and animal lovers</li>
+                            <li><img src="{{asset('new/assets/img/list.png')}}" alt="list">Hungry horses: whatever the size of your pe</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dogs-img">
+                        <img src="{{asset('shop3.png')}}" alt="dogs">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-image: url(assets/img/healthy-product.png); background-color: #f5f5f5;" class="gap care-services">
+        <div class="container">
+            <div class="heading">
+                <img src="{{asset('new/assets/img/heading-img.png')}}" alt="heading-img">
+                <h6>What We Provide</h6>
+                <h2>Marketing Services</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
+                    <div class="pet-grooming">
+                        <i><img src="{{asset('new/assets/img/welcome-to-3.png')}}" alt="icon"></i>
+                        <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
+                        </svg>
+                        <a href="#"><h4>Online Order</h4></a>
+{{--                        <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>--}}
+                    </div>
+                </div>
+                <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
+                    <div class="pet-grooming">
+                        <i><img src="{{asset('new/assets/img/welcome-to-1.png')}}" alt="icon"></i>
+                        <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
+                        </svg>
+                        <a href="#"><h4>Strategic Planning</h4></a>
+{{--                        <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>--}}
+                    </div>
+                </div>
+                <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
+                    <div class="pet-grooming">
+                        <i><img src="{{asset('new/assets/img/welcome-to-4.png')}}" alt="icon"></i>
+                        <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
+                        </svg>
+                        <a href="#"><h4>Digital Marketing</h4></a>
+{{--                        <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>--}}
+                    </div>
+                </div>
+                <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
+                    <div class="pet-grooming">
+                        <i><img src="{{asset('new/assets/img/welcome-to-2.png')}}" alt="icon"></i>
+                        <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
+                        </svg>
+                        <a href="#"><h4>Advertising Campaigns</h4></a>
+{{--                        <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>--}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-1.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="100" ></h2>
+                                <span>+</span>
                             </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-2.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="99" ></h2>
+                                <span>%</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text mb-sm-0">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-3.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="2" ></h2>
+                                <span>k</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="count-text mb-0">
+                        <img alt="img" src="{{asset('new/assets/img/fun-facts-4.png')}}">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h2 class="count" data-number="400" ></h2>
+                                <span>+</span>
+                            </div>
+                            <h3 class="text">Client Served</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 @endsection

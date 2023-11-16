@@ -86,7 +86,7 @@
     </div>
     <div class="container">
         <div class="bottom-bar">
-            <a href="{{url('home')}}"><img width="50" src="{{asset('images/logo.jpeg')}}" alt="logo"></a>
+{{--            <a href="{{url('home')}}"><img width="50" src="{{asset('images/logo.jpeg')}}" alt="logo"></a>--}}
             <nav class="navbar">
                 <ul class="navbar-links">
                     <li>
@@ -120,7 +120,7 @@
     <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
         <div class="res-log">
             <a href="{{url('home')}}">
-{{--                <img width="50" src="{{asset('images/logo.jpeg')}}" alt="Responsive Logo">--}}
+                <img width="50" src="{{asset('images/logo.jpeg')}}" alt="Responsive Logo">
             </a>
         </div>
         <ul>
