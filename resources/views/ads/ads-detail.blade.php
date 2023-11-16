@@ -92,10 +92,10 @@
             </span>
                                 <h6><span>In stock</span></h6>
                             </div>
-                            <div class="quantity">
-                                <h6>Quantity</h6>
-                                <input type="number" class="input-text" step="1" min="1" name="quantity" value="1">
-                            </div>
+{{--                            <div class="quantity">--}}
+{{--                                <h6>Quantity</h6>--}}
+{{--                                <input type="number" class="input-text" step="1" min="1" name="quantity" value="1">--}}
+{{--                            </div>--}}
                             <div class="add-to-cart">
                                 <a href="tel:{{$ad->number}}" class="button">Contact Customer</a>
 {{--                                <a href="#" class="heart-wishlist">--}}
@@ -103,8 +103,8 @@
 {{--                                </a>--}}
 
                                 @if($user->chat_link != null)
-                                    <div class="btn-wrapper">
-                                        <a  href="#" onclick="openPopup()" class="cmn-btn-outline2 w-100"><i class="fa fa-message"></i>Message seller</a>
+                                    <div>
+                                        <a  href="#" onclick="openPopup()" class="badge badge-danger"><i class="fa fa-message"></i>Message seller</a>
                                     </div>
                                 <script type="text/javascript">
                                     function openPopup() {
