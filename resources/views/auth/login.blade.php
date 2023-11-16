@@ -4,12 +4,12 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>Ashsupport.com.ng </title>
+    <title>Ashmarkets Login </title>
 
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://ashsupport.com.ng//images/ash.jpeg">
-    <link rel="icon"  sizes="32x32" href="https://ashsupport.com.ng//images/ash.jpeg">
-    <link rel="icon"  sizes="16x16" href="https://ashsupport.com.ng//images/ash.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ashmarkets.com//images/logo.jpeg">
+    <link rel="icon"  sizes="32x32" href="https://ashmarkets//images/logo.jpeg">
+    <link rel="icon"  sizes="16x16" href="https://ashmarkets//images/logo.jpeg">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -65,12 +65,18 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-7">
-                <img src="{{asset('images/auth.png')}}" alt="">
+{{--                <img src="{{asset('images/auth.png')}}" alt="">--}}
+                <center>
+                <video width="600" controls autoplay loop>
+                    <source src="{{asset('vid.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                </center>
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="login-box bg-white box-shadow border-radius-10">
                     <div class="login-title">
-                        <h2 class="text-center text-primary">Login To Ashsupport</h2>
+                        <h2 class="text-center text-primary">Login To Ashmarkets</h2>
                     </div>
                     <x-auth-session-status class="mb-4" :status="session('status')" />
 

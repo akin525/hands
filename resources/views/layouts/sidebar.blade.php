@@ -1,12 +1,12 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>ADE'S SUPPORTING HANDS VENTURE CAPITAL</title>
+    <title>ADE'S MARKETING</title>
 
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://ashsupport.com.ng//images/ash.jpeg">
-    <link rel="icon"  sizes="32x32" href="https://ashsupport.com.ng//images/ash.jpeg">
-    <link rel="icon"  sizes="16x16" href="https://ashsupport.com.ng//images/ash.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ashmarkets//images/logo.jpeg">
+    <link rel="icon"  sizes="32x32" href="https://ashmarkets//images/logo.jpeg">
+    <link rel="icon"  sizes="16x16" href="https://ashmarkets//images/logo.jpeg">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -138,9 +138,9 @@
 <div class="left-side-bar">
     <div class="brand-logo">
         <a href="{{route('dashboard')}}">
-            <img src="{{asset('images/logo.png')}}" alt="" class="dark-logo">
+            <img width="50" src="{{asset('images/logo.jpeg')}}" alt="" class="dark-logo">
             <center>
-            <img width="200" src="{{asset('images/lab.jpeg')}}" alt="" class="light-logo">
+            <img width="50" src="{{asset('images/logo.jpeg')}}" alt="" class="light-logo">
             </center>
         </a>
         <div class="close-sidebar" data-toggle="left-sidebar-close">

@@ -10,7 +10,7 @@
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon"  href="https://ashmarkets.com//images/ash.jpeg">
+    <link rel="shortcut icon"  href="https://ashmarkets.com//images/logo.jpeg">
     <meta content="Learn How To Grow Your Business Quick And Promoting Good And Services on Ashsupport.com.ng" name="description" />
 
     <!-- ================================================================
@@ -79,6 +79,12 @@
                             </i>
                             <a class="me-3" href="callto:+2348169532894">08169532894</a>
                         </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="login">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="{{route('login')}}">Login / Register</a>
                     </div>
                 </div>
             </div>
