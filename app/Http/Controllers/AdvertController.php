@@ -135,7 +135,7 @@ public function adscat($request)
     $top=Advert::where('status', 1)
         ->orderByRaw('updated_at  DESC')
         ->limit(3)->get();
-    return view('ads/all-category', compact('cat',  'top'));
+    return view('ads/all-category', compact('cat',  'top', 'request'));
 }
 
 

@@ -1,120 +1,83 @@
-@extends("ads.lay.header")
-
+@extends("layouts.header")
+@section('tittle', 'Category')
 @section('content')
-    <div class="section-padding2 plr">
-        <div class="container-fluid">
-            <div class="row">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    @include('ads.lay.category')
-                <div class="col-xxl-9 col-xl-9  col-lg-8 col-md-7">
-                    <div class="viewItems">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="select-itms">
-{{--                                    <select name="select" class="niceSelect">--}}
-{{--                                        <option value="">New York, USA</option>--}}
-{{--                                        <option value="">Location PK</option>--}}
-{{--                                        <option value="">Location US</option>--}}
-{{--                                        <option value="">Location UK</option>--}}
-{{--                                    </select>--}}
-                                    <i class="las la-map-marker-alt  icon"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="SearchWrapper">
-                                    <div class="searchBox-wrapper">
-
-
-                                        <div class="category-searchbar search-showHide">
-
-                                            <span class="closed-icon"><i class="las la-times"></i></span>
-                                            <div class="search-suggestions" id="search_suggestions_wrap">
-                                                <div class="search-inner">
-                                                    <div class="category-suggestion item-suggestions">
-                                                        <h6 class="item-title">Category Suggestions</h6>
-                                                        <ul class="category-suggestion-list">
-                                                            <li class="list"> <a href="#" class="item">Fruits &amp; Vegetables</a>
-                                                            </li>
-                                                            <li class="list"><a href="#" class="item">Cooking</a>
-                                                            </li><li class="list"> <a href="#" class="item">Dairy</a> </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-suggestion item-suggestions">
-                                                        <h6 class="item-title">
-<span>
-Product Suggestions
-</span>
-                                                            <a href="#" target="_blank" id="search_result_all" class="showAll">Show all</a>
-                                                        </h6>
-                                                        <ul class="product-suggestion-list mt-4" id="search_result_products">
-                                                            <li class="list">
-                                                                <a href="#" class="item">
-                                                                    <div class="product-image"><img src="{{asset('assets/img/gallery/wishlist1.jpg')}}" alt="img"></div>
-                                                                    <div class="product-info">
-                                                                        <div class="product-info-top">
-                                                                            <h6 class="product-name">Fresh Fruits</h6>
-                                                                        </div>
-                                                                        <div class="product-price">
-                                                                            <div class="price-update-through">
-                                                                                <span class="flash-price fw-500">$200.00</span>
-                                                                                <span class="flash-old-prices">$240</span>
-                                                                            </div>
-                                                                            <span class="stock-out">In Stock</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="view">
-                                        <button class="customTab active" data-toggle-target=".customTab-content-1"><i class="las la-th-large"></i></button>
-                                        <button class="customTab" data-toggle-target=".customTab-content-2"><i class="las la-bars"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <section class="banner" style="background-color: #fff8e5; background-image:url({{asset('new/assets/img/banner.png')}})">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-text">
+                        <h2>{{$request}}</h2>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="{{route('home')}}">Home</a>
+                            </li>
+                        </ol>
                     </div>
-
-                    <div class="gridView customTab-content customTab-content-1 active">
-                        <div class="row ">
-                            @foreach($cat as $ad)
-                            <div class="col-xl-4  col-lg-6  col-md-12 col-sm-6">
-                                <div class="singleFeature mb-24">
-                                    <div class="featureImg">
-                                        <a href="{{route('ads-detail', $ad->id)}}"><img src="{{url('/', $ad->cover_image)}}" alt="images"></a>
-                                    </div>
-                                    <div class="featureCaption">
-                                        <h4><a href="{{route('ads-detail', $ad->id)}}" class="featureTittle">{{$ad->advert_name}}</a></h4>
-                                         <span class="featurePricing">₦{{number_format(intval($ad->amount *1))}}</span>
-                                        <div class="btn-wrapper">
-                                            <span class="pro-btn1">NEW</span>
-                                            <span class="pro-btn2">PROMTED</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-img">
+                        <div class="banner-img-1">
+                            <svg width="260" height="260" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                            </svg>
+                            <img src="{{asset('shop1.png')}}" alt="banner">
                         </div>
-                    </div>
-
-
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12">
-                            <div class="pagination mt-60">
-                                <ul class="pagination-list">
-                                    {{$cat->links()}}
-                                      </ul>
-                            </div>
+                        <div class="banner-img-2">
+                            <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                            </svg>
+                            <img src="{{asset('shop.png')}}" alt="banner">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-2">
+        <img src="{{asset('new/assets/img/hero-shaps-1.png')}}" alt="hero-shaps" class="img-4">
+    </section>
+
+    <section class="gap products-section">
+        <div class="container">
+            <div class="row">
+                @include('ads.lay.category')
+                <div class="col-lg-9">
+
+                    <div class="row">
+                        @foreach($cat as $shop)
+                            <div class="col-md-4 col-sm-6">
+                                <div class="healthy-product">
+                                    <div class="healthy-product-img">
+                                        <img src="{{url('/', $shop->cover_image)}}" alt="product">
+                                        <ul class="star">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                        <div class="add-to-cart">
+                                            <a href="{{route('ads-detail', $shop->id)}}">View Product</a>
+                                            <a href="#" class="heart-wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <span>{{$shop->category}}</span>
+                                    <a href="{{route('ads-detail', $shop->id)}}">{{$shop->advert_name}}</a>
+                                    <h6>₦{{number_format(intval($shop->amount *1))}}</h6>
+                                </div>
+                            </div>
+                        @endforeach
+
+                        <ul class="pagination m-auto">
+                            {{$cat->links()}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 @endsection
