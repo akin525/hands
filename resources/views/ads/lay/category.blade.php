@@ -5,22 +5,23 @@
         <div class="boder-bar"></div>
         <ul class="category">
             <li>
-                <a href="{{route('all-category', 'Vehicles' )}}">Vehicles<span>32</span></a>
+                <a href="{{route('all-category', 'Vehicles' )}}">Vehicles</a>
             </li>
             <li>
-                <a href="{{route('all-category', 'Appliances' )}}">Appliances<span>12</span></a>
+{{--                <a href="{{route('all-category', 'Appliances' )}}">Appliances<span>12</span></a>--}}
+                <a href="{{route('all-category', 'Appliances' )}}">Appliances</a>
             </li>
             <li>
-                <a href="{{route('all-category', 'Fashions' )}}">Fashions<span>14</span></a>
+                <a href="{{route('all-category', 'Fashions' )}}">Fashions</a>
             </li>
             <li>
-                <a href="{{route('all-category', 'Properties' )}}">Properties<span>7</span></a>
+                <a href="{{route('all-category', 'Properties' )}}">Properties</a>
             </li>
             <li>
-                <a href="{{route('all-category', 'Education' )}}">Education<span>10</span></a>
+                <a href="{{route('all-category', 'Phone-gadgets' )}}">Phone-Gadgets</a>
             </li>
             <li class="end">
-                <a href="a{{route('all-category', 'Businesses' )}}">Business<span>30</span></a>
+                <a href="a{{route('all-category', 'Businesses' )}}">Business</a>
             </li>
         </ul>
     </div>

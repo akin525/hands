@@ -52,7 +52,7 @@
                 <div class="col-lg-6">
                     <div class="welcome-to">
                         <h2>Welcome to Ashmakets Company</h2>
-                        <p>We Grow Your Business Quick And Promoting Good And Services on Ashsupport.com</p>
+                        <p>We Grow Your Business Quick And Promoting Good And Services on ashmarkets.com</p>
                         <div class="row mt-lg-5">
                             <div class="col-md-6">
                                 <div class="pet-grooming">
@@ -81,7 +81,7 @@
                 <div class="col-lg-6">
                     <div class="dog-walker two d-block">
 {{--                        <img src="{{asset('new/assets/img/puppies.png')}}" class="puppies" alt="puppies">--}}
-                        <img src="{{asset('shop3.png')}}" class="w-100" alt="dog walker">
+                        <img src="{{asset('ca.jpeg')}}" class="w-100" alt="dog walker">
 {{--                        <img src="{{asset('new/assets/img/line.png')}}" class="line" alt="line">--}}
 {{--                        <img src="{{asset('new/assets/img/dabal-foot.png')}}" class="dabal-foot" alt="dabal-foot">--}}
                         <img src="{{asset('new/assets/img/haddi.png')}}" class="haddi" alt="haddi">

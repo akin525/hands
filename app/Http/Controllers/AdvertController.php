@@ -132,7 +132,10 @@ public function advert(Request $request)
 public function adscat($request)
 {
     $cat=Advert::where('category', $request)->where('status', 1)->latest()->paginate(6);
-    return view('ads/all-category', compact('cat'));
+    $top=Advert::where('status', 1)
+        ->orderByRaw('updated_at  DESC')
+        ->limit(3)->get();
+    return view('ads/all-category', compact('cat',  'top'));
 }
 
 
