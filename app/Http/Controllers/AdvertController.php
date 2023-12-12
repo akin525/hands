@@ -166,7 +166,10 @@ function alladsloaded()
     $all=Advert::where('status', 1)
         ->orderByRaw('updated_at  DESC')
         ->paginate(12);
-    return view('ads/list-ads', compact('all', 'banner'));
+    $top=Advert::where('status', 1)
+        ->orderByRaw('updated_at  DESC')
+        ->limit(3)->get();
+    return view('ads/list-ads', compact('all', 'banner', 'top'));
 }
 
 
