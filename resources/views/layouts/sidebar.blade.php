@@ -239,11 +239,11 @@
             <div class="container-fluid">
                 <div class="row column_title">
                     <div class="card card-body align-content-center">
-                        <a href="https://play.google.com/store/apps/details?id=com.ashsupport" class="font-weight-bold text-center">
-                            <b>Download  our Mobile App</b>
-                            <img width="300" src="{{asset('images/play.png')}}" alt="">
+{{--                        <a href="https://play.google.com/store/apps/details?id=com.ashsupport" class="font-weight-bold text-center">--}}
+{{--                            <b>Download  our Mobile App</b>--}}
+{{--                            <img width="300" src="{{asset('images/play.png')}}" alt="">--}}
 
-                        </a>
+{{--                        </a>--}}
 
                     </div>
                 </div>
