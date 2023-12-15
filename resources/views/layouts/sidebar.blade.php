@@ -162,11 +162,11 @@
                     </a>
                 </li>
                 @if(Auth::user()->usertype=='ads')
-                <li>
-                    <a href="{{url('business')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-bookmark"></span><span class="mtext">Business Training</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{url('business')}}" class="dropdown-toggle no-arrow">--}}
+{{--                        <span class="micon dw dw-bookmark"></span><span class="mtext">Business Training</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{url('items')}}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bookmark"></span><span class="mtext">All Advert</span>
@@ -191,11 +191,11 @@
                         <span class="micon dw dw-bookmark"></span><span class="mtext">Post Advert</span>
                     </a>
                 </li>
-                    <li>
-                        <a href="{{route('upgrade')}}" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-user3"></span><span class="mtext">Membership Account</span>
-                        </a>
-                    </li>
+{{--                    <li>--}}
+{{--                        <a href="{{route('upgrade')}}" class="dropdown-toggle no-arrow">--}}
+{{--                            <span class="micon dw dw-user3"></span><span class="mtext">Membership Account</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
                     <li>
                         <a href="{{route('listupgrade')}}" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-book"></span><span class="mtext">Upgrade List</span>

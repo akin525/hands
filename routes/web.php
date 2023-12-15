@@ -61,7 +61,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['auth','ads'])->group(function () {
-    Route::get('upgrade', [AdvertController::class, 'upgrade'])->name('upgrade');
+//    Route::get('upgrade', [AdvertController::class, 'upgrade'])->name('upgrade');
     Route::get('listupgrade', [AdvertController::class, 'listupgrade'])->name('listupgrade');
     Route::get('verifyads/{id}', [AdvertController::class, 'verifyads'])->name('verifyads');
 
@@ -71,7 +71,7 @@ Route::middleware(['auth','ads'])->group(function () {
 
     });
 
-    Route::view('business', 'business');
+//    Route::view('business', 'business');
 
 
 });
